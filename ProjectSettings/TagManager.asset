@@ -37,7 +37,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Obstacles
   m_SortingLayers:
   - name: Chao
     uniqueID: 1749028061
