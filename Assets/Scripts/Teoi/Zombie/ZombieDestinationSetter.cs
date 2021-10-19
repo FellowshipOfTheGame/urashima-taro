@@ -21,10 +21,19 @@ namespace Pathfinding
 		/// <summary>The object that the AI should move to</summary>
 		//private Transform target;
 		private bool isPlayerLocation = false;
+		private PlayerCollision playerCollision;
 		IAstarAI ai;
 
+		// The default location of the zombie, where he run when he is not pursuing the player
 		public Transform defaultLocation;
+		// The position of the player
 		public Transform playerLocation;
+
+        private void Start()
+        {
+			// Receive the script attached with the Player object, used to return variables related to collision
+			playerCollision = GameObject.FindWithTag("Player").GetComponent<PlayerCollision>();
+        }
 
         void OnEnable () 
 		{
@@ -44,25 +53,16 @@ namespace Pathfinding
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () 
 		{
-			if (Input.GetButtonDown("Horizontal"))
-			{
-				//if (playerLocation.position != null && ai != null) ai.destination = playerLocation.position;
-				isPlayerLocation = true;
-				//Debug.Log(ai == null);
-			}
-			else if (Input.GetButtonUp("Horizontal"))
-            {
-				//if (defaultLocation != null && ai != null) ai.destination = defaultLocation.position;
-				isPlayerLocation = false;
-			}
-
-			switch(isPlayerLocation)
+			// Tests if the player is in a hideout place
+			// The zombie run for the default location if the player is hidden, if not he pursues the player
+			switch(playerCollision.IsHidden())
             {
 				case true:
-					if (playerLocation.position != null && ai != null) ai.destination = playerLocation.position;
-					break;
-				case false:
 					if (defaultLocation != null && ai != null) ai.destination = defaultLocation.position;
+					break;
+
+				case false:
+					if (playerLocation.position != null && ai != null) ai.destination = playerLocation.position;
 					break;
 			}
 
