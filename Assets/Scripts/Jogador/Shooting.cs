@@ -23,17 +23,16 @@ public class Shooting : MonoBehaviour
     [SerializeField] int tirosMax;
     int tirosAtuais;
 
-    bool podeAtirar = true;
+    public bool podeAtirar = true;
 
     [Header("Variaveis melee")]
     [SerializeField] float range;
 
     [SerializeField] LayerMask inimigo;
-    // variaveis melee
 
     void Start()
     {
-        GameObject txt = GameObject.Find("Canvas/DisplayBalas");
+        GameObject txt = GameObject.Find("UI_Jogador/DisplayBalas");
 
         displayBalas = txt.GetComponent<TextMeshProUGUI>();
         tirosAtuais = tirosMax;

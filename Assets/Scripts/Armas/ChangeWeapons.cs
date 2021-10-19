@@ -87,9 +87,7 @@ public class ChangeWeapons : MonoBehaviour
                 }
             }
 
-            armas[armaAtual].SetActive(true);
-            shootingScript = armas[armaAtual].GetComponent<Shooting>();
-            tempoMenu = 1f;
+            AtivarArma();
         }
     }
 
@@ -114,9 +112,7 @@ public class ChangeWeapons : MonoBehaviour
 
             armaAtual = 0;
 
-            armas[armaAtual].SetActive(true);
-            shootingScript = armas[armaAtual].GetComponent<Shooting>();
-            tempoMenu = 1f;
+            AtivarArma();
         }
     }
 
@@ -129,9 +125,7 @@ public class ChangeWeapons : MonoBehaviour
 
             armaAtual = 1;
 
-            armas[armaAtual].SetActive(true);
-            shootingScript = armas[armaAtual].GetComponent<Shooting>();
-            tempoMenu = 1f;
+            AtivarArma();
         }
     }
 
@@ -144,9 +138,7 @@ public class ChangeWeapons : MonoBehaviour
 
             armaAtual = 2;
 
-            armas[armaAtual].SetActive(true);
-            shootingScript = armas[armaAtual].GetComponent<Shooting>();
-            tempoMenu = 1f;
+            AtivarArma();
         }
     }
 
@@ -159,10 +151,16 @@ public class ChangeWeapons : MonoBehaviour
 
             armaAtual = 3;
 
-            armas[armaAtual].SetActive(true);
-            shootingScript = armas[armaAtual].GetComponent<Shooting>();
-            tempoMenu = 1f;
+            AtivarArma();
         }
+    }
+
+    void AtivarArma()
+    {
+        armas[armaAtual].SetActive(true);
+        shootingScript = armas[armaAtual].GetComponent<Shooting>();
+        shootingScript.podeAtirar = true;
+        tempoMenu = 1f;
     }
 
     void LigarMenu()
