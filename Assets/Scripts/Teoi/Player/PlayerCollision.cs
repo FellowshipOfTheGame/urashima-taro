@@ -33,6 +33,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Hideout")
         {
+            Debug.Log("Out hideout");
             isHidden = true;
         }
     }
@@ -40,6 +41,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Hideout")
         {
+            Debug.Log("In hideout");
             isHidden = false;
         }
     }
