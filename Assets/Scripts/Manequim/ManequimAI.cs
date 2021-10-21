@@ -8,12 +8,11 @@ public class ManequimAI : MonoBehaviour
     public Transform target;
 
     [Header("Move Parameters")] public float speed;
-    public float nextWayPointDistance;
 
     [Header("Attack Parameters")] public float attackRange;
 
     [Header("Settings")] public bool isFirstStopOn;
-
+    
     Path path;
     int currentWayPoint = 0;
     bool reachedEndOfPath = false;
@@ -22,14 +21,18 @@ public class ManequimAI : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sprite;
 
+    float nextWayPointDistance = 0.5f;
+
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-
+        if (sprite == null) Debug.Log("null");
         InvokeRepeating("PathUpdate", 0f, 0.5f);
-        InvokeRepeating("DirectionUpdate", 0f, 0.2f);
+        float repeatFrequency = speed / 5000.0f;
+        Debug.Log(repeatFrequency);
+        InvokeRepeating("DirectionUpdate", 0f, repeatFrequency);
     }
 
 
@@ -43,13 +46,13 @@ public class ManequimAI : MonoBehaviour
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
-        
+
     }
 
     //calcula a direcao do manequim
     private void DirectionUpdate()
     {
-        if(!reachedEndOfPath)
+        if (!reachedEndOfPath)
         {
             Vector2 direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
             float xAngle = Vector2.Angle(direction, new Vector2(100000, 0));
@@ -65,11 +68,11 @@ public class ManequimAI : MonoBehaviour
             else if (xAngle < 67.5f)
             {
                 //direita superior
-                if(yAngle < 90) velocity2 = new Vector2(1, 1);
+                if (yAngle < 90) velocity2 = new Vector2(1, 1);
                 //direita inferior
                 else velocity2 = new Vector2(1, -1);
             }
-            else if(xAngle < 112.5f)
+            else if (xAngle < 112.5f)
             {
                 //cima
                 if (yAngle < 90) velocity2 = new Vector2(0, 1);
@@ -88,10 +91,10 @@ public class ManequimAI : MonoBehaviour
                 //esquerda
                 velocity2 = new Vector2(-1, 0);
             }
-            
+
             //deixa o modulo da velocidade constante
             velocity2 = velocity2.normalized * speed;
-            
+
             velocity = new Vector3(velocity2.x, velocity2.y, 0f);
         }
     }
@@ -100,7 +103,7 @@ public class ManequimAI : MonoBehaviour
     //reseta o caminho
     private void OnPathComplete(Path p)
     {
-        if(!p.error)
+        if (!p.error)
         {
             path = p;
             currentWayPoint = 0;
@@ -111,17 +114,16 @@ public class ManequimAI : MonoBehaviour
 
     bool isActive = false;
     bool isStop = false;
+    bool isHear = false;
+
     void FixedUpdate()
     {
-        //mouse representa o som
-        if(Input.GetKey(KeyCode.Mouse0) && !isActive)
+        if (isHear && !isActive)
         {
-            //faz a animacao
             StartMove();
         }
 
-        
-        if(isActive && !isStop)
+        if (isActive && !isStop)
         {
             float playerDistance = ((Vector2)target.transform.position - (Vector2)this.transform.position).magnitude;
             if (playerDistance < attackRange)
@@ -136,41 +138,43 @@ public class ManequimAI : MonoBehaviour
         }
 
         //mouse representa o player esconder
-        if(Input.GetKey(KeyCode.Mouse1) && isActive)
-        {
-            StopMove();
-        }
-    }
+        /* if (Input.GetKey(KeyCode.Mouse1) && isActive)
+         {
+             StopMove();
+         }*/
 
+
+        if (isHear) isHear = false;
+    }
 
 
     #region //Start Move
     private void StartMove()
     {
-        sprite.material.color = new Color(0, 255, 0);
+        sprite.color = new Color(0, 1, 0, 1);
         isActive = true;
         isStop = true;
-        if(isFirstStopOn)
+        if (isFirstStopOn)
         {
             StartCoroutine(FirstStop());
             //faz animacao
-            sprite.material.color = new Color(255, 255, 0);
+            sprite.color = new Color(1, 1, 0, 1);
         }
         else
         {
             isStop = false;
-            sprite.material.color = new Color(255, 0, 0);
+            sprite.color = new Color(1, 0, 0, 1);
         }
 
     }
 
     private IEnumerator FirstStop()
     {
-        
+
         //o tempo, depois troca para tempo da animacao
         yield return new WaitForSeconds(1f);
         isStop = false;
-        sprite.material.color = new Color(255, 0, 0);
+        sprite.color = new Color(1, 0, 0, 1);
     }
     #endregion
 
@@ -179,7 +183,7 @@ public class ManequimAI : MonoBehaviour
     {
         isStop = true;
         //faz animacao de ataque
-        sprite.material.color = new Color(0, 255, 225);
+        sprite.color = new Color(0, 1, 1, 1);
         StartCoroutine(AttackStop());
     }
 
@@ -188,7 +192,7 @@ public class ManequimAI : MonoBehaviour
         //o tempo, depois troca para tempo da animacao
         yield return new WaitForSeconds(1f);
         isStop = false;
-        sprite.material.color = new Color(255, 0, 0);
+        sprite.color = new Color(1, 0, 0, 1);
     }
     #endregion
 
@@ -227,7 +231,15 @@ public class ManequimAI : MonoBehaviour
         isActive = false;
         isStop = true;
         //faz animacao
-        sprite.material.color = new Color(255, 255, 255);
+        sprite.color = new Color(1, 1, 1, 1);
+    }
+    #endregion
+
+    #region //Som
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Sound"))
+            isHear = true;
     }
     #endregion
 }

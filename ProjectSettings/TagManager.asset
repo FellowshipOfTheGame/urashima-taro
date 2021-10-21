@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Hideout
+  - Sound
   layers:
   - Default
   - TransparentFX
