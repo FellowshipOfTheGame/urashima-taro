@@ -39,6 +39,22 @@ limites devem ser colocados nas paredes externas da cena caso o ambiente seja fe
 Situação atual do desenvolvimento:<br>
 
 Concluído.
+<hr/>
+Documentação: Chave<br>
+Responsável: Alexandre email: alelocci@ime.usp.br<br>
+25 de Outubro de 2021<br><br>
+
+Arquivo(s) Criado(s): Chave.cs, Porta.cs e Flag.cs.<br><br>
+
+O que foi Implementado?<br>
+
+Foi implementada o elemento de cenário definido como chave. Esse elemento é introduzido no cenário mediante a ocorrência de um evento e permanece no cenário até que 
+Player a capture. A captura se dá por meio da aproximação do Player com a chave. A posse da chave permite ao Player abrir uma porta. O evento de abertura se dá quando o Player, tendo a chave, se apróxima da porta e preciona a tecla 'O'. A porta se abre e o Player perde a posse da chave.
+
+Configuração do Chave:<br>
+
+A chave é configurada como segue:
+
 
 
 
