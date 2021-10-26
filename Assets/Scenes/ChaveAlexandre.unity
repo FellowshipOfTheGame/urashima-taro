@@ -301,6 +301,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   porta: {fileID: 620883261}
+  jogador: {fileID: 196765986}
+  raioPorta: 3
 --- !u!1 &1256311362
 GameObject:
   m_ObjectHideFlags: 0
