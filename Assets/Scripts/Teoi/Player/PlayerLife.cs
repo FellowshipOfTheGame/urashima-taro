@@ -66,7 +66,6 @@ public class PlayerLife : MonoBehaviour
         {
             Debug.Log("PLAYER MAX HEALTH");
             this.SetMaxLife();
-            healthManager.currentLife = (int)lifeSlider.maxValue;
         }
         else
         {
