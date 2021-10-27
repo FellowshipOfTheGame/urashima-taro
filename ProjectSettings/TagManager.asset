@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - chave
-  - porta
+  - Hideout
+  - Sound
+
   layers:
   - Default
   - TransparentFX
@@ -38,11 +39,14 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Hideout
+  - Obstacles
   m_SortingLayers:
   - name: Chao
     uniqueID: 1749028061
+    locked: 0
+  - name: Parede
+    uniqueID: 3232105599
     locked: 0
   - name: Default
     uniqueID: 0
