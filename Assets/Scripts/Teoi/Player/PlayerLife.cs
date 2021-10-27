@@ -11,7 +11,7 @@ public class PlayerLife : MonoBehaviour
     void Start()
     {
         healthManager = FindObjectOfType<HealthManager>();
-        SetHeathmanagerStatus();
+        GetHealthmanagerLife();
     }
 
     void Update()
@@ -28,7 +28,7 @@ public class PlayerLife : MonoBehaviour
     }
 
     // Set the life bar with the current status of the life manager
-    private void SetHeathmanagerStatus()
+    private void GetHealthmanagerLife()
     {
         lifeSlider.maxValue = healthManager.maxLife;
         lifeSlider.value = healthManager.currentLife;
@@ -78,16 +78,6 @@ public class PlayerLife : MonoBehaviour
     private bool isLifeEnded()
     {
         if (healthManager.currentLife <= 0)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    // Test if the player get Sanity to zero (died or got crazy, we don't know yet)
-    private bool isSanityEnded()
-    {
-        if (healthManager.currentSanity <= 0)
         {
             return true;
         }
