@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+<<<<<<< Updated upstream
+=======
+  - Hideout
+  - Sound
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -39,15 +44,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Chao
-    uniqueID: 1749028061
-    locked: 0
-  - name: Parede
-    uniqueID: 3232105599
+  - name: Background
+    uniqueID: 3470365521
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: UI
-    uniqueID: 3731960969
+    uniqueID: 2595394277
     locked: 0
