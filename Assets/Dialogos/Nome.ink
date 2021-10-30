@@ -16,7 +16,7 @@ VAR nomeAtual = ""
         -> Escolhas
         
     + Não  #sprite:jogador #falante:nomeJogador
-        Ok, {nomeAtual}! #sprite:veio #falante:Senhor
+        Ok, <color="red">{nomeAtual}</color>! #sprite:veio #falante:Senhor
     -> END
 }
 
