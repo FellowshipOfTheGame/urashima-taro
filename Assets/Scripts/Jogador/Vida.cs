@@ -35,7 +35,7 @@ public class Vida : MonoBehaviour
         barraScript.DefinirVida(vidaAtual);
     }
 
-    void Dano(int _dano)
+    public void Dano(int _dano)
     {
         vidaAtual = Mathf.Clamp(vidaAtual-_dano, 0, vidaMax);
 
