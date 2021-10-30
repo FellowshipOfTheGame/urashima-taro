@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// TODO: Mudar shoot e reload do ChangeWeapons.cs para Shooting.cs
+
 public class Shooting : MonoBehaviour
 {
     [SerializeField] bool melee;

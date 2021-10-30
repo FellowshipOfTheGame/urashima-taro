@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class NewInput : MonoBehaviour
 {
+    public PlayerInput pInput;
+
     [SerializeField] float velocidadeMovimento;
 
     [SerializeField] SpriteRenderer sprite;
@@ -38,16 +40,16 @@ public class NewInput : MonoBehaviour
         {
             raioSom.radius = 6f;
         }
+
+        
     }
 
     private void FixedUpdate()
     {
-        if (isRunning)
-            rb.MovePosition(rb.position + 2 * Time.fixedDeltaTime * velocidadeMovimento * movimento);
-        else
-            rb.MovePosition(rb.position + Time.fixedDeltaTime * velocidadeMovimento * movimento);
-
-        rb.rotation = angulo;
+        Rotation();
+        Move();
+        Run();
+        Flashlight();
 
         if ((angulo >= 0 && angulo < 22.5f) || (angulo <= 0 && angulo > -22.5f))
         {
@@ -83,39 +85,40 @@ public class NewInput : MonoBehaviour
         }
     }
 
-    public void OnRotation(InputValue input)
+    public void Rotation()
     {
-        Vector2 inputVec = input.Get<Vector2>();
+        Vector2 inputVec = InputManager.GetInstance().GetRotation();
 
-        mousePos = cam.ScreenToWorldPoint(inputVec);
-
-        Vector2 direcao = mousePos - rb.position;
-        angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg - 90f;
-    }
-
-    public void OnRotationGamepad(InputValue input)
-    {
-        Vector2 inputVec = input.Get<Vector2>();
-
+        if (InputManager.GetInstance().GetDevice() == "Mouse")
+        {
+            mousePos = cam.ScreenToWorldPoint(inputVec);
+            inputVec = mousePos - rb.position;
+        }
 
         angulo = Mathf.Atan2(inputVec.y, inputVec.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angulo;
     }
 
-    public void OnMove(InputValue input)
+    public void Move()
     {
-        Vector2 inputVec = input.Get<Vector2>();
+        Vector2 inputVec = InputManager.GetInstance().GetMoveDirection();
 
         movimento = new Vector2(inputVec.x, inputVec.y);
+
+        if (isRunning)
+            rb.MovePosition(rb.position + 2 * Time.fixedDeltaTime * velocidadeMovimento * movimento);
+        else
+            rb.MovePosition(rb.position + Time.fixedDeltaTime * velocidadeMovimento * movimento);
     }
 
-    public void OnRun()
+    public void Run()
     {
-        isRunning = !isRunning;
+        isRunning = InputManager.GetInstance().GetRunPressed();
     }
 
-    public void OnFlashlight()
+    public void Flashlight()
     {
-        isLanternaOn = !isLanternaOn;
+        isLanternaOn = InputManager.GetInstance().GetLanternaPressed();
 
         lanterna.SetActive(isLanternaOn);
     }
