@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// TODO: Mudar shoot e reload do ChangeWeapons.cs para Shooting.cs
+
 public class ChangeWeapons : MonoBehaviour
 {
     [SerializeField] GameObject[] armas;
@@ -50,14 +52,20 @@ public class ChangeWeapons : MonoBehaviour
             tempoMenu -= Time.deltaTime;
         }
 
+        SelecionarArma();
+        ChangeWeapon();
         LigarMenu();
+        Shoot();
+        Reload();
     }
 
-    public void OnChangeWeapon(InputValue input)
+    public void ChangeWeapon()
     {
-        if (!allNull)
+        if (!allNull && InputManager.GetInstance().GetTrocaVector())
         {
-            Vector2 inputVec = input.Get<Vector2>();
+            Vector2 inputVec = InputManager.GetInstance().GetChangeWeapon();
+
+            Debug.Log("asas");
 
             armas[armaAtual].SetActive(false);
             ResetColor(armaAtual);
@@ -87,71 +95,38 @@ public class ChangeWeapons : MonoBehaviour
                 }
             }
 
+            
             AtivarArma();
         }
     }
 
-    public void OnShoot()
+    public void Shoot()
     {
-        if(!allNull)
+        if(!allNull && InputManager.GetInstance().GetShootPressed())
             shootingScript.Atirar();
     }
 
-    public void OnReload()
+    public void Reload()
     {
-        if (!allNull)
+        if (!allNull && InputManager.GetInstance().GetReloadPressed())
             shootingScript.Reload();
     }
 
-    public void OnArma1()
+    public void SelecionarArma()
     {
-        if(armas[0] != null)
+        if (InputManager.GetInstance().GetTroca())
         {
-            armas[armaAtual].SetActive(false);
-            ResetColor(armaAtual);
+            int index = InputManager.GetInstance().GetArma();
 
-            armaAtual = 0;
+            if (armas[index] != null)
+            {
+                armas[armaAtual].SetActive(false);
+                ResetColor(armaAtual);
 
-            AtivarArma();
-        }
-    }
+                armaAtual = index;
 
-    public void OnArma2()
-    {
-        if (armas[1] != null)
-        {
-            armas[armaAtual].SetActive(false);
-            ResetColor(armaAtual);
-
-            armaAtual = 1;
-
-            AtivarArma();
-        }
-    }
-
-    public void OnArma3()
-    {
-        if (armas[2] != null)
-        {
-            armas[armaAtual].SetActive(false);
-            ResetColor(armaAtual);
-
-            armaAtual = 2;
-
-            AtivarArma();
-        }
-    }
-
-    public void OnArma4()
-    {
-        if (armas[3] != null)
-        {
-            armas[armaAtual].SetActive(false);
-            ResetColor(armaAtual);
-
-            armaAtual = 3;
-
-            AtivarArma();
+                AtivarArma();
+            }
         }
     }
 
