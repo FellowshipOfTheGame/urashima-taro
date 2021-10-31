@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 330933970134143853}
   m_Layer: 0
   m_Name: Som
-  m_TagString: Untagged
+  m_TagString: Sound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -600,7 +600,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
   m_ShapePathHash: 2105375973
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1354
+  m_InstanceId: 37392
 --- !u!50 &330933970345463194
 Rigidbody2D:
   serializedVersion: 4
