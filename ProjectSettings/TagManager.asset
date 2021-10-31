@@ -7,7 +7,7 @@ TagManager:
   - Enemy
   - Hideout
   - Sound
-
+=======
   layers:
   - Default
   - TransparentFX
@@ -42,15 +42,12 @@ TagManager:
   - Hideout
   - Obstacles
   m_SortingLayers:
-  - name: Chao
-    uniqueID: 1749028061
-    locked: 0
-  - name: Parede
-    uniqueID: 3232105599
+  - name: Background
+    uniqueID: 2268092051
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: UI
-    uniqueID: 3731960969
+    uniqueID: 1453677147
     locked: 0
