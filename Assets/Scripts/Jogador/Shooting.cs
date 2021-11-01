@@ -23,7 +23,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] float forcaBala;
 
     [SerializeField] int tirosMax;
-    int tirosAtuais;
+    [HideInInspector] public int tirosAtuais;
 
     public bool podeAtirar = true;
 

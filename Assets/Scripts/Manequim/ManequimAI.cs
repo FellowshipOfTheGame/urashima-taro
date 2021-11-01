@@ -31,8 +31,7 @@ public class ManequimAI : MonoBehaviour
         if (sprite == null) Debug.Log("null");
         InvokeRepeating("PathUpdate", 0f, 0.5f);
         float repeatFrequency = speed / 5000.0f;
-        Debug.Log(repeatFrequency);
-        InvokeRepeating("DirectionUpdate", 0f, repeatFrequency);
+        InvokeRepeating("DirectionUpdate", 1f, repeatFrequency);
     }
 
 
