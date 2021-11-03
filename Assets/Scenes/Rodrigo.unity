@@ -6047,7 +6047,6 @@ MonoBehaviour:
   balaPrefab: {fileID: 8758049487362895966, guid: 9dca0583379646f4e9b9af46bb24c0a2, type: 3}
   forcaBala: 20
   tirosMax: 6
-  tirosAtuais: 0
   podeAtirar: 1
   range: 0
   inimigo:
@@ -6121,7 +6120,6 @@ MonoBehaviour:
   balaPrefab: {fileID: 0}
   forcaBala: 0
   tirosMax: 0
-  tirosAtuais: 0
   podeAtirar: 1
   range: 0.7
   inimigo:
@@ -6768,7 +6766,6 @@ GameObject:
   - component: {fileID: 8913159229826328332}
   - component: {fileID: 8913159229826328333}
   - component: {fileID: 8913159229826328330}
-  - component: {fileID: 8913159229826328339}
   - component: {fileID: 8913159229826328341}
   m_Layer: 0
   m_Name: Jogador 1
@@ -6777,22 +6774,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &8913159229826328339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8913159229826328338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0306a4083218ebf489a74593ddb548ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vidaAtual: 0
-  position: []
-  tirosAtuais: 0
-  shootSc: {fileID: 8913159228615908570}
 --- !u!114 &8913159229826328341
 MonoBehaviour:
   m_ObjectHideFlags: 0
