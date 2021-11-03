@@ -43,11 +43,7 @@ TagManager:
   - Obstacles
   m_SortingLayers:
   - name: Background
-<<<<<<< Updated upstream
-    uniqueID: 2268092051
-=======
     uniqueID: 276150625
->>>>>>> Stashed changes
     locked: 0
   - name: Default
     uniqueID: 0
