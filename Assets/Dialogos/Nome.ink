@@ -11,13 +11,13 @@ VAR nomeAtual = ""
   - else:
     Insatisfeito com seu nome?
     
+    + Não  #sprite:jogador #falante:nomeJogador
+        Ok, <color="red">{nomeAtual}</color>! #sprite:veio #falante:Senhor
+            -> END
+    
     + Sim #sprite:jogador #falante:nomeJogador
         Escolha um novo nome #sprite:veio #falante:Senhor
         -> Escolhas
-        
-    + Não  #sprite:jogador #falante:nomeJogador
-        Ok, <color="red">{nomeAtual}</color>! #sprite:veio #falante:Senhor
-    -> END
 }
 
 == Escolhas ==
