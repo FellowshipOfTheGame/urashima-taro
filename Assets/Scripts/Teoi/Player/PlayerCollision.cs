@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    private bool isHidden;
+    public bool isHidden;
     // Start is called before the first frame update
     void Start()
     {

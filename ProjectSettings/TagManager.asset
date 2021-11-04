@@ -7,7 +7,8 @@ TagManager:
   - Enemy
   - Hideout
   - Sound
-=======
+  - porta
+  - chave
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,13 @@ TagManager:
   - 
   - Water
   - UI
-  - Inimigo
+  - Player
+  - Enemy
+  - Obstacle
+  - PlayerAttack
+  - EnemyAttack
+  - Sound
+  - Light
   - 
   - 
   - 
@@ -35,19 +42,25 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - Hideout
-  - Obstacles
   m_SortingLayers:
   - name: Background
     uniqueID: 276150625
     locked: 0
+  - name: Outline
+    uniqueID: 906333153
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Obstacle
+    uniqueID: 263426399
+    locked: 0
+  - name: Enemy
+    uniqueID: 1636835585
+    locked: 0
+  - name: Player
+    uniqueID: 3907780183
+    locked: 0
   - name: UI
-    uniqueID: 1453677147
+    uniqueID: 3016357515
     locked: 0

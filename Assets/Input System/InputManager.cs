@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
     private bool lanterna = false;
     private bool shoot = false;
     private bool reload = false;
+    private bool interagir = false;
     private int arma;
     private bool trocaArma = false;
     private bool trocaArmaVector = false;
@@ -142,6 +143,7 @@ public class InputManager : MonoBehaviour
         trocaArma = true;
         arma = 1;
     }
+
     public void OnArma3(InputAction.CallbackContext context)
     {
         trocaArma = true;
@@ -152,6 +154,12 @@ public class InputManager : MonoBehaviour
     {
         trocaArma = true;
         arma = 3;
+    }
+
+    public void OnInteragir(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            interagir = true;
     }
 
     public string GetDevice()
@@ -217,6 +225,13 @@ public class InputManager : MonoBehaviour
     public int GetArma()
     {
         return arma;
+    }
+
+    public bool GetInteragir()
+    {
+        bool result = interagir;
+        interagir = false;
+        return result;
     }
 
     //
