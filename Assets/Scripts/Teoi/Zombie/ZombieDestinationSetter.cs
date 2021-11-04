@@ -20,7 +20,7 @@ namespace Pathfinding
 	{
 		/// <summary>The object that the AI should move to</summary>
 		//private Transform target;
-		private bool isPlayerLocation = false;
+		//private bool isPlayerLocation = false;
 		private PlayerCollision playerCollision;
 		IAstarAI ai;
 
