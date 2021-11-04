@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Hideout
   - Sound
+  - porta
+  - chave
   layers:
   - Default
   - TransparentFX
@@ -41,6 +43,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 276150625
+    locked: 0
+  - name: Outline
+    uniqueID: 906333153
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
