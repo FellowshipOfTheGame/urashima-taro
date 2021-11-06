@@ -44,9 +44,9 @@ public class CacarMoverLimitar : MonoBehaviour
     IEnumerator Ataque()
     {
         yield return new WaitForSecondsRealtime(tempoSec);
-        fantasma.transform.position = Vector3.MoveTowards(fantasma.transform.position, jogador.transform.position, velocidadeDeAtaque);
+        fantasma.transform.position = Vector3.MoveTowards(fantasma.transform.position, jogador.transform.position, Time.fixedDeltaTime * velocidadeDeAtaque);
     }
-
+    
     void movefantasma()
     {
         direcao = Random.Range(1f, 50000f);
@@ -76,7 +76,7 @@ public class CacarMoverLimitar : MonoBehaviour
                 }
             }
         }
-        transform.Translate(fantasma_V * velocidade * Time.deltaTime);
+        transform.Translate(fantasma_V * Time.fixedDeltaTime * velocidade);
     }
 
     void limiteMovimento()
@@ -85,7 +85,7 @@ public class CacarMoverLimitar : MonoBehaviour
         if (transform.position.x >= comprimento)
         {
 
-            transform.position = new Vector3(transform.position.x - retorno, transform.position.y, velocidadeRecuo);
+            transform.position = new Vector3(transform.position.x - retorno, transform.position.y, Time.fixedDeltaTime * velocidadeRecuo);
 
         }
         else
@@ -94,7 +94,7 @@ public class CacarMoverLimitar : MonoBehaviour
             if (transform.position.x <= -comprimento)
             {
 
-                transform.position = new Vector3(transform.position.x + retorno, transform.position.y, velocidadeRecuo);
+                transform.position = new Vector3(transform.position.x + retorno, transform.position.y, Time.fixedDeltaTime * velocidadeRecuo);
 
             }
             else
@@ -103,7 +103,7 @@ public class CacarMoverLimitar : MonoBehaviour
                 if (transform.position.y >= altura)
                 {
 
-                    transform.position = new Vector3(transform.position.x, transform.position.y - retorno, velocidadeRecuo);
+                    transform.position = new Vector3(transform.position.x, transform.position.y - retorno, Time.fixedDeltaTime * velocidadeRecuo);
 
                 }
                 else
@@ -112,7 +112,7 @@ public class CacarMoverLimitar : MonoBehaviour
                     if (transform.position.y <= -altura)
                     {
 
-                        transform.position = new Vector3(transform.position.x, transform.position.y + retorno, velocidadeRecuo);
+                        transform.position = new Vector3(transform.position.x, transform.position.y + retorno, Time.fixedDeltaTime * velocidadeRecuo);
 
                     }
 

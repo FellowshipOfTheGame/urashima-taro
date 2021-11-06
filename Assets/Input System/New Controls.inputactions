@@ -606,6 +606,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "419c0616-2a55-407e-b05d-95847adf4e37",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AvancarDialogo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "Analogico",
                     "id": "b22a9d4e-71c4-4e53-a86f-3f2be983c296",
                     "path": "2DVector",
