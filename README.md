@@ -11,7 +11,7 @@ Foi implementada a lógica de comportamento do No Player Fantasma, a qual possui
 <ol>
 <li>O Fantasma se move pelo ambiente de jogo.</li>
 <li>O movimento do fantasma é limitado pelo ambiente de jogo.</li>
-<li>Fantasma não passa através dos sólidos. </li>
+<li>Fantasma passa através dos sólidos. </li>
 <li>Se Fantasma se encontra a uma certa distância do Player, o fantasma para o movimento por um intervalo de tempo de 2 segundos e depois inicia um ataque indo
 em direção ao Player.</li>
 <li>Fantasma ataca o Player mesmo não tendo uma linha de visão limpa.
