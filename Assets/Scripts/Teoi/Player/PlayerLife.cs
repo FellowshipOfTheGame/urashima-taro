@@ -57,7 +57,7 @@ public class PlayerLife : MonoBehaviour
         if (updatedLife <= 0)
         {
             // CALL FUNCION OF DEATH OF THE PLAYER BY LIFE
-            Debug.Log("PLAYER DIED");
+            Debug.Log("PLAYER DIED FROM LIFE");
             healthManager.currentLife = 0;
             lifeSlider.value = 0;
         }

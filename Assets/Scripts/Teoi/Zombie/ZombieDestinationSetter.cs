@@ -65,7 +65,6 @@ namespace Pathfinding
 					if (playerLocation.position != null && ai != null) ai.destination = playerLocation.position;
 					break;
 			}
-
 		}
 	}
 }

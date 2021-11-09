@@ -55,14 +55,14 @@ public class PlayerSanity : MonoBehaviour
         if (updatedSanity <= 0)
         {
             // CALL FUNCION OF DEATH OF THE PLAYER BY LIFE
-            Debug.Log("PLAYER DIED");
+            Debug.Log("PLAYER DIED BY SANITY");
             healthManager.currentSanity = 0;
             sanitySlider.value = 0;
         }
         // Test if the current sanity exceded the maximum sanity value
         else if (updatedSanity > sanitySlider.maxValue)
         {
-            Debug.Log("PLAYER MAX HEALTH");
+            Debug.Log("PLAYER MAX SANITY");
             this.SetMaxSanity();
         }
         else
