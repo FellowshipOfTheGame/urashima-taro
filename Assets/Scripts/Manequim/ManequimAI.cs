@@ -7,7 +7,7 @@ public class ManequimAI : MonoBehaviour
 {
     //variaveis public
     [Header("Move Parameters")] public float chaseSpeed;
-    [Header("Move Parameters")] public float backSpeed;
+    public float backSpeed;
 
     [Header("Attack Parameters")] public float attackRange;
 
@@ -51,7 +51,7 @@ public class ManequimAI : MonoBehaviour
         firstPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
         InvokeRepeating("PathUpdate", 0f, 0.5f);
-        float repeatFrequency = chaseSpeed / 5000.0f;
+        float repeatFrequency = chaseSpeed / 1000;
         InvokeRepeating("DirectionUpdate", 1f, repeatFrequency);
     }
 
@@ -66,6 +66,7 @@ public class ManequimAI : MonoBehaviour
         }
     }
 
+
     //calcula a direcao do manequim
     private void DirectionUpdate()
     {
@@ -76,32 +77,18 @@ public class ManequimAI : MonoBehaviour
             float yAngle = Vector2.Angle(direction, new Vector2(0, 100000));
             Vector2 velocity2 = new Vector2(0, 0);
 
-            //decide a direcao entre os 8 direcoes(falta animacao) 
-            if (xAngle < 22.5f)
+            //decide a direcao entre os 4 direcoes(falta animacao) 
+            if (xAngle < 45f)
             {
                 //direita
                 velocity2 = new Vector2(1, 0);
             }
-            else if (xAngle < 67.5f)
-            {
-                //direita superior
-                if (yAngle < 90) velocity2 = new Vector2(1, 1);
-                //direita inferior
-                else velocity2 = new Vector2(1, -1);
-            }
-            else if (xAngle < 112.5f)
+            else if (xAngle < 135f)
             {
                 //cima
                 if (yAngle < 90) velocity2 = new Vector2(0, 1);
                 //baixo
                 else velocity2 = new Vector2(0, -1);
-            }
-            else if (xAngle < 157.5f)
-            {
-                //esquerda superior
-                if (yAngle < 90) velocity2 = new Vector2(-1, 1);
-                //esqruerda inferior
-                else velocity2 = new Vector2(-1, -1);
             }
             else
             {
@@ -153,7 +140,6 @@ public class ManequimAI : MonoBehaviour
                 MoveManequim();
             }
         }
-        Debug.Log(InputManager.GetInstance().GetInteragir());
         //comeca a voltar para local original
         if (playerCollision.IsHidden() && isActive)
         {
@@ -171,6 +157,7 @@ public class ManequimAI : MonoBehaviour
         //reseta o isHear todas as vezes
         if (isHear) isHear = false;
     }
+
 
 
     //funcoes para ir para o player
