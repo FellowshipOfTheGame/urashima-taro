@@ -6483,7 +6483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8674780749620639258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.56, y: -0.5, z: 0}
+  m_LocalPosition: {x: -6.17, y: -3.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8674780748129055623}
@@ -6534,7 +6534,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseSpeed: 250
   backSpeed: 150
-  x: 1000
   attackRange: 1.2
   isFirstStopOn: 1
 --- !u!1 &8751398514975607220

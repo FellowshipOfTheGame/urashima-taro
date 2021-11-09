@@ -37,6 +37,8 @@ public class ManequimAI : MonoBehaviour
     bool isStop = false;
     bool isHear = false;
     bool isBack = false;
+    bool isWaiting = false;
+    float waitTime = 0.0f;
 
 
     void Start()
@@ -140,10 +142,16 @@ public class ManequimAI : MonoBehaviour
                 MoveManequim();
             }
         }
-        //comeca a voltar para local original
+        //comeca a voltar para local original(depois de esperar um pouco o Player)
         if (playerCollision.IsHidden() && isActive)
         {
             StartBack();
+        }
+        
+        //enquanto espera o player escondido
+        if(isWaiting)
+        {
+            WaitPlayer();
         }
 
         //enquanto volta
@@ -180,7 +188,6 @@ public class ManequimAI : MonoBehaviour
             isStop = false;
             sprite.color = new Color(1, 0, 0, 1);
         }
-
     }
 
     private IEnumerator FirstStop()
@@ -255,22 +262,35 @@ public class ManequimAI : MonoBehaviour
     #region//StartBack
     private void StartBack()
     {
-        StopMove();
-
         sprite.color = new Color(1, 0.5f, 0, 1);
-        speed = backSpeed;
 
-        StartCoroutine(WaitPlayer());
-
-        isBack = true;
-       
+        isWaiting = true;
+        isStop = true;
     }
 
-    private IEnumerator WaitPlayer()
+    private void WaitPlayer()
     {
-        yield return new WaitForSeconds(3f);
-        isStop = false;
-        sprite.color = new Color(0, 0.5f, 1, 1);
+        if (!playerCollision.IsHidden())
+        {
+            waitTime = 0;
+            isWaiting = false;
+            isStop = false;
+            sprite.color = new Color(1, 0, 0, 1);
+        }
+
+        if (waitTime >= 3f)
+        {
+            waitTime = 0;
+            isWaiting = false;
+            StopMove();
+            isStop = false;
+            isBack = true;
+            PathUpdate();
+            speed = backSpeed;
+            sprite.color = new Color(0, 0.5f, 1, 1);
+        }
+
+        waitTime += Time.deltaTime;
     }
     #endregion
 
