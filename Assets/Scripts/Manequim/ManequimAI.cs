@@ -5,47 +5,65 @@ using Pathfinding;
 
 public class ManequimAI : MonoBehaviour
 {
-    public Transform target;
-
-    [Header("Move Parameters")] public float speed;
+    //variaveis public
+    [Header("Move Parameters")] public float chaseSpeed;
+    [Header("Move Parameters")] public float backSpeed;
 
     [Header("Attack Parameters")] public float attackRange;
 
     [Header("Settings")] public bool isFirstStopOn;
     
-    Path path;
-    int currentWayPoint = 0;
-    bool reachedEndOfPath = false;
-
+   
+    //componentes do manequim
     Seeker seeker;
     Rigidbody2D rb;
     SpriteRenderer sprite;
+    Vector3 firstPos;
 
-    float nextWayPointDistance = 0.5f;
+    //static
+    static float nextWayPointDistance = 0.5f;
+
+    //componentes de fora
+    private GameObject player;
+    private PlayerCollision playerCollision;
+
+    //variaveis qualquer
+    Path path;
+    Vector3 velocity;
+    int currentWayPoint = 0;
+    bool reachedEndOfPath = false;
+    float speed;
+    bool isActive = false;
+    bool isStop = false;
+    bool isHear = false;
+    bool isBack = false;
+
 
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-        if (sprite == null) Debug.Log("null");
+
+        player = GameObject.FindWithTag("Player");
+        playerCollision = player.GetComponent<PlayerCollision>();
+
+        firstPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
         InvokeRepeating("PathUpdate", 0f, 0.5f);
-        float repeatFrequency = speed / 5000.0f;
+        float repeatFrequency = chaseSpeed / 5000.0f;
         InvokeRepeating("DirectionUpdate", 1f, repeatFrequency);
     }
 
-
-
-    Vector3 velocity;
 
     //calcula o caminho do manequim
     private void PathUpdate()
     {
         if (seeker.IsDone() || reachedEndOfPath)
         {
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            if(isBack) seeker.StartPath(rb.position, firstPos, OnPathComplete); 
+            else seeker.StartPath(rb.position, player.transform.position, OnPathComplete);
         }
-
     }
 
     //calcula a direcao do manequim
@@ -111,20 +129,20 @@ public class ManequimAI : MonoBehaviour
 
 
 
-    bool isActive = false;
-    bool isStop = false;
-    bool isHear = false;
+    
 
     void FixedUpdate()
     {
+        //comeca perseguir o player
         if (isHear && !isActive)
         {
             StartMove();
         }
 
+        //enquanto persegue o player
         if (isActive && !isStop)
         {
-            float playerDistance = ((Vector2)target.transform.position - (Vector2)this.transform.position).magnitude;
+            float playerDistance = ((Vector2)player.transform.position - (Vector2)this.transform.position).magnitude;
             if (playerDistance < attackRange)
             {
                 ReachPlayer();
@@ -135,24 +153,35 @@ public class ManequimAI : MonoBehaviour
                 MoveManequim();
             }
         }
+        Debug.Log(InputManager.GetInstance().GetInteragir());
+        //comeca a voltar para local original
+        if (playerCollision.IsHidden() && isActive)
+        {
+            StartBack();
+        }
 
-        //mouse representa o player esconder
-        /* if (Input.GetKey(KeyCode.Mouse1) && isActive)
-         {
-             StopMove();
-         }*/
+        //enquanto volta
+        if (isBack && !isStop)
+        {
+            MoveManequim();
 
+            if (reachedEndOfPath) StopBack();
+        }
 
+        //reseta o isHear todas as vezes
         if (isHear) isHear = false;
     }
 
 
+    //funcoes para ir para o player
     #region //Start Move
     private void StartMove()
     {
         sprite.color = new Color(0, 1, 0, 1);
         isActive = true;
         isStop = true;
+        isBack = false;
+        speed = chaseSpeed;
         if (isFirstStopOn)
         {
             StartCoroutine(FirstStop());
@@ -224,7 +253,7 @@ public class ManequimAI : MonoBehaviour
     }
     #endregion
 
-    #region // Stop Move
+    #region //Stop Move
     void StopMove()
     {
         isActive = false;
@@ -234,6 +263,42 @@ public class ManequimAI : MonoBehaviour
     }
     #endregion
 
+
+    //funcoes para voltar
+    #region//StartBack
+    private void StartBack()
+    {
+        StopMove();
+
+        sprite.color = new Color(1, 0.5f, 0, 1);
+        speed = backSpeed;
+
+        StartCoroutine(WaitPlayer());
+
+        isBack = true;
+       
+    }
+
+    private IEnumerator WaitPlayer()
+    {
+        yield return new WaitForSeconds(3f);
+        isStop = false;
+        sprite.color = new Color(0, 0.5f, 1, 1);
+    }
+    #endregion
+
+    #region//StopBack
+    private void StopBack()
+    {
+        isBack = false;
+        isStop = true;
+        //faz animacao
+        sprite.color = new Color(1, 1, 1, 1);
+    }
+    #endregion
+
+
+    //funcoes para detectar som
     #region //Som
     private void OnTriggerEnter2D(Collider2D collision)
     {
