@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class PlayerSanity : MonoBehaviour
 {
     public Slider sanitySlider;
-    private HealthManager healthManager;
+    public Gradient gradient;
+    public Image img;
 
+    private HealthManager healthManager;
     private Rect sliderRect;
     private float sliderInitialWidth;
 
@@ -66,6 +68,7 @@ public class PlayerSanity : MonoBehaviour
             healthManager.maxSanity = 0;
             healthManager.currentSanity = 0;
         }
+        img.color = gradient.Evaluate(sanitySlider.normalizedValue);
     }
 
     // Get the current max value and value of sanity from the health manager
@@ -73,6 +76,8 @@ public class PlayerSanity : MonoBehaviour
     {
         sanitySlider.maxValue = healthManager.maxSanity;
         sanitySlider.value = healthManager.currentSanity;
+
+        img.color = gradient.Evaluate(sanitySlider.normalizedValue);
     }
 
     // Set the current sanity with the max sanity
@@ -105,6 +110,7 @@ public class PlayerSanity : MonoBehaviour
             sanitySlider.value = updatedSanity;
             healthManager.currentSanity = updatedSanity;
         }
+        img.color = gradient.Evaluate(sanitySlider.normalizedValue);
     }
 
     // Test if the player get Sanity to zero (died or got crazy, we don't know yet)

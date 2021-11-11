@@ -68,6 +68,8 @@ public class PlayerLife : MonoBehaviour
             healthManager.maxLife = 0;
             healthManager.currentLife = 0;
         }
+
+        fill.color = gradient.Evaluate(lifeSlider.normalizedValue);
     }
     
     // Set the current life with the max life
