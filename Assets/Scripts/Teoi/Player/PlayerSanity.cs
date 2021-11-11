@@ -8,9 +8,17 @@ public class PlayerSanity : MonoBehaviour
     public Slider sanitySlider;
     private HealthManager healthManager;
 
+    private Rect sliderRect;
+    private float sliderInitialWidth;
+
     void Start()
     {
         healthManager = FindObjectOfType<HealthManager>();
+
+        sliderRect = sanitySlider.fillRect.rect;
+        sliderInitialWidth = sliderRect.width;
+
+        //Debug.Log(initialSliderWidth);
         GetHealthmanagerSanity();
     }
 
@@ -20,20 +28,47 @@ public class PlayerSanity : MonoBehaviour
         // temp
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            this.UpdateCurrentSanity(-5);
+            this.UpdateCurrentSanity(-2);
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            this.UpdateCurrentSanity(5);
+            this.UpdateCurrentSanity(2);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            this.UpdateMaxSanity(-5);
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            this.UpdateMaxSanity(5);
         }
     }
+
     public void UpdateMaxSanity(int sanityAddiction)
     {
         int updatedMaxSanity = healthManager.maxSanity + sanityAddiction;
-        sanitySlider.maxValue = updatedMaxSanity;
-        healthManager.maxSanity = updatedMaxSanity;
+
+        if (updatedMaxSanity > 0)
+        {
+            sanitySlider.maxValue = updatedMaxSanity;
+            healthManager.maxSanity = updatedMaxSanity;
+
+            if (updatedMaxSanity < sanitySlider.value)
+            {
+                sanitySlider.value = updatedMaxSanity;
+                healthManager.currentSanity = updatedMaxSanity;
+            }
+        }
+        else
+        {
+            // Debug.Log("MAX SANITY IS ZERO, SO PLAYER IS DEAD BY SANITY");
+            sanitySlider.maxValue = 0;
+            healthManager.maxSanity = 0;
+            healthManager.currentSanity = 0;
+        }
     }
 
+    // Get the current max value and value of sanity from the health manager
     private void GetHealthmanagerSanity()
     {
         sanitySlider.maxValue = healthManager.maxSanity;
@@ -47,7 +82,7 @@ public class PlayerSanity : MonoBehaviour
         healthManager.currentSanity = healthManager.maxSanity;
     }
 
-    // Change current sanity (player bar and HeathManager) with adding (negative or positive) value in the current sanity
+    // Change current sanity (player bar and HealthManager) with adding (negative or positive) value in the current sanity
     public void UpdateCurrentSanity(int sanityAddition)
     {
         int updatedSanity = healthManager.currentSanity + sanityAddition;
