@@ -2493,9 +2493,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4777,7 +4777,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3061300337284236030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.58, y: -0.31, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3061300336222560323}
@@ -4819,8 +4819,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7b80f6fe090b434c8e3b9073f7cb112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2
-  angle: 58
+  radius: 5
+  delayToSearch: 1
+  angle: 53
   player: {fileID: 3632003928286448623}
   targetMask:
     serializedVersion: 2
@@ -5407,7 +5408,7 @@ GameObject:
   - component: {fileID: 3632003928286448634}
   - component: {fileID: 3632003928286448632}
   - component: {fileID: 3632003928286448622}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jogador 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5468,7 +5469,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.007636547, y: -0.005406916}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.60240555
 --- !u!114 &3632003928286448627

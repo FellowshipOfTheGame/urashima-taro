@@ -65,7 +65,7 @@ public class ChangeWeapons : MonoBehaviour
         {
             Vector2 inputVec = InputManager.GetInstance().GetChangeWeapon();
 
-            Debug.Log("asas");
+            //Debug.Log("asas");
 
             armas[armaAtual].SetActive(false);
             ResetColor(armaAtual);
