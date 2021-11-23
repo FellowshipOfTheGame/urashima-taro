@@ -238,8 +238,14 @@ public class InputManager : MonoBehaviour
     // ActionMap: Dialogo
     //
 
+    private Vector2 pointed;
     private bool avancarDialogo;
     private Vector2 moveDialogo;
+
+    public void OnPoint(InputAction.CallbackContext context)
+    {
+        pointed = context.ReadValue<Vector2>();
+    }
 
     public void OnClick(InputAction.CallbackContext context)
     {
@@ -256,6 +262,11 @@ public class InputManager : MonoBehaviour
     public void OnMoveDialogo(InputAction.CallbackContext context)
     {
         moveDialogo = context.ReadValue<Vector2>();
+    }
+
+    public Vector2 GetPoint()
+    {
+        return pointed;
     }
 
     public Vector2 GetMoveDialogo()

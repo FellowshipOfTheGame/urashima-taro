@@ -6,6 +6,7 @@ using Ink.Runtime;
 using TMPro;
 using UnityEngine.EventSystems;
 
+// TODO: Mudar selecao qndo usa o teclado em vez do mouse / tirar selecao qndo usa o mouse
 // TODO: Quando muda o controle no meio de uma selecao de dialogo, o controle novo nao funciona para aquela selecao
 // TODO: Botoes estao na ordem invertida. Ex: o botao 0 eh o botao de baixo. Por isso, eh necessario escrever as escolhas no ink de forma invertida.
 
