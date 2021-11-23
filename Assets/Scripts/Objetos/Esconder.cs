@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Esconder : MonoBehaviour
+public class Esconder : Interactable
 {
     // semi pseudo codigo para qndo o inimigo ve o player se esconder
     /*
@@ -28,72 +28,57 @@ public class Esconder : MonoBehaviour
 
     GameObject jogador;
 
-    public bool isHidden;
-    bool inRange;
+    public bool isHidden = false;
 
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        MoverPlayer();
+        // Trocar para nome do gameobject do jogador
+        jogador = GameObject.FindGameObjectWithTag("Player");
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public override string Descricao()
     {
+        if (!isHidden)
+            return "Pressione E para se esconder";
 
-        // sistema temporario ate completar o sistema de interacao
-        if(collision.gameObject.CompareTag("Player"))
+        return "Pressione E para sair do esconderijo";
+    }
+
+    public override void Acender()
+    {
+        outline.SetActive(true);
+    }
+
+    public override void Apagar()
+    {
+        outline.SetActive(false);
+    }
+
+    public override void Interagir()
+    {
+        if (!isHidden)
         {
-            inRange = true;
+            // tocar animacao entrada
 
-            jogador = collision.gameObject;
+            isHidden = true;
 
-            outline.SetActive(true);
+            jogador.transform.position = transform.position;
+
+            jogador.GetComponent<PlayerCollision>().isHidden = true;
+
+            jogador.SetActive(false);
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player") && !isHidden)
+        else if (isHidden)
         {
-            inRange = false;
+            // tocar animacao saida
 
-            outline.SetActive(false);
-        }
-    }
+            jogador.SetActive(true);
 
-    private void MoverPlayer()
-    {
-        if (inRange)
-        {
-            if (!isHidden && InputManager.GetInstance().GetInteragir())
-            {
-                // tocar animacao entrada
+            jogador.GetComponent<PlayerCollision>().isHidden = false;
 
-                outline.SetActive(false);
+            jogador.gameObject.transform.position = pontoAbertura.position;
 
-                isHidden = true;
-
-                jogador.transform.position = gameObject.transform.position;
-
-                jogador.GetComponent<PlayerCollision>().isHidden = true;
-
-                jogador.SetActive(false);
-            }
-            else if (isHidden && InputManager.GetInstance().GetInteragir())
-            {
-                // tocar animacao saida
-
-                outline.SetActive(true);
-
-                jogador.SetActive(true);
-
-                jogador.GetComponent<PlayerCollision>().isHidden = false;
-
-                jogador.gameObject.transform.position = pontoAbertura.position;
-
-                isHidden = false;
-            }
+            isHidden = false;
         }
     }
 }
