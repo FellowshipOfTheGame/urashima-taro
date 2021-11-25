@@ -64,6 +64,15 @@ public class Esconder : Interactable
 
             jogador.transform.position = transform.position;
 
+            // Suposto lugar para testar se o zumbi esta vendo o jogador se esconder aqui(seta o 'viuSeEsconder' do pseudocodigo lah)
+            /* if (zombieView.canSeePlayer)
+                * {
+                *      jogador.GetComponent<PlayerCollision>().isHidden = false;
+                * }
+                * else
+                    jogador.GetComponent<PlayerCollision>().isHidden = true;
+            */
+
             jogador.GetComponent<PlayerCollision>().isHidden = true;
 
             jogador.SetActive(false);
@@ -71,7 +80,6 @@ public class Esconder : Interactable
         else if (isHidden)
         {
             // tocar animacao saida
-
             jogador.SetActive(true);
 
             jogador.GetComponent<PlayerCollision>().isHidden = false;
