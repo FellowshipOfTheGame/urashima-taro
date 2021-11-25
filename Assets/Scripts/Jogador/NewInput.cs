@@ -14,6 +14,7 @@ public class NewInput : MonoBehaviour
     [SerializeField] CircleCollider2D raioSom;
 
     [SerializeField] GameObject lanterna;
+    [SerializeField] Transform[] posicoesLanterna;
 
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Camera cam;
@@ -21,10 +22,19 @@ public class NewInput : MonoBehaviour
     bool isRunning = false;
     bool isLanternaOn = true;
 
+    private MousePosition mousePosition;
+    Animator anim;
+
     Vector2 movimento;
     Vector2 mousePos;
 
     float angulo;
+
+    private void Start()
+    {
+        mousePosition = GameObject.Find("MousePosReader").GetComponent<MousePosition>();
+        anim = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -46,12 +56,20 @@ public class NewInput : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Rotation();
+        angulo = mousePosition.angulo;
+        if(lanterna.activeSelf)
+        {
+            lanterna.transform.rotation = Quaternion.Euler(0, 0, angulo);
+        }
+        //rb.rotation = angulo;
+
+        Flip();
+        //Rotation();
         Move();
         Run();
         Flashlight();
 
-        if ((angulo >= 0 && angulo < 22.5f) || (angulo <= 0 && angulo > -22.5f))
+        /*if ((angulo >= 0 && angulo < 22.5f) || (angulo <= 0 && angulo > -22.5f))
         {
             sprite.color = new Color(1, 0, 0, 1);
         }
@@ -82,6 +100,40 @@ public class NewInput : MonoBehaviour
         else if (angulo >= 22.5f && angulo < 67.5f)
         {
             sprite.color = new Color(0.2f, 0.5f, 1, 1);
+        }*/
+    }
+
+    private void Flip()
+    {
+        //Debug.Log(angulo);
+
+        if ((angulo < 45 && angulo >= 0) || (angulo > -45 && angulo <= 0))
+        {
+            // cima
+            lanterna.transform.position = posicoesLanterna[0].position;
+            Debug.Log("cima");
+            anim.SetInteger("Direcao", 0);
+        }
+        else if (angulo <= -45 && angulo >= -135)
+        {
+            // direita
+            lanterna.transform.position = posicoesLanterna[1].position;
+            Debug.Log("direita");
+            anim.SetInteger("Direcao", 1);
+        }
+        else if (angulo < -135 && angulo > -225)
+        {
+            // baixo
+            lanterna.transform.position = posicoesLanterna[2].position;
+            Debug.Log("baixo");
+            anim.SetInteger("Direcao", 2);
+        }
+        else if ((angulo >= 45 && angulo <= 90) || (angulo >= -270 && angulo <= -225))
+        {
+            // esquerda
+            lanterna.transform.position = posicoesLanterna[3].position;
+            Debug.Log("esquerda");
+            anim.SetInteger("Direcao", 3);
         }
     }
 
@@ -102,6 +154,23 @@ public class NewInput : MonoBehaviour
     public void Move()
     {
         Vector2 inputVec = InputManager.GetInstance().GetMoveDirection();
+
+        if(inputVec.x != 0 || inputVec.y != 0)
+        {
+            if(isRunning)
+            {
+                //animacao corrida
+            }
+            else
+            {
+                anim.SetBool("Andando", true);
+            }
+        }
+        else
+        {
+            anim.SetBool("Andando", false);
+        }
+
 
         movimento = new Vector2(inputVec.x, inputVec.y);
 
