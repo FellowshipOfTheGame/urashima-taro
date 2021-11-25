@@ -17,8 +17,12 @@ public class ZombieFieldOfView : MonoBehaviour
 
     public bool canSeePlayer;
 
+    private NewInput newInput;
+
     void Start()
     {
+        newInput = FindObjectOfType<NewInput>();
+
         StartCoroutine(FOVRoutine());
     }
 
@@ -34,35 +38,54 @@ public class ZombieFieldOfView : MonoBehaviour
         }
     }
 
+    private float GetSlope(Vector3 point0, Vector3 point1)
+    {
+        return ( point0.y - point1.y ) / ( point0.x - point1.x );
+    }
+
     private void FieldOfViewCheck2D()
     {
+        //* ATTENTION: The Dev lost 4 hours (actually more) trying to debug this, and the reason that the Angle
+        //*            between the player and de zombie was not corrently setted was that another object was with the 'Player' layer.
+        //*            So to avoid this problem, the scene must have ONLY ONE object with the Layer 'Player'.
+
         // Get all the colliders inside the circle scribed by position, radius and order by targetMask
         Collider2D[] rangeChecks = Physics2D.OverlapCircleAll(transform.position, radius, targetMask);
         if (rangeChecks.Length != 0)
         {
-            // The first transform is the Player transform, because the targetMask is setted as the Player Layer
-            Transform target = rangeChecks[0].transform;
-
-            // Get the direction from the zombie to the player
-            Vector2 directionToTarget = (target.position - transform.position).normalized;
-
-            // Check if the angle between the line to the target and the line with angle/2 to this line takes the player position
-            if (Vector2.Angle(target.forward, directionToTarget) < angle / 2)
+            // Tests if the player is running inside the circle where the zombie can listen
+            if (newInput.isRunning)
             {
-                float distanceToTarget = Vector2.Distance(transform.position, target.position);
-
-                // check if the vision distance and if there is an obstruction between the player and the enemy
-                if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
-                {
-                    canSeePlayer = true;
-                }
-                else
-                {
-                    canSeePlayer = false;
-                }
+                canSeePlayer = true;
             }
             else
-                canSeePlayer = false;
+            {
+                // The first transform is the Player transform, because the targetMask is setted as the Player Layer
+                Transform target = rangeChecks[0].transform;
+
+                // Get the direction from the zombie to the player
+                Vector3 directionToTarget = (target.position - transform.position).normalized;
+
+                Debug.Log(Vector3.Angle(directionToTarget, transform.up));
+
+                // Check if the angle between the line to the target and the line with angle/2 to this line takes the player position
+                if (Vector3.Angle(directionToTarget, transform.up) < angle / 2)
+                {
+                    float distanceToTarget = Vector2.Distance(transform.position, target.position);
+
+                    // check if the vision distance and if there is an obstruction between the player and the enemy
+                    if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                    {
+                        canSeePlayer = true;
+                    }
+                    else
+                    {
+                        canSeePlayer = false;
+                    }
+                }
+                else
+                    canSeePlayer = false;
+            }
         }
         else if (canSeePlayer)
             canSeePlayer = false;
