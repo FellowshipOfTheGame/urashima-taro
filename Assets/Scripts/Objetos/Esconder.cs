@@ -75,9 +75,15 @@ public class Esconder : MonoBehaviour
                 isHidden = true;
 
                 jogador.transform.position = gameObject.transform.position;
-
+                // Testa se o zumbi esta vendo o jogador se esconder aqui(seta o 'viuSeEsconder' do pseudocodigo lah)
+                /* if (zombieView.canSeePlayer)
+                 * {
+                 *      jogador.GetComponent<PlayerCollision>().isHidden = false;
+                 * }
+                 * else
+                        jogador.GetComponent<PlayerCollision>().isHidden = true;
+                */
                 jogador.GetComponent<PlayerCollision>().isHidden = true;
-
                 jogador.SetActive(false);
             }
             else if (isHidden && InputManager.GetInstance().GetInteragir())

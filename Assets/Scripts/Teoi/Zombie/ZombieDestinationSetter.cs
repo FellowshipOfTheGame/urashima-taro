@@ -19,8 +19,6 @@ namespace Pathfinding
 	public class ZombieDestinationSetter : VersionedMonoBehaviour 
 	{
 		/// <summary>The object that the AI should move to</summary>
-		//private Transform target;
-		//private bool isPlayerLocation = false;
 		private PlayerCollision playerCollision;
 		IAstarAI ai;
 
@@ -28,11 +26,17 @@ namespace Pathfinding
 		public Transform defaultLocation;
 		// The position of the player
 		public Transform playerLocation;
+		// To check if the zombie is seing the player
+		private ZombieFieldOfView zombieView;
 
-        private void Start()
+		private bool joinHoldRoutine;
+
+		private void Start()
         {
 			// Receive the script attached with the Player object, used to return variables related to collision
 			playerCollision = GameObject.FindWithTag("Player").GetComponent<PlayerCollision>();
+			zombieView = GetComponent<ZombieFieldOfView>();
+			joinHoldRoutine = false;
         }
 
         void OnEnable () 
@@ -55,15 +59,43 @@ namespace Pathfinding
 		{
 			// Tests if the player is in a hideout place
 			// The zombie run for the default location if the player is hidden, if not he pursues the player
-			switch(playerCollision.IsHidden())
-            {
-				case true:
-					if (defaultLocation != null && ai != null) ai.destination = defaultLocation.position;
-					break;
+			// Also tests if the zombie can see the player through the field of view
 
-				case false:
-					if (playerLocation.position != null && ai != null) ai.destination = playerLocation.position;
-					break;
+			if (defaultLocation != null && ai != null && playerLocation.position != null)
+			{
+				switch (playerCollision.IsHidden())
+				{
+					case true:
+						ai.destination = defaultLocation.position;
+						break;
+
+					case false:
+						if (zombieView.canSeePlayer)
+						{
+							ai.destination = playerLocation.position;
+						}
+						else
+						{
+							HoldSeekRoutine(5f);
+						}
+						break;
+				}
+			}
+		}
+
+		private IEnumerator HoldSeekRoutine(float time)
+        {
+			if (!joinHoldRoutine)
+			{
+				ai.destination = this.transform.position;
+				joinHoldRoutine = true;
+				WaitForSeconds wait = new WaitForSeconds(time);
+				yield return wait;
+
+				if (!zombieView.canSeePlayer || playerCollision.IsHidden())
+				{
+					ai.destination = defaultLocation.position;
+				}
 			}
 		}
 	}

@@ -18,7 +18,7 @@ public class NewInput : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Camera cam;
 
-    bool isRunning = false;
+    [HideInInspector] public bool isRunning = false;
     bool isLanternaOn = true;
 
     Vector2 movimento;
