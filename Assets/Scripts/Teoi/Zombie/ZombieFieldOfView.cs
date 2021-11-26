@@ -52,40 +52,34 @@ public class ZombieFieldOfView : MonoBehaviour
         // Get all the colliders inside the circle scribed by position, radius and order by targetMask
         Collider2D[] rangeChecks = Physics2D.OverlapCircleAll(transform.position, radius, targetMask);
         if (rangeChecks.Length != 0)
-        {
-            // Tests if the player is running inside the circle where the zombie can listen
-            if (newInput.isRunning)
+        {            
+            // The first transform is the Player transform, because the targetMask is setted as the Player Layer
+            Transform target = rangeChecks[0].transform;
+
+            // Get the direction from the zombie to the player
+            Vector3 directionToTarget = (target.position - transform.position).normalized;
+
+            Debug.Log(Vector3.Angle(directionToTarget, transform.up));
+
+            // Check if the angle between the line to the target and the line with angle/2 to this line takes the player position
+            // Also Check if the player is running inside the circle where the zombie can listen
+            if (Vector3.Angle(directionToTarget, transform.up) < angle / 2 || newInput.isRunning)
             {
-                canSeePlayer = true;
-            }
-            else
-            {
-                // The first transform is the Player transform, because the targetMask is setted as the Player Layer
-                Transform target = rangeChecks[0].transform;
+                float distanceToTarget = Vector2.Distance(transform.position, target.position);
 
-                // Get the direction from the zombie to the player
-                Vector3 directionToTarget = (target.position - transform.position).normalized;
-
-                Debug.Log(Vector3.Angle(directionToTarget, transform.up));
-
-                // Check if the angle between the line to the target and the line with angle/2 to this line takes the player position
-                if (Vector3.Angle(directionToTarget, transform.up) < angle / 2)
+                // check if the vision distance and if there is an obstruction between the player and the enemy
+                if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
                 {
-                    float distanceToTarget = Vector2.Distance(transform.position, target.position);
-
-                    // check if the vision distance and if there is an obstruction between the player and the enemy
-                    if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
-                    {
-                        canSeePlayer = true;
-                    }
-                    else
-                    {
-                        canSeePlayer = false;
-                    }
+                    canSeePlayer = true;
                 }
                 else
+                {
                     canSeePlayer = false;
+                }
             }
+            else
+                canSeePlayer = false;
+            
         }
         else if (canSeePlayer)
             canSeePlayer = false;
