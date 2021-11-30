@@ -111,28 +111,24 @@ public class NewInput : MonoBehaviour
         {
             // cima
             lanterna.transform.position = posicoesLanterna[0].position;
-            Debug.Log("cima");
             anim.SetInteger("Direcao", 0);
         }
         else if (angulo <= -45 && angulo >= -135)
         {
             // direita
             lanterna.transform.position = posicoesLanterna[1].position;
-            Debug.Log("direita");
             anim.SetInteger("Direcao", 1);
         }
         else if (angulo < -135 && angulo > -225)
         {
             // baixo
             lanterna.transform.position = posicoesLanterna[2].position;
-            Debug.Log("baixo");
             anim.SetInteger("Direcao", 2);
         }
         else if ((angulo >= 45 && angulo <= 90) || (angulo >= -270 && angulo <= -225))
         {
             // esquerda
             lanterna.transform.position = posicoesLanterna[3].position;
-            Debug.Log("esquerda");
             anim.SetInteger("Direcao", 3);
         }
     }
