@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class PlayerLife : MonoBehaviour
 {
     public Slider lifeSlider;
+    public Gradient gradient;
+    public Image fill;
     private HealthManager healthManager;
 
     void Start()
@@ -19,11 +21,19 @@ public class PlayerLife : MonoBehaviour
         // temp
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            this.UpdateCurrentLife(-5);
+            this.UpdateCurrentLife(-2);
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            this.UpdateCurrentLife(5);
+            this.UpdateCurrentLife(2);
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            this.UpdateMaxLife(-5);
+        }
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            this.UpdateMaxLife(5);
         }
     }
 
@@ -32,14 +42,34 @@ public class PlayerLife : MonoBehaviour
     {
         lifeSlider.maxValue = healthManager.maxLife;
         lifeSlider.value = healthManager.currentLife;
+        fill.color = gradient.Evaluate(lifeSlider.normalizedValue);
     }
 
     // Change the max of the life slider and healthManager, meaning that the maximum life of the player has changed
     public void UpdateMaxLife(int lifeAddiction)
     {
         int updatedMaxLife = healthManager.maxLife + lifeAddiction;
-        lifeSlider.maxValue = updatedMaxLife;
-        healthManager.maxLife = updatedMaxLife;
+
+        if (updatedMaxLife > 0)
+        {
+            lifeSlider.maxValue = updatedMaxLife;
+            healthManager.maxLife = updatedMaxLife;
+
+            if (updatedMaxLife < lifeSlider.value)
+            {
+                lifeSlider.value = updatedMaxLife;
+                healthManager.currentLife = updatedMaxLife;
+            }
+        }
+        else
+        {
+            //Debug.Log("PLAYER IS DEAD 'CAUSE THE MAX LIFE IS ZERO");
+            lifeSlider.maxValue = 0;
+            healthManager.maxLife = 0;
+            healthManager.currentLife = 0;
+        }
+
+        fill.color = gradient.Evaluate(lifeSlider.normalizedValue);
     }
     
     // Set the current life with the max life
@@ -57,7 +87,7 @@ public class PlayerLife : MonoBehaviour
         if (updatedLife <= 0)
         {
             // CALL FUNCION OF DEATH OF THE PLAYER BY LIFE
-            Debug.Log("PLAYER DIED");
+            Debug.Log("PLAYER DIED FROM LIFE");
             healthManager.currentLife = 0;
             lifeSlider.value = 0;
         }
@@ -71,7 +101,9 @@ public class PlayerLife : MonoBehaviour
         {
             lifeSlider.value = updatedLife;
             healthManager.currentLife = updatedLife;
+
         }
+        fill.color = gradient.Evaluate(lifeSlider.normalizedValue);
     }
 
     // Test if the player died by life
