@@ -241,6 +241,7 @@ public class InputManager : MonoBehaviour
     private Vector2 pointed;
     private bool avancarDialogo;
     private Vector2 moveDialogo;
+    private Vector2 mousePos;
 
     public void OnPoint(InputAction.CallbackContext context)
     {
@@ -264,6 +265,12 @@ public class InputManager : MonoBehaviour
         moveDialogo = context.ReadValue<Vector2>();
     }
 
+    public void OnMousePos(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+            mousePos = context.ReadValue<Vector2>();
+    }
+
     public Vector2 GetPoint()
     {
         return pointed;
@@ -281,4 +288,10 @@ public class InputManager : MonoBehaviour
         return result;
     }
 
+    public Vector2 GetMousePos()
+    {
+        Vector2 result = mousePos;
+        mousePos = new Vector2(0, 0);
+        return result;
+    }
 }

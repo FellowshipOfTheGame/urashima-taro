@@ -6,8 +6,6 @@ using Ink.Runtime;
 using TMPro;
 using UnityEngine.EventSystems;
 
-// TODO: Mudar selecao qndo usa o teclado em vez do mouse / tirar selecao qndo usa o mouse
-// TODO: Quando muda o controle no meio de uma selecao de dialogo, o controle novo nao funciona para aquela selecao
 // TODO: Botoes estao na ordem invertida. Ex: o botao 0 eh o botao de baixo. Por isso, eh necessario escrever as escolhas no ink de forma invertida.
 
 public class DialogueManager : MonoBehaviour
@@ -30,6 +28,8 @@ public class DialogueManager : MonoBehaviour
     private SpritesDialogo spriteScript;
 
     private static DialogueManager instance;
+
+    private bool usingKey = false;
 
     private void Awake()
     {
@@ -79,6 +79,42 @@ public class DialogueManager : MonoBehaviour
         if(avancarDialogo && !fazendoEscolha)
         {
             ContinuarHistoria();
+        }
+
+        if(fazendoEscolha)
+        {
+            MudancaControle();
+        }
+    }
+
+    private void MudancaControle()
+    {
+        // detecta se o jogador esta usando o mouse e age de acordo
+
+        if (InputManager.GetInstance().CurrentControlScheme() == "Keyboard")
+        {
+            if (InputManager.GetInstance().GetMousePos().x != 0 || InputManager.GetInstance().GetMousePos().y != 0)
+            {
+                usingKey = false;
+                EventSystem.current.SetSelectedGameObject(null);
+                return;
+            }
+
+            if (InputManager.GetInstance().GetMoveDialogo().y != 0)
+            {
+                if (!usingKey)
+                {
+                    StartCoroutine(PrimeiraEscolha());
+                }
+
+                usingKey = true;
+                return;
+            }
+        }
+        else if(!usingKey)
+        {
+            usingKey = true;
+            StartCoroutine(PrimeiraEscolha());
         }
     }
 
@@ -160,6 +196,7 @@ public class DialogueManager : MonoBehaviour
 
         if(escolhasAtuais.Count == 0)
         {
+            fazendoEscolha = false;
             return;
         }
 
@@ -178,9 +215,6 @@ public class DialogueManager : MonoBehaviour
         {
             escolhas[index].SetActive(false);
         }
-
-        if(InputManager.GetInstance().CurrentControlScheme() != "Keyboard")
-            StartCoroutine(PrimeiraEscolha());
     }
 
     private IEnumerator PrimeiraEscolha()
@@ -198,9 +232,13 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(DesativarEscolhas());
 
         // Permite tirar a caixa de texto 'fantasma' qndo usa o mouse
-        if(InputManager.GetInstance().CurrentControlScheme() == "Keyboard")
-            ContinuarHistoria();
+        if (InputManager.GetInstance().CurrentControlScheme() == "Keyboard")
+        {
+            if(!usingKey)
+                ContinuarHistoria();
+        }
 
+        usingKey = false;
         fazendoEscolha = false;
     }
 
