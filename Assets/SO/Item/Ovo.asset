@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71ae10fc3ff9c184f9af5348ee746fe9, type: 3}
-  m_Name: Betoneira
+  m_Name: Ovo
   m_EditorClassIdentifier: 
-  name: Betoneira
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  ID: 2
+  name: Ovo
+  icon: {fileID: 21300000, guid: e8e0c67886f72a441a84383cf20f3365, type: 3}
+  ID: 3
   quantity: 0
