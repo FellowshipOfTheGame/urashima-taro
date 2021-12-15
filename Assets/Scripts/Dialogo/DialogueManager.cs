@@ -132,6 +132,7 @@ public class DialogueManager : MonoBehaviour
         dialogoRodando = false;
         caixaDeTexto.SetActive(false);
         texto.text = "";
+        // mudando antes da hr?
         InputManager.GetInstance().ChangeActionMap("Player_base");
     }
 
