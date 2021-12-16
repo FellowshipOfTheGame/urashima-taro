@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1809618219921728648
+--- !u!1 &4328107285928773202
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1809618219921728693}
-  - component: {fileID: 1809618219921728694}
-  - component: {fileID: 1809618219921728695}
+  - component: {fileID: 4328107285928773231}
+  - component: {fileID: 4328107285928773228}
+  - component: {fileID: 4328107285928773229}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -18,27 +18,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1809618219921728693
+--- !u!4 &4328107285928773231
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809618219921728648}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 4328107285928773202}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6169443, y: -0.7935647, z: 0.57422256}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1809618219921728694
+--- !u!114 &4328107285928773228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809618219921728648}
+  m_GameObject: {fileID: 4328107285928773202}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
     m_ActionName: Player_base/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnRotation
         m_Mode: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
     m_ActionName: Player_base/Rotation[/Mouse/position]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnRun
         m_Mode: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
     m_ActionName: Player_base/Run[/Keyboard/leftShift]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnChangeWeapon
         m_Mode: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
     m_ActionName: Player_base/ChangeWeapon[/Mouse/scroll]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnLanterna
         m_Mode: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
     m_ActionName: Player_base/Flashlight[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnShoot
         m_Mode: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
     m_ActionName: Player_base/Shoot[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnReload
         m_Mode: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
     m_ActionName: Player_base/Reload[/Keyboard/r]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnArma1
         m_Mode: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
     m_ActionName: Player_base/Arma1[/Keyboard/1]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnArma2
         m_Mode: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
     m_ActionName: Player_base/Arma2[/Keyboard/2]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnArma3
         m_Mode: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
     m_ActionName: Player_base/Arma3[/Keyboard/3]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnArma4
         m_Mode: 0
@@ -235,7 +235,7 @@ MonoBehaviour:
     m_ActionName: Player_base/Arma4[/Keyboard/4]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnAvancarDialogo
         m_Mode: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
     m_ActionName: Dialogo/AvancarDialogo[/Keyboard/space,/Keyboard/e,/Keyboard/enter,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809618219921728695}
+      - m_Target: {fileID: 4328107285928773229}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnMoveDialogo
         m_Mode: 0
@@ -266,25 +266,69 @@ MonoBehaviour:
     m_ActionId: 00e2e1a9-27db-4972-9235-535dc667e661
     m_ActionName: Dialogo/Move[/Keyboard/a,/Keyboard/s,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4328107285928773229}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnPoint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 76c12bca-b5f5-40d4-a9be-4a5d75f4a609
     m_ActionName: Dialogo/Point[/Mouse/position]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 07d4397d-82e4-498e-ac65-562f89532223
     m_ActionName: Dialogo/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4328107285928773229}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnInteragir
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b6860479-5385-4ef6-8174-7459ac81e753
+    m_ActionName: Player_base/Interagir[/Keyboard/e,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4328107285928773229}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnMousePos
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4d2eeda5-33ac-42c8-9759-0efe4821cc81
+    m_ActionName: Dialogo/MousePos[/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player_base
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1809618219921728695
+--- !u!114 &4328107285928773229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809618219921728648}
+  m_GameObject: {fileID: 4328107285928773202}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad3239d48f1156948baf417d42ff959b, type: 3}

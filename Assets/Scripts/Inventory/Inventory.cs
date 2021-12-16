@@ -1,12 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private int spaces;
 
     [SerializeField] private List<ItemSO> items = new List<ItemSO>();
+
+    ItemSO currentItem;
+
+    public void InteractItem()
+    {
+        // gambiarra 1:
+        // Verifica se o inventory slot ta mostrando uma imagem
+        GameObject button = EventSystem.current.currentSelectedGameObject;
+        Image image = button.GetComponentInChildren<Image>();
+
+        if (image == null || !image.IsActive())
+        {
+            Debug.Log("Sem item");
+            return;
+        }
+
+        // gambiarra 2: o inimigo agora eh outro
+        // Como cada parent tem o nome SlotGFX (i), dei split nessa string e peguei o i
+        string[] indexC = button.transform.parent.name.Split(new char[] { '(', ')' });
+        int index = int.Parse(indexC[1]) - 1;
+
+        // salva o item (modificar caso necessario)
+        currentItem = items[index];
+
+        Debug.Log("item equipado: " + items[index].name + " index: " + index);
+    }
 
     public void AddInventory(ItemSO item)
     {
