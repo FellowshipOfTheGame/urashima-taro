@@ -11,6 +11,8 @@ public class InventoryUI : MonoBehaviour
 
     InventorySlot[] slots;
 
+    // This update the inventory every frame, so maybe we could change the inventory only 
+    // when an item is changed?
     void Update()
     {
         slots = gameObjectParent.GetComponentsInChildren<InventorySlot>();
@@ -27,6 +29,7 @@ public class InventoryUI : MonoBehaviour
             if(i < listInventory.Count)
             {
                 slots[i].AddItem(listInventory[i]);
+                slots[i].UpdateQuantity();
             }
             else
             {

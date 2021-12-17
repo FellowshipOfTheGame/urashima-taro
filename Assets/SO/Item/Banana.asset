@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71ae10fc3ff9c184f9af5348ee746fe9, type: 3}
-  m_Name: Betoneira
+  m_Name: Banana
   m_EditorClassIdentifier: 
-  name: Betoneira
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  ID: 2
+  name: Banana
+  icon: {fileID: 21300000, guid: c8d1763c5806b154f82bc28f877bf857, type: 3}
+  ID: 0
   quantity: 0
