@@ -614,17 +614,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "419c0616-2a55-407e-b05d-95847adf4e37",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "AvancarDialogo",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "WASD",
                     "id": "38810ca1-1047-466b-bf2a-4f75740cf08b",
                     "path": "2DVector",
@@ -804,9 +793,9 @@
                     "name": "",
                     "id": "5b3390eb-6941-48ea-aa61-5511105a89bb",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "Press",
+                    "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false

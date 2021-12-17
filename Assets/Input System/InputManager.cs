@@ -254,7 +254,7 @@ public class InputManager : MonoBehaviour
             avancarDialogo = true;
     }
 
-    public void OnAvancarDialogo(InputAction.CallbackContext context)
+    public void OnAvancarDialogoMouse(InputAction.CallbackContext context)
     {
         if (context.performed)
             avancarDialogo = true;
