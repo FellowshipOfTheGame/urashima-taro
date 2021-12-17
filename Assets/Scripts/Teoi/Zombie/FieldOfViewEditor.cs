@@ -8,14 +8,16 @@ public class FieldOfViewEditor : Editor
     {
         ZombieFieldOfView fov = (ZombieFieldOfView)target;
         Handles.color = Color.white;
-        Handles.DrawWireArc(fov.transform.position, Vector3.forward,Vector3.right, 360, fov.radius);
+        Handles.DrawWireArc(fov.transform.position, Vector3.forward, Vector3.right, 360, fov.radiusVision);
+        Handles.color = Color.blue;
+        Handles.DrawWireArc(fov.transform.position, Vector3.forward, Vector3.right, 360, fov.radiusHearing);
 
         Vector3 viewAngle01 = DirectionFromAngle(fov.transform.eulerAngles.z, -fov.angle / 2);
         Vector3 viewAngle02 = DirectionFromAngle(fov.transform.eulerAngles.z, fov.angle / 2);
 
         Handles.color = Color.yellow;
-        Handles.DrawLine(fov.transform.position, (fov.transform.position + viewAngle01 * fov.radius));
-        Handles.DrawLine(fov.transform.position, (fov.transform.position + viewAngle02 * fov.radius));
+        Handles.DrawLine(fov.transform.position, (fov.transform.position + viewAngle01 * fov.radiusVision));
+        Handles.DrawLine(fov.transform.position, (fov.transform.position + viewAngle02 * fov.radiusVision));
 
 
         if (fov.canSeePlayer)
