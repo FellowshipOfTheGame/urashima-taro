@@ -10,6 +10,12 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private List<ItemSO> items = new List<ItemSO>();
 
+    [SerializeField] private GameObject optionsItem;
+
+    [SerializeField] private RectTransform canvas;
+
+    [SerializeField] private RectTransform panel;
+
     ItemSO currentItem;
 
     public void InteractItem()
@@ -24,6 +30,9 @@ public class Inventory : MonoBehaviour
             Debug.Log("Sem item");
             return;
         }
+
+        optionsItem.SetActive(true);
+        optionsItem.transform.position = button.transform.position;
 
         // gambiarra 2: o inimigo agora eh outro
         // Como cada parent tem o nome SlotGFX (i), dei split nessa string e peguei o i
