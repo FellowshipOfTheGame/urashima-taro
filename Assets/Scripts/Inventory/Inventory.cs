@@ -78,8 +78,13 @@ public class Inventory : MonoBehaviour
 
             if (quantitySum > 0)
                 items[itemIdx].quantity = quantitySum;
+            else if (quantitySum == 0)
+                items.Remove(item);
             else
-                items.Remove(item);            
+            {
+                // the quantity of items became minor than 0 
+                items.Remove(item);
+            }
         }
         else
         {
