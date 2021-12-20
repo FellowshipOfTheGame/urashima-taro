@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 6f63c42538730bf4a89900fefce106fd
+guid: fb94846c6755b6d4589e577375c6bc78
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5643823122917221161
-    second: tile002_0
+      213: -2102865931415668676
+    second: anim000_0
   - first:
-      213: -2836555649881565082
-    second: tile002_1
+      213: -3628652019699283651
+    second: anim000_2
   - first:
-      213: -6469729246485669879
-    second: tile002_2
+      213: -4249781664034939210
+    second: anim000_4
   - first:
-      213: -2775150016204849591
-    second: tile002_3
+      213: -397981833254059034
+    second: anim000_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -78,7 +78,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -89,18 +89,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 1
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -115,12 +103,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tile002_0
+      name: anim000_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 15
         y: 0
-        width: 27
+        width: 32
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -129,19 +117,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dc126f95cc1da1b0800000000000000
-      internalID: -5643823122917221161
+      spriteID: c38b2bba39e11d2e0800000000000000
+      internalID: -2102865931415668676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile002_1
+      name: anim000_2
       rect:
         serializedVersion: 2
-        x: 84
+        x: 79
         y: 0
-        width: 27
+        width: 32
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -150,19 +138,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6689e274aa782a8d0800000000000000
-      internalID: -2836555649881565082
+      spriteID: d390258a63074adc0800000000000000
+      internalID: -3628652019699283651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile002_2
+      name: anim000_4
       rect:
         serializedVersion: 2
-        x: 148
+        x: 143
         y: 0
-        width: 27
+        width: 32
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,19 +159,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90814464787e636a0800000000000000
-      internalID: -6469729246485669879
+      spriteID: 6be9a36c71eb505c0800000000000000
+      internalID: -4249781664034939210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile002_3
+      name: anim000_6
       rect:
         serializedVersion: 2
-        x: 212
+        x: 207
         y: 0
-        width: 27
+        width: 32
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -192,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94eb0bd73cfac79d0800000000000000
-      internalID: -2775150016204849591
+      spriteID: 6e345d991a51a7af0800000000000000
+      internalID: -397981833254059034
       vertices: []
       indices: 
       edges: []

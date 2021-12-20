@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 98880f2fddd8d624c9a2ae40eef5d864
+guid: 24ff1abd6850ce249ab4335bfcf1fbe0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5826479529469629657
-    second: tile000_0
+      213: -3825972473463496931
+    second: anim002_0
   - first:
-      213: -3991111139732158604
-    second: tile000_1
+      213: -4822356300712451494
+    second: anim002_2
   - first:
-      213: 7910577273166664746
-    second: tile000_2
+      213: 167943078086455144
+    second: anim002_4
   - first:
-      213: -8205956202865925384
-    second: tile000_3
+      213: 2244122746459142570
+    second: anim002_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,101 +99,89 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tile000_0
+      name: anim002_0
       rect:
         serializedVersion: 2
-        x: 14
+        x: 15
         y: 0
-        width: 28
+        width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d45f151340dbd050800000000000000
-      internalID: 5826479529469629657
+      spriteID: d1f19c66e4a67eac0800000000000000
+      internalID: -3825972473463496931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile000_1
+      name: anim002_2
       rect:
         serializedVersion: 2
-        x: 78
+        x: 79
         y: 0
-        width: 28
+        width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47709217099bc98c0800000000000000
-      internalID: -3991111139732158604
+      spriteID: a52eaa39e7c831db0800000000000000
+      internalID: -4822356300712451494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile000_2
+      name: anim002_4
       rect:
         serializedVersion: 2
-        x: 142
+        x: 143
         y: 0
-        width: 28
+        width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a24906f2e1408cd60800000000000000
-      internalID: 7910577273166664746
+      spriteID: 86f24d7f657a45200800000000000000
+      internalID: 167943078086455144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile000_3
+      name: anim002_6
       rect:
         serializedVersion: 2
-        x: 206
+        x: 207
         y: 0
-        width: 28
+        width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f263cd7f469e1e80800000000000000
-      internalID: -8205956202865925384
+      spriteID: aa9321f7fb9b42f10800000000000000
+      internalID: 2244122746459142570
       vertices: []
       indices: 
       edges: []
