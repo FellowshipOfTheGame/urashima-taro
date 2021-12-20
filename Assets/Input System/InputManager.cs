@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour
     private int arma;
     private bool trocaArma = false;
     private bool trocaArmaVector = false;
+    private bool inventario = false;
 
     private static InputManager instance;
 
@@ -52,11 +53,12 @@ public class InputManager : MonoBehaviour
         playerInput.SwitchCurrentActionMap(actionMap);
     }
 
+    #region PlayerBase
     //
     // ActionMap: Player_base
     //
-    
-    
+
+    #region Movimento
     public void OnMove(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -89,13 +91,9 @@ public class InputManager : MonoBehaviour
             isRunning = false;
         }
     }
+    #endregion Movimento
 
-    public void OnLanterna(InputAction.CallbackContext context)
-    {
-        if(context.performed)
-            lanterna = !lanterna;
-    }
-
+    #region Armas
     public void OnChangeWeapon(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -156,12 +154,27 @@ public class InputManager : MonoBehaviour
         arma = 3;
     }
 
+    public void OnLanterna(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            lanterna = !lanterna;
+    }
+    #endregion Armas
+
     public void OnInteragir(InputAction.CallbackContext context)
     {
         if (context.performed)
             interagir = true;
     }
 
+    public void OnInventario(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            inventario = true;
+    }
+
+
+    #region GetMovimento
     public string GetDevice()
     {
         return device;
@@ -177,15 +190,17 @@ public class InputManager : MonoBehaviour
         return rotation;
     }
 
-    public Vector2 GetChangeWeapon()
-    {
-        return changeWeapon;
-    }
-
     public bool GetRunPressed()
     {
         bool result = isRunning;
         return result;
+    }
+    #endregion GetMovimento
+
+    #region GetArmas
+    public Vector2 GetChangeWeapon()
+    {
+        return changeWeapon;
     }
 
     public bool GetLanternaPressed()
@@ -226,6 +241,7 @@ public class InputManager : MonoBehaviour
     {
         return arma;
     }
+    #endregion GetArmas
 
     public bool GetInteragir()
     {
@@ -234,6 +250,14 @@ public class InputManager : MonoBehaviour
         return result;
     }
 
+    public bool GetInventario()
+    {
+        bool result = inventario;
+        inventario = false;
+        return result;
+    }
+    #endregion PlayerBase
+    #region Dialogo
     //
     // ActionMap: Dialogo
     //
@@ -294,4 +318,5 @@ public class InputManager : MonoBehaviour
         mousePos = new Vector2(0, 0);
         return result;
     }
+    #endregion Dialogo
 }

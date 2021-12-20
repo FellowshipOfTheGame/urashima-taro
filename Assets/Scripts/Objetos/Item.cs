@@ -6,6 +6,8 @@ public class Item : Interactable
 {
     [SerializeField] GameObject outline;
 
+    [SerializeField] ItemSO item;
+
     public override string Descricao()
     {
         return "Pressione E para pegar o item";
@@ -24,6 +26,8 @@ public class Item : Interactable
     public override void Interagir()
     {
         // interacao com item (text box, adicionar ao inventario, etc.)
+        Inventory.GetInstance().AddInventory(item);
+
         gameObject.SetActive(false);
     }
 }
