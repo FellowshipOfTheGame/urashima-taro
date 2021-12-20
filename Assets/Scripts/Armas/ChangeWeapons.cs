@@ -103,7 +103,7 @@ public class ChangeWeapons : MonoBehaviour
     }
 
     public void Shoot()
-    {
+    {       
         if(!allNull && InputManager.GetInstance().GetShootPressed())
             shootingScript.Atirar();
     }
