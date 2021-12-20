@@ -22,6 +22,8 @@ public class NewInput : MonoBehaviour
     [HideInInspector] public bool isRunning = false;
     bool isLanternaOn = true;
 
+    [SerializeField] private Transform armas;
+
     private MousePosition mousePosition;
     Animator anim;
 
@@ -57,10 +59,6 @@ public class NewInput : MonoBehaviour
     private void FixedUpdate()
     {
         angulo = mousePosition.angulo;
-        if(lanterna.activeSelf)
-        {
-            lanterna.transform.rotation = Quaternion.Euler(0, 0, angulo);
-        }
         //rb.rotation = angulo;
 
         Flip();
@@ -68,6 +66,7 @@ public class NewInput : MonoBehaviour
         Move();
         Run();
         Flashlight();
+        RotationArmas();
 
         /*if ((angulo >= 0 && angulo < 22.5f) || (angulo <= 0 && angulo > -22.5f))
         {
@@ -186,5 +185,14 @@ public class NewInput : MonoBehaviour
         isLanternaOn = InputManager.GetInstance().GetLanternaPressed();
 
         lanterna.SetActive(isLanternaOn);
+        if (lanterna.activeSelf)
+        {
+            lanterna.transform.rotation = Quaternion.Euler(0, 0, angulo);
+        }
+    }
+
+    private void RotationArmas()
+    {
+        armas.rotation = Quaternion.Euler(0, 0, angulo);
     }
 }

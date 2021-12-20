@@ -35,6 +35,7 @@ public class InventorySlot : MonoBehaviour
 
         icon.sprite = null;
         icon.enabled = false;
-        quantityText.text = "";
+        if(quantityText != null)
+            quantityText.text = "";
     }
 }
