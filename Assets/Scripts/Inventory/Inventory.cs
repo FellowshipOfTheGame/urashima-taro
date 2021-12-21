@@ -12,11 +12,62 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private GameObject optionsItem;
 
-    [SerializeField] private RectTransform canvas;
+    [SerializeField] private GameObject inventoryUI;
 
-    [SerializeField] private RectTransform panel;
+    [SerializeField] private GameObject[] otherUI;
+
+    private bool inventarioAtivo = false;
 
     ItemSO currentItem;
+
+    private static Inventory instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("Mais de 1 Inventario");
+        }
+        instance = this;
+    }
+
+    public static Inventory GetInstance()
+    {
+        return instance;
+    }
+
+    private void Update()
+    {
+        if (InputManager.GetInstance().GetInventario())
+        {
+            if (!inventarioAtivo)
+            {
+                Time.timeScale = 0;
+
+                foreach (GameObject ui in otherUI)
+                {
+                    ui.SetActive(false);
+                }
+
+                inventoryUI.SetActive(true);
+
+                inventarioAtivo = true;
+            }
+            else
+            {
+                inventarioAtivo = false;
+
+                inventoryUI.SetActive(false);
+
+                foreach (GameObject ui in otherUI)
+                {
+                    ui.SetActive(true);
+                }
+
+                Time.timeScale = 1;
+            }
+        }
+    }
 
     public void InteractItem()
     {
@@ -43,8 +94,9 @@ public class Inventory : MonoBehaviour
         currentItem = items[index];
 
         Debug.Log("item equipado: " + items[index].name + " index: " + index);
-    // Find if a item is in the list of items and return it index in the list
-    // if not, return -1
+        // Find if a item is in the list of items and return it index in the list
+        // if not, return -1
+    }
     private int IsInInventory(ItemSO item)
     {
         for (int i = 0; i < items.Count; i++)
@@ -78,8 +130,13 @@ public class Inventory : MonoBehaviour
 
             if (quantitySum > 0)
                 items[itemIdx].quantity = quantitySum;
+            else if (quantitySum == 0)
+                items.Remove(item);
             else
-                items.Remove(item);            
+            {
+                // the quantity of items became minor than 0 
+                items.Remove(item);
+            }
         }
         else
         {
