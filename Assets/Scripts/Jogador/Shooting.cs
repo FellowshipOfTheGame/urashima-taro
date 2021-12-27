@@ -35,8 +35,8 @@ public class Shooting : MonoBehaviour
 
     void Start()
     {
+        GameObject txt = GameObject.Find("UI/UI_Jogador/DisplayBalas");
         audioManager = FindObjectOfType<AudioManager>();
-        GameObject txt = GameObject.Find("UI_Jogador/DisplayBalas");
 
         displayBalas = txt.GetComponent<TextMeshProUGUI>();
         tirosAtuais = tirosMax;

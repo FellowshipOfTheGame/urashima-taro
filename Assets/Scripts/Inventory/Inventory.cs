@@ -16,6 +16,16 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private GameObject[] otherUI;
 
+    private ItemSO[] equippedItems = new ItemSO[4];
+    // player
+    private GameObject player;
+
+    private ChangeWeapons changeWeapons;
+    // gameobject vazio onde estao os weapon slots
+    private Transform weaponPlayer;
+    // referencia aos weapon slots no player
+    private Transform[] weaponSlots = new Transform[4];
+
     private bool inventarioAtivo = false;
 
     ItemSO currentItem;
@@ -31,6 +41,18 @@ public class Inventory : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        player = GameObject.Find("Jogador 1");
+        changeWeapons = player.GetComponent<ChangeWeapons>();
+        weaponPlayer = player.transform.Find("Armas");
+
+        for(int i = 0; i<weaponPlayer.childCount; i++)
+        {
+            weaponSlots[i] = weaponPlayer.GetChild(i);
+        }
+    }
+
     public static Inventory GetInstance()
     {
         return instance;
@@ -42,31 +64,51 @@ public class Inventory : MonoBehaviour
         {
             if (!inventarioAtivo)
             {
-                Time.timeScale = 0;
-
-                foreach (GameObject ui in otherUI)
-                {
-                    ui.SetActive(false);
-                }
-
-                inventoryUI.SetActive(true);
-
-                inventarioAtivo = true;
+                OpenInventory();
             }
             else
             {
-                inventarioAtivo = false;
-
-                inventoryUI.SetActive(false);
-
-                foreach (GameObject ui in otherUI)
-                {
-                    ui.SetActive(true);
-                }
-
-                Time.timeScale = 1;
+                // FIXME: como estou mudando o action map, o tab n funciona para fechar o inventario
+                // provavelmente tem uma maneira de fazer isso sem adicionar (mais) um comando ao action map,
+                // mas por enquanto so vou deixar com um botao
+                CloseInventory();
             }
         }
+    }
+
+    public void OpenInventory()
+    {
+        InputManager.GetInstance().ChangeActionMap("Dialogo");
+
+        Time.timeScale = 0;
+
+        // a arma n consegue acessar a UI do jogador se estiver desativada
+        // a UI do inventario vai se sobrepor a UI do jogador ate eu achar uma solucao melhor
+
+        /*foreach (GameObject ui in otherUI)
+        {
+            ui.SetActive(false);
+        }*/
+
+        inventoryUI.SetActive(true);
+
+        inventarioAtivo = true;
+    }
+
+    public void CloseInventory()
+    {
+        InputManager.GetInstance().ChangeActionMap("Player_Base");
+
+        inventarioAtivo = false;
+
+        inventoryUI.SetActive(false);
+
+        foreach (GameObject ui in otherUI)
+        {
+            ui.SetActive(true);
+        }
+
+        Time.timeScale = 1;
     }
 
     public void InteractItem()
@@ -178,6 +220,142 @@ public class Inventory : MonoBehaviour
         }
 
         items.Remove(item);
+    }
+
+    // botoes nao conseguem receber mais de um parametro, entao criei uma funcao para cada slot
+    // a "verdadeira" funcao eh a chamada EquipWeapon com dois parametros
+    // (pqp mas pq o botao so pode receber um parametro)
+
+    public void EquipWeapon0(ItemSO item)
+    {
+        if (item.tipe != Tipe.Weapon)
+        {
+            return;
+        }
+
+        // remove do inventario, talvez n seja necessario
+        RemoveInventory(item);
+        // adiciona ao inventario o item anterior
+        if(equippedItems[0] != null)
+        {
+            AddInventory(equippedItems[0]);
+        }
+        equippedItems[0] = item;
+
+        //verifica se ha um item no slot e o destroi
+        if (weaponSlots[0].GetChild(0) != null)
+        {
+            Destroy(weaponSlots[0].GetChild(0).gameObject);
+        }
+
+        Instantiate(item.item, weaponSlots[0]);
+        changeWeapons.NewWeapon(weaponSlots[0].GetChild(0).gameObject, 0);
+    }
+
+    public void EquipWeapon1(ItemSO item)
+    {
+        if (item.tipe != Tipe.Weapon)
+        {
+            return;
+        }
+
+        // remove do inventario, talvez n seja necessario
+        RemoveInventory(item);
+        // adiciona ao inventario o item anterior
+        if (equippedItems[1] != null)
+        {
+            AddInventory(equippedItems[1]);
+        }
+        equippedItems[1] = item;
+
+        //verifica se ha um item no slot e o destroi
+        if (weaponSlots[1].GetChild(1) != null)
+        {
+            Destroy(weaponSlots[1].GetChild(1).gameObject);
+        }
+
+        Instantiate(item.item, weaponSlots[1]);
+        changeWeapons.NewWeapon(weaponSlots[1].GetChild(1).gameObject, 1);
+    }
+
+    public void EquipWeapon2(ItemSO item)
+    {
+        if (item.tipe != Tipe.Weapon)
+        {
+            return;
+        }
+
+        // remove do inventario, talvez n seja necessario
+        RemoveInventory(item);
+        // adiciona ao inventario o item anterior
+        if (equippedItems[2] != null)
+        {
+            AddInventory(equippedItems[2]);
+        }
+        equippedItems[2] = item;
+
+        //verifica se ha um item no slot e o destroi
+        if (weaponSlots[2].GetChild(2) != null)
+        {
+            Destroy(weaponSlots[2].GetChild(2).gameObject);
+        }
+
+        Instantiate(item.item, weaponSlots[2]);
+        changeWeapons.NewWeapon(weaponSlots[2].GetChild(2).gameObject, 2);
+    }
+
+    public void EquipWeapon3(ItemSO item)
+    {
+        if (item.tipe != Tipe.Weapon)
+        {
+            return;
+        }
+
+        // remove do inventario, talvez n seja necessario
+        RemoveInventory(item);
+        // adiciona ao inventario o item anterior
+        if (equippedItems[3] != null)
+        {
+            AddInventory(equippedItems[3]);
+        }
+        equippedItems[3] = item;
+
+        //verifica se ha um item no slot e o destroi
+        if (weaponSlots[3].GetChild(3) != null)
+        {
+            Destroy(weaponSlots[3].GetChild(3).gameObject);
+        }
+
+        Instantiate(item.item, weaponSlots[3]);
+        changeWeapons.NewWeapon(weaponSlots[3].GetChild(3).gameObject, 3);
+    }
+
+    // verdadeira funcao
+    // espero que quem tem o emprego de criar os botoes da Unity seja demitido
+    public void EquipWeapon(ItemSO item, int slot)
+    {
+        if (item.tipe != Tipe.Weapon || slot > 3)
+        {
+            return;
+        }
+
+        // remove do inventario, talvez n seja necessario
+        RemoveInventory(item);
+        // adiciona ao inventario o item anterior
+        if (equippedItems[slot] != null)
+        {
+            AddInventory(equippedItems[slot]);
+        }
+        equippedItems[slot] = item;
+
+        //verifica se ha um item no slot e o destroi
+        if(weaponSlots[slot].GetChild(0) != null)
+        {
+            Destroy(weaponSlots[slot].GetChild(0).gameObject);
+        }
+
+        Instantiate(item.item, weaponSlots[slot]);
+        changeWeapons.NewWeapon(weaponSlots[slot].GetChild(0).gameObject, slot);
     }
 
     public List<ItemSO> GetInventory()

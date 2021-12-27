@@ -16,7 +16,7 @@ public class Vida : MonoBehaviour
     {
         GameObject hp;
 
-        hp = GameObject.Find("UI_Jogador/HP");
+        hp = GameObject.Find("UI/UI_Jogador/HP");
         barraScript = hp.GetComponent<BarraDeVida>();
 
         vidaAtual = vidaMax;
