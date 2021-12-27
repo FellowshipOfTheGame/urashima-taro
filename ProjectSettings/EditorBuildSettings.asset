@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Teoi.unity
     guid: ed06d93a7be27cf44b69a621d7199a11
+  - enabled: 1
+    path: Assets/Scenes/Teoi2.unity
+    guid: 5aba2106e8a759340aefcf57b193dc7e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c16d0b7127b3c714695bee82e373fa5c, type: 2}
