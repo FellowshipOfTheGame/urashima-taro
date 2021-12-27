@@ -7,6 +7,7 @@ using TMPro;
 
 public class Shooting : MonoBehaviour
 {
+    private AudioManager audioManager;
     [SerializeField] bool melee;
 
     [Header("Variaveis ranged & melee")]
@@ -35,6 +36,7 @@ public class Shooting : MonoBehaviour
     void Start()
     {
         GameObject txt = GameObject.Find("UI/UI_Jogador/DisplayBalas");
+        audioManager = FindObjectOfType<AudioManager>();
 
         displayBalas = txt.GetComponent<TextMeshProUGUI>();
         tirosAtuais = tirosMax;
@@ -58,6 +60,7 @@ public class Shooting : MonoBehaviour
         {
             if (tirosAtuais > 0 && delay <= 0f && podeAtirar)
             {
+                audioManager.Play("PISTOL_SHOOT");
                 GameObject bala = Instantiate(balaPrefab, pontoDeTiro.position, pontoDeTiro.rotation);
                 Rigidbody2D rb = bala.GetComponent<Rigidbody2D>();
                 rb.AddForce(pontoDeTiro.up * forcaBala, ForceMode2D.Impulse);
@@ -82,8 +85,6 @@ public class Shooting : MonoBehaviour
         }
     }
 
-
-
     public void Reload()
     {
         if(!melee)
@@ -92,6 +93,7 @@ public class Shooting : MonoBehaviour
 
     private IEnumerator Recarregar()
     {
+        audioManager.Play("PISTOL_RELOAD_FAST");
         podeAtirar = false;
         yield return new WaitForSeconds(1f);
         tirosAtuais = tirosMax;
