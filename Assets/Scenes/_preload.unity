@@ -190,7 +190,6 @@ GameObject:
   - component: {fileID: 913188470}
   - component: {fileID: 913188469}
   - component: {fileID: 913188468}
-  - component: {fileID: 913188471}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -205,7 +204,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913188467}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &913188469
 Camera:
   m_ObjectHideFlags: 0
@@ -263,38 +262,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &913188471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913188467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1 &986559290
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,37 +363,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: COLLECT_AMMUNITION
-    clip: {fileID: 8300000, guid: c03aa820f08fc744eba8575d878e1513, type: 3}
-    output: {fileID: 0}
-    volume: 1
-    pitch: 1
-    spatialBlend: 0
+  - name: Box
+    clip: {fileID: 8300000, guid: f063b32b286c26c49a6db2ea868ffee4, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
-  - name: PISTOL_RELOAD_SLOW
-    clip: {fileID: 8300000, guid: b9aead10b9e8d5747bb7e056350e1f86, type: 3}
-    output: {fileID: 0}
-    volume: 1
-    pitch: 1
+  - name: MenuTheme
+    clip: {fileID: 8300000, guid: ad5aa99b922473a419de68a189e033d4, type: 3}
+    output: {fileID: -5501493645383929318, guid: 5c0f6354d4257ea4d8830027384b4f3f, type: 2}
+    volume: 0.385
+    pitch: 0.1
     spatialBlend: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: PISTOL_RELOAD_FAST
-    clip: {fileID: 8300000, guid: 10032a7e5e2b3af43a630cbd22ce7936, type: 3}
-    output: {fileID: 0}
-    volume: 1
-    pitch: 1
-    spatialBlend: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: PISTOL_SHOOT
-    clip: {fileID: 8300000, guid: 5a09ac27e50cd2b4aaeb4ce7b02374cd, type: 3}
-    output: {fileID: 0}
-    volume: 1
-    pitch: 1
-    spatialBlend: 0
-    loop: 0
+    loop: 1
     source: {fileID: 0}
 --- !u!114 &1007754101
 MonoBehaviour:
@@ -565,7 +516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635163710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.11642468, y: -0.33201504, z: 1.7754812}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

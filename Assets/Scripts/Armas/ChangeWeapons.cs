@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 
 public class ChangeWeapons : MonoBehaviour
 {
-    private AudioManager audioManager;
     [SerializeField] GameObject[] armas;
 
     GameObject[] equipavel = new GameObject[4];
@@ -26,8 +25,6 @@ public class ChangeWeapons : MonoBehaviour
 
     void Start()
     {
-        audioManager = FindObjectOfType<AudioManager>();
-
         for (int i = 0; i < 4; i++)
             spriteMenu[i] = menu[i].GetComponent<SpriteRenderer>();
 
@@ -111,7 +108,7 @@ public class ChangeWeapons : MonoBehaviour
     }
 
     public void Shoot()
-    {       
+    {
         if(!allNull && InputManager.GetInstance().GetShootPressed())
             shootingScript.Atirar();
     }
