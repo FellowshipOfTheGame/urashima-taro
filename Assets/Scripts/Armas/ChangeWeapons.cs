@@ -9,6 +9,8 @@ public class ChangeWeapons : MonoBehaviour
 {
     [SerializeField] GameObject[] armas;
 
+    GameObject[] equipavel = new GameObject[4];
+
     [SerializeField] GameObject[] menu;
     readonly SpriteRenderer[] spriteMenu = new SpriteRenderer[4];
 
@@ -19,29 +21,34 @@ public class ChangeWeapons : MonoBehaviour
 
     int armaAtual = 0;
 
-    bool allNull = false;
+    bool allNull = true;
 
     void Start()
     {
         for (int i = 0; i < 4; i++)
             spriteMenu[i] = menu[i].GetComponent<SpriteRenderer>();
 
-        if (armas[0] != null)
-            armaAtual = 0;
-        else if (armas[1] != null)
-            armaAtual = 1;
-        else if (armas[2] != null)
-            armaAtual = 2;
-        else if (armas[3] != null)
-            armaAtual = 3;
-        else
-            allNull = true;
+        for(int i = 0; i<4 ; i++)
+        {
+            if (armas[i].transform.childCount != 0 && armas[i].transform.GetChild(0) != null)
+            {
+                if(allNull)
+                    armaAtual = i;
+
+                equipavel[i] = armas[i].transform.GetChild(0).gameObject;
+                allNull = false;
+                continue;
+            }
+            equipavel[i] = null;
+        }
 
         if (!allNull)
         {
-            armas[armaAtual].SetActive(true);
+            equipavel[armaAtual].SetActive(true);
 
-            shootingScript = armas[armaAtual].GetComponent<Shooting>();
+            Debug.Log("aq");
+
+            shootingScript = equipavel[armaAtual].GetComponent<Shooting>();
         }
     }
 
@@ -67,14 +74,14 @@ public class ChangeWeapons : MonoBehaviour
 
             //Debug.Log("asas");
 
-            armas[armaAtual].SetActive(false);
+            equipavel[armaAtual].SetActive(false);
             ResetColor(armaAtual);
 
             if (inputVec.y > 0)
             {
                 armaAtual = (armaAtual + 1) % armas.Length;
 
-                while (armas[armaAtual] == null)
+                while (equipavel[armaAtual] == null)
                 {
                     armaAtual = (armaAtual + 1) % armas.Length;
                 }
@@ -118,9 +125,9 @@ public class ChangeWeapons : MonoBehaviour
         {
             int index = InputManager.GetInstance().GetArma();
 
-            if (armas[index] != null)
+            if (equipavel[index] != null)
             {
-                armas[armaAtual].SetActive(false);
+                equipavel[armaAtual].SetActive(false);
                 ResetColor(armaAtual);
 
                 armaAtual = index;
@@ -132,8 +139,8 @@ public class ChangeWeapons : MonoBehaviour
 
     void AtivarArma()
     {
-        armas[armaAtual].SetActive(true);
-        shootingScript = armas[armaAtual].GetComponent<Shooting>();
+        equipavel[armaAtual].SetActive(true);
+        shootingScript = equipavel[armaAtual].GetComponent<Shooting>();
         shootingScript.podeAtirar = true;
         tempoMenu = 1f;
     }
@@ -171,14 +178,15 @@ public class ChangeWeapons : MonoBehaviour
     // arma nova vinda do inventario
     public void NewWeapon(GameObject weapon, int index)
     {
-        armas[index] = weapon;
+        equipavel[index] = weapon;
         if (index != armaAtual)
         {
-            armas[index].SetActive(false);
+            equipavel[index].SetActive(false);
         }
         else
         {
-            armas[index].SetActive(true);
+            equipavel[index].SetActive(true);
+            AtivarArma();
         }
     }
 }
