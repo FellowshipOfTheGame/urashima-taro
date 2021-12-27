@@ -172,13 +172,8 @@ public class Inventory : MonoBehaviour
 
             if (quantitySum > 0)
                 items[itemIdx].quantity = quantitySum;
-            else if (quantitySum == 0)
-                items.Remove(item);
             else
-            {
-                // the quantity of items became minor than 0 
-                items.Remove(item);
-            }
+                items.Remove(item);            
         }
         else
         {
@@ -226,17 +221,39 @@ public class Inventory : MonoBehaviour
     // a "verdadeira" funcao eh a chamada EquipWeapon com dois parametros
     // (pqp mas pq o botao so pode receber um parametro)
 
+    // coroutine necessaria por causa do destroy
+
     public void EquipWeapon0(ItemSO item)
+    {
+        StartCoroutine(EW0(item));
+    }
+
+    public void EquipWeapon1(ItemSO item)
+    {
+        StartCoroutine(EW1(item));
+    }
+
+    public void EquipWeapon2(ItemSO item)
+    {
+        StartCoroutine(EW2(item));
+    }
+
+    public void EquipWeapon3(ItemSO item)
+    {
+        StartCoroutine(EW3(item));
+    }
+
+    private IEnumerator EW0(ItemSO item)
     {
         if (item.tipe != Tipe.Weapon)
         {
-            return;
+            yield break;
         }
 
         // remove do inventario, talvez n seja necessario
         RemoveInventory(item);
         // adiciona ao inventario o item anterior
-        if(equippedItems[0] != null)
+        if (equippedItems[0] != null)
         {
             AddInventory(equippedItems[0]);
         }
@@ -248,15 +265,17 @@ public class Inventory : MonoBehaviour
             Destroy(weaponSlots[0].GetChild(0).gameObject);
         }
 
+        yield return new WaitForEndOfFrame();
+
         Instantiate(item.item, weaponSlots[0]);
         changeWeapons.NewWeapon(weaponSlots[0].GetChild(0).gameObject, 0);
     }
 
-    public void EquipWeapon1(ItemSO item)
+    public IEnumerator EW1(ItemSO item)
     {
         if (item.tipe != Tipe.Weapon)
         {
-            return;
+            yield break;
         }
 
         // remove do inventario, talvez n seja necessario
@@ -269,20 +288,22 @@ public class Inventory : MonoBehaviour
         equippedItems[1] = item;
 
         //verifica se ha um item no slot e o destroi
-        if (weaponSlots[1].GetChild(1) != null)
+        if (weaponSlots[1].GetChild(0) != null)
         {
-            Destroy(weaponSlots[1].GetChild(1).gameObject);
+            Destroy(weaponSlots[1].GetChild(0).gameObject);
         }
 
+        yield return new WaitForEndOfFrame();
+
         Instantiate(item.item, weaponSlots[1]);
-        changeWeapons.NewWeapon(weaponSlots[1].GetChild(1).gameObject, 1);
+        changeWeapons.NewWeapon(weaponSlots[1].GetChild(0).gameObject, 1);
     }
 
-    public void EquipWeapon2(ItemSO item)
+    public IEnumerator EW2(ItemSO item)
     {
         if (item.tipe != Tipe.Weapon)
         {
-            return;
+            yield break;
         }
 
         // remove do inventario, talvez n seja necessario
@@ -297,18 +318,20 @@ public class Inventory : MonoBehaviour
         //verifica se ha um item no slot e o destroi
         if (weaponSlots[2].GetChild(2) != null)
         {
-            Destroy(weaponSlots[2].GetChild(2).gameObject);
+            Destroy(weaponSlots[2].GetChild(0).gameObject);
         }
 
+        yield return new WaitForEndOfFrame();
+
         Instantiate(item.item, weaponSlots[2]);
-        changeWeapons.NewWeapon(weaponSlots[2].GetChild(2).gameObject, 2);
+        changeWeapons.NewWeapon(weaponSlots[2].GetChild(0).gameObject, 2);
     }
 
-    public void EquipWeapon3(ItemSO item)
+    public IEnumerator EW3(ItemSO item)
     {
         if (item.tipe != Tipe.Weapon)
         {
-            return;
+            yield break;
         }
 
         // remove do inventario, talvez n seja necessario
@@ -321,22 +344,30 @@ public class Inventory : MonoBehaviour
         equippedItems[3] = item;
 
         //verifica se ha um item no slot e o destroi
-        if (weaponSlots[3].GetChild(3) != null)
+        if (weaponSlots[3].GetChild(0) != null)
         {
-            Destroy(weaponSlots[3].GetChild(3).gameObject);
+            Destroy(weaponSlots[3].GetChild(0).gameObject);
         }
 
+        yield return new WaitForEndOfFrame();
+
         Instantiate(item.item, weaponSlots[3]);
-        changeWeapons.NewWeapon(weaponSlots[3].GetChild(3).gameObject, 3);
+        changeWeapons.NewWeapon(weaponSlots[3].GetChild(0).gameObject, 3);
     }
 
     // verdadeira funcao
     // espero que quem tem o emprego de criar os botoes da Unity seja demitido
+
     public void EquipWeapon(ItemSO item, int slot)
+    {
+        StartCoroutine(EW(item, slot));
+    }
+
+    public IEnumerator EW(ItemSO item, int slot)
     {
         if (item.tipe != Tipe.Weapon || slot > 3)
         {
-            return;
+            yield break;
         }
 
         // remove do inventario, talvez n seja necessario
@@ -353,6 +384,8 @@ public class Inventory : MonoBehaviour
         {
             Destroy(weaponSlots[slot].GetChild(0).gameObject);
         }
+
+        yield return new WaitForEndOfFrame();
 
         Instantiate(item.item, weaponSlots[slot]);
         changeWeapons.NewWeapon(weaponSlots[slot].GetChild(0).gameObject, slot);
