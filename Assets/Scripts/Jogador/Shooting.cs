@@ -34,7 +34,7 @@ public class Shooting : MonoBehaviour
 
     void Start()
     {
-        GameObject txt = GameObject.Find("UI_Jogador/DisplayBalas");
+        GameObject txt = GameObject.Find("UI/UI_Jogador/DisplayBalas");
 
         displayBalas = txt.GetComponent<TextMeshProUGUI>();
         tirosAtuais = tirosMax;

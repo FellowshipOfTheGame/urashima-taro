@@ -167,4 +167,18 @@ public class ChangeWeapons : MonoBehaviour
     {
         spriteMenu[i].color = new Color(0.2941177f, 0.2941177f, 0.2941177f);
     }
+
+    // arma nova vinda do inventario
+    public void NewWeapon(GameObject weapon, int index)
+    {
+        armas[index] = weapon;
+        if (index != armaAtual)
+        {
+            armas[index].SetActive(false);
+        }
+        else
+        {
+            armas[index].SetActive(true);
+        }
+    }
 }
