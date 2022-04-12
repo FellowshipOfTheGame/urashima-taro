@@ -550,6 +550,17 @@
                     "action": "OpenInventory",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9b674420-dcd6-4c8c-8c98-de02fa4a243c",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
