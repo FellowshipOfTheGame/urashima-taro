@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// TODO: Mudar shoot e reload do ChangeWeapons.cs para Shooting.cs
-
 public class ChangeWeapons : MonoBehaviour
 {
     [SerializeField] GameObject[] armas;
@@ -62,8 +60,6 @@ public class ChangeWeapons : MonoBehaviour
         SelecionarArma();
         ChangeWeapon();
         LigarMenu();
-        Shoot();
-        Reload();
     }
 
     public void ChangeWeapon()
@@ -79,16 +75,44 @@ public class ChangeWeapons : MonoBehaviour
 
             if (inputVec.y > 0)
             {
+                int i = 0;
+
+                // passa para proxima arma
                 armaAtual = (armaAtual + 1) % armas.Length;
 
                 while (equipavel[armaAtual] == null)
                 {
                     armaAtual = (armaAtual + 1) % armas.Length;
+                    i++;
+
+                    // caso percorra a roda inteira (mudar valor caso haja mais que 4 armas)
+                    if (i > 4)
+                        break;
                 }
             }
-            else
+            else if(inputVec.y < 0)
             {
+                int i = 0;
+
+                // passa para arma anterior
                 if (armaAtual > 0)
+                    armaAtual = (armaAtual - 1) % armas.Length;
+                else
+                    armaAtual = 3;
+
+                while (equipavel[armaAtual] == null)
+                {
+                    if(armaAtual > 0)
+                        armaAtual = (armaAtual - 1) % armas.Length;
+                    else
+                        armaAtual = 3;
+
+                    i++;
+
+                    if (i > 4)
+                        break;
+                }
+                /*if (armaAtual > 0)
                     armaAtual = (armaAtual - 1) % armas.Length;
                 else
                     armaAtual = 3;
@@ -99,24 +123,12 @@ public class ChangeWeapons : MonoBehaviour
                         armaAtual = (armaAtual - 1) % armas.Length;
                     else
                         armaAtual = 3;
-                }
+                }*/
             }
 
             
             AtivarArma();
         }
-    }
-
-    public void Shoot()
-    {
-        if(!allNull && InputManager.GetInstance().GetShootPressed())
-            shootingScript.Atirar();
-    }
-
-    public void Reload()
-    {
-        if (!allNull && InputManager.GetInstance().GetReloadPressed())
-            shootingScript.Reload();
     }
 
     public void SelecionarArma()

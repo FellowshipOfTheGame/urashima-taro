@@ -25,6 +25,7 @@ public class InteracaoJogador : MonoBehaviour
         AcessarInteracao();
     }
 
+    // acessa o objeto mais proximo dentro da range
     private void AcessarInteracao()
     {
         if(maisPerto != null)
@@ -35,11 +36,13 @@ public class InteracaoJogador : MonoBehaviour
             {
                 if (!interagindo)
                 {
+                    // highlight no objeto
                     interactable.Acender();
                 }
                 texto.text = interactable.Descricao();
                 if (InputManager.GetInstance().GetInteragir())
                 {
+                    // ação
                     interactable.Interagir();
                     interagindo = !interagindo;
                 }
@@ -51,14 +54,17 @@ public class InteracaoJogador : MonoBehaviour
         }
     }
 
+    // detecta o objeto mais proximo dentro da range
     private void DetectarObjetos() 
     {
+        // array com todos os interagiveis
         Collider2D[] colliders = Physics2D.OverlapCircleAll(jogador.transform.position, raioInteracao, objeto);
 
         if (colliders.Length == 0)
         {
             if(maisPerto != null)
             {
+                // acessa o objeto mais proximo
                 Interactable interactable = maisPerto.gameObject.GetComponent<Interactable>();
 
                 if (interactable != null)
@@ -75,6 +81,7 @@ public class InteracaoJogador : MonoBehaviour
 
         for (int i = 0; i < colliders.Length; i++)
         {
+            // D^2 = x^2 + y^2
             float sqrDistanceToCenter = (jogador.transform.position - colliders[i].transform.position).sqrMagnitude;
 
             if (sqrDistanceToCenter < minSqrDistancia)

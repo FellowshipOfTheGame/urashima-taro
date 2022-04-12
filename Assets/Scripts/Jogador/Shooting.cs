@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-// TODO: Mudar shoot e reload do ChangeWeapons.cs para Shooting.cs
+// TODO: Dividir esse script em 2: um para melee e outro para ranged
 
 public class Shooting : MonoBehaviour
 {
@@ -50,13 +50,16 @@ public class Shooting : MonoBehaviour
 
         if (delay >= 0f)
             delay -= Time.deltaTime;
+
+        Atirar();
+        Reload();
     }
 
     public void Atirar()
     {
         if (!melee)
         {
-            if (tirosAtuais > 0 && delay <= 0f && podeAtirar)
+            if (tirosAtuais > 0 && delay <= 0f && podeAtirar && InputManager.GetInstance().GetShootPressed())
             {
                 GameObject bala = Instantiate(balaPrefab, pontoDeTiro.position, pontoDeTiro.rotation);
                 Rigidbody2D rb = bala.GetComponent<Rigidbody2D>();
@@ -68,7 +71,7 @@ public class Shooting : MonoBehaviour
         }
         else
         {
-            if(delay <= 0f)
+            if(delay <= 0f && InputManager.GetInstance().GetShootPressed())
             {
                 Collider2D[] dano = Physics2D.OverlapCircleAll(pontoDeTiro.position, range, inimigo);
 
@@ -86,7 +89,7 @@ public class Shooting : MonoBehaviour
 
     public void Reload()
     {
-        if(!melee)
+        if(!melee && InputManager.GetInstance().GetReloadPressed())
             StartCoroutine(Recarregar());
     }
 
