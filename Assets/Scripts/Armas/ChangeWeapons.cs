@@ -44,8 +44,6 @@ public class ChangeWeapons : MonoBehaviour
         {
             equipavel[armaAtual].SetActive(true);
 
-            Debug.Log("aq");
-
             shootingScript = equipavel[armaAtual].GetComponent<Shooting>();
         }
     }

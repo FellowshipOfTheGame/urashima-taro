@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-// TODO: Dividir esse script em 2: um para melee e outro para ranged
+// OBS: Script obsoleto, use Melle.cs ou Pistol.cs
+// Este script só n foi deletado para não interferir em outras cenas
 
 public class Shooting : MonoBehaviour
 {
