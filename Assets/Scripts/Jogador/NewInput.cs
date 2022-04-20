@@ -154,11 +154,13 @@ public class NewInput : MonoBehaviour
         {
             if(isRunning)
             {
-                //animacao corrida
+                anim.SetBool("Correndo", true);
+                anim.SetBool("Andando", false);
             }
             else
             {
                 anim.SetBool("Andando", true);
+                anim.SetBool("Correndo", false);
             }
         }
         else
