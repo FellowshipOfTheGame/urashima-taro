@@ -35,7 +35,7 @@ public class ZombieFieldOfView : MonoBehaviour
         {
             yield return wait;
             FieldOfViewCheck2D();
-            Debug.Log(canSeePlayer);
+            // Debug.Log(canSeePlayer);
         }
     }
 

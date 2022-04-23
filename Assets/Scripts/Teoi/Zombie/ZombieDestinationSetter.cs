@@ -31,6 +31,8 @@ namespace Pathfinding
 
 		private bool joinHoldRoutine;
 
+		private Ray2D ray;
+
 		private void Start()
         {
 			// Receive the script attached with the Player object, used to return variables related to collision
@@ -57,10 +59,15 @@ namespace Pathfinding
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () 
 		{
+			ray = new Ray2D(transform.position, transform.forward);
+			// Debug.Log(ray.direction);
+			Debug.Log(transform.eulerAngles.z);
+			Debug.DrawRay(transform.position, 5*transform.up, Color.green);
+			Debug.DrawRay(transform.position, transform.position + new Vector3(0,0,0) , Color.red);
+
 			// Tests if the player is in a hideout place
 			// The zombie run for the default location if the player is hidden, if not he pursues the player
 			// Also tests if the zombie can see the player through the field of view
-
 			if (defaultLocation != null && ai != null && playerLocation.position != null)
 			{
 				switch (playerCollision.IsHidden())
