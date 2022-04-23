@@ -33,13 +33,17 @@ namespace Pathfinding
 
 		private Ray2D ray;
 
+		public Animator animator ;
+
 		private void Start()
         {
 			// Receive the script attached with the Player object, used to return variables related to collision
 			playerCollision = GameObject.FindWithTag("Player").GetComponent<PlayerCollision>();
 			zombieView = GetComponent<ZombieFieldOfView>();
 			joinHoldRoutine = false;
-        }
+
+			//animator = gameObject.GetComponentInParent<Animator>();
+		}
 
         void OnEnable () 
 		{
@@ -61,7 +65,7 @@ namespace Pathfinding
 		{
 			ray = new Ray2D(transform.position, transform.forward);
 			// Debug.Log(ray.direction);
-			Debug.Log(transform.eulerAngles.z);
+			Debug.Log(transform.eulerAngles.z.GetType());
 			Debug.DrawRay(transform.position, 5*transform.up, Color.green);
 			Debug.DrawRay(transform.position, transform.position + new Vector3(0,0,0) , Color.red);
 
@@ -73,16 +77,25 @@ namespace Pathfinding
 				switch (playerCollision.IsHidden())
 				{
 					case true:
-						ai.destination = defaultLocation.position;
+						if (transform.position == defaultLocation.position)
+						{
+							animator.SetBool("isWalking", false);
+						}
+						else
+						{
+							animator.SetBool("isWalking", true);
+							ai.destination = defaultLocation.position;
+						}
 						break;
-
 					case false:
 						if (zombieView.canSeePlayer)
 						{
+							animator.SetBool("isWalking", true);
 							ai.destination = playerLocation.position;
 						}
 						else
 						{
+							animator.SetBool("isWalking", false);
 							HoldSeekRoutine(5f);
 						}
 						break;

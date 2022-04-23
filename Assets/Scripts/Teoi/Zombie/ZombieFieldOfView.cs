@@ -7,7 +7,7 @@ public class ZombieFieldOfView : MonoBehaviour
 {
     public float radiusVision;
     public float radiusHearing;
-    public float delayToSearch = 1f;
+    public float delayToSearch;
 
     [Range(0, 360)] public float angle;
 
@@ -146,12 +146,6 @@ public class ZombieFieldOfView : MonoBehaviour
             Transform target = rangeCheckVision[0].transform;
 
             Vector3 directionToTarget = (target.position - transform.position).normalized;
-
-
-
-
-
-
         }
 
     }
