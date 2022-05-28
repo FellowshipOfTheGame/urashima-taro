@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ab959cfbd44cc014db7972c064c1d631
+guid: c6b2faec0c345cb418866d9160a27e2b
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -164,6 +164,300 @@ TextureImporter:
   - first:
       213: 7398681395290911592
     second: City - Street 2_53
+  - first:
+      213: 4475958481329282362
+    second: City - Street 2_54
+  - first:
+      213: 4429055128393770532
+    second: City - Street 2_55
+  - first:
+      213: -3918919152907539314
+    second: City - Street 2_56
+  - first:
+      213: -1130167470863348138
+    second: City - Street 2_57
+  - first:
+      213: 7640927096977671893
+    second: City - Street 2_58
+  - first:
+      213: -5508505320479728881
+    second: City - Street 2_59
+  - first:
+      213: -5314655754426104263
+    second: City - Street 2_60
+  - first:
+      213: -4825450364795245642
+    second: City - Street 2_61
+  - first:
+      213: 5982588597026277636
+    second: City - Street 2_62
+  - first:
+      213: -1969879718852888933
+    second: City - Street 2_63
+  - first:
+      213: 3092743670153323822
+    second: City - Street 2_64
+  - first:
+      213: 703309610691551415
+    second: City - Street 2_65
+  - first:
+      213: 847688334886670998
+    second: City - Street 2_66
+  - first:
+      213: -8903288888020113602
+    second: City - Street 2_67
+  - first:
+      213: 677702303027276040
+    second: City - Street 2_68
+  - first:
+      213: -6215260335437716960
+    second: City - Street 2_69
+  - first:
+      213: 2560707034589808738
+    second: City - Street 2_70
+  - first:
+      213: -3944058616623959491
+    second: City - Street 2_71
+  - first:
+      213: -5430545324386322189
+    second: City - Street 2_72
+  - first:
+      213: -3346424844948134338
+    second: City - Street 2_73
+  - first:
+      213: -3873829579713124804
+    second: City - Street 2_74
+  - first:
+      213: 7390794048729358559
+    second: City - Street 2_75
+  - first:
+      213: 6821779865736726472
+    second: City - Street 2_76
+  - first:
+      213: 1586422992345641159
+    second: City - Street 2_77
+  - first:
+      213: 754727554677066249
+    second: City - Street 2_78
+  - first:
+      213: 8892647867764202885
+    second: City - Street 2_79
+  - first:
+      213: 8772283494650757590
+    second: City - Street 2_80
+  - first:
+      213: 5875595447776411675
+    second: City - Street 2_81
+  - first:
+      213: -4387170348792439863
+    second: City - Street 2_82
+  - first:
+      213: 6656682995304094548
+    second: City - Street 2_83
+  - first:
+      213: -1739757262115027680
+    second: City - Street 2_84
+  - first:
+      213: -7611873431513537373
+    second: City - Street 2_85
+  - first:
+      213: -1236468924127967292
+    second: City - Street 2_86
+  - first:
+      213: -748058197090308691
+    second: City - Street 2_87
+  - first:
+      213: 1681203595577282697
+    second: City - Street 2_88
+  - first:
+      213: 6326955879526446123
+    second: City - Street 2_89
+  - first:
+      213: -5483429371448927641
+    second: City - Street 2_90
+  - first:
+      213: -6104175223247694118
+    second: City - Street 2_91
+  - first:
+      213: 4662753648450938494
+    second: City - Street 2_92
+  - first:
+      213: 4187830212149138026
+    second: City - Street 2_93
+  - first:
+      213: -6075709211833505472
+    second: City - Street 2_94
+  - first:
+      213: -765693760578792188
+    second: City - Street 2_95
+  - first:
+      213: -9031456223925113548
+    second: City - Street 2_96
+  - first:
+      213: 8784882657276483060
+    second: City - Street 2_97
+  - first:
+      213: -4210491987638149047
+    second: City - Street 2_98
+  - first:
+      213: -3764742170186608704
+    second: City - Street 2_99
+  - first:
+      213: -8842770528960049575
+    second: City - Street 2_100
+  - first:
+      213: 766615707263489519
+    second: City - Street 2_101
+  - first:
+      213: -4762322061131753238
+    second: City - Street 2_102
+  - first:
+      213: -8196536003415057653
+    second: City - Street 2_103
+  - first:
+      213: -5690226789104055221
+    second: City - Street 2_104
+  - first:
+      213: -2067682971032512039
+    second: City - Street 2_105
+  - first:
+      213: 2783048095005524602
+    second: City - Street 2_106
+  - first:
+      213: 904852841609391431
+    second: City - Street 2_107
+  - first:
+      213: 93128750444376878
+    second: City - Street 2_108
+  - first:
+      213: -3155033077729236820
+    second: City - Street 2_109
+  - first:
+      213: 3988213064891018547
+    second: City - Street 2_110
+  - first:
+      213: -5370665004362039451
+    second: City - Street 2_111
+  - first:
+      213: 2459726335219430257
+    second: City - Street 2_112
+  - first:
+      213: -7952371122130886595
+    second: City - Street 2_113
+  - first:
+      213: -8153144452433209445
+    second: City - Street 2_114
+  - first:
+      213: 6942844886737051838
+    second: City - Street 2_115
+  - first:
+      213: 8529048061373639025
+    second: City - Street 2_116
+  - first:
+      213: -5306911320333463106
+    second: City - Street 2_117
+  - first:
+      213: -2571341205165688940
+    second: City - Street 2_118
+  - first:
+      213: 7342182358139559042
+    second: City - Street 2_119
+  - first:
+      213: 1460149164859187355
+    second: City - Street 2_120
+  - first:
+      213: -594931915549235893
+    second: City - Street 2_121
+  - first:
+      213: 2809281996425813636
+    second: City - Street 2_122
+  - first:
+      213: 88490698587379838
+    second: City - Street 2_123
+  - first:
+      213: -8951586724399597988
+    second: City - Street 2_124
+  - first:
+      213: -8747746713536813144
+    second: City - Street 2_125
+  - first:
+      213: 2631708021450191379
+    second: City - Street 2_126
+  - first:
+      213: 7259386172728618636
+    second: City - Street 2_127
+  - first:
+      213: 411635173331014339
+    second: City - Street 2_128
+  - first:
+      213: 1482062181252497097
+    second: City - Street 2_129
+  - first:
+      213: -611365727024180463
+    second: City - Street 2_130
+  - first:
+      213: -3470522248273122273
+    second: City - Street 2_131
+  - first:
+      213: 5960429399153363025
+    second: City - Street 2_132
+  - first:
+      213: 3761728336938864586
+    second: City - Street 2_133
+  - first:
+      213: 7879611346236137353
+    second: City - Street 2_134
+  - first:
+      213: -3211797401777726359
+    second: City - Street 2_135
+  - first:
+      213: 3089109778522465204
+    second: City - Street 2_136
+  - first:
+      213: 1277221999940344949
+    second: City - Street 2_137
+  - first:
+      213: 885170542207828260
+    second: City - Street 2_138
+  - first:
+      213: -4336798008213567184
+    second: City - Street 2_139
+  - first:
+      213: -6601216761858663651
+    second: City - Street 2_140
+  - first:
+      213: 1341304790970596200
+    second: City - Street 2_141
+  - first:
+      213: 1829351514809328235
+    second: City - Street 2_142
+  - first:
+      213: 9079250259194568862
+    second: City - Street 2_143
+  - first:
+      213: 4615997800405809935
+    second: City - Street 2_144
+  - first:
+      213: -7459251896536055818
+    second: City - Street 2_145
+  - first:
+      213: 6329524328193912266
+    second: City - Street 2_146
+  - first:
+      213: -3728461763020187580
+    second: City - Street 2_147
+  - first:
+      213: 837571679180601127
+    second: City - Street 2_148
+  - first:
+      213: 705002956865850857
+    second: City - Street 2_149
+  - first:
+      213: 6984656369990897861
+    second: City - Street 2_150
+  - first:
+      213: -109245125700395835
+    second: City - Street 2_151
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -256,8 +550,8 @@ TextureImporter:
       name: City - Street 2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 64
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -277,8 +571,8 @@ TextureImporter:
       name: City - Street 2_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
+        x: 96
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -298,8 +592,8 @@ TextureImporter:
       name: City - Street 2_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 128
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -319,8 +613,8 @@ TextureImporter:
       name: City - Street 2_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 224
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -340,8 +634,8 @@ TextureImporter:
       name: City - Street 2_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 256
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -361,8 +655,8 @@ TextureImporter:
       name: City - Street 2_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 128
+        x: 288
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -382,8 +676,8 @@ TextureImporter:
       name: City - Street 2_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
+        x: 320
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -403,8 +697,8 @@ TextureImporter:
       name: City - Street 2_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 128
+        x: 352
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -424,8 +718,8 @@ TextureImporter:
       name: City - Street 2_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
+        x: 384
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -445,8 +739,8 @@ TextureImporter:
       name: City - Street 2_9
       rect:
         serializedVersion: 2
-        x: 288
-        y: 128
+        x: 416
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -466,8 +760,8 @@ TextureImporter:
       name: City - Street 2_10
       rect:
         serializedVersion: 2
-        x: 320
-        y: 128
+        x: 448
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -487,8 +781,8 @@ TextureImporter:
       name: City - Street 2_11
       rect:
         serializedVersion: 2
-        x: 352
-        y: 128
+        x: 480
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -508,8 +802,8 @@ TextureImporter:
       name: City - Street 2_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 512
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -529,8 +823,8 @@ TextureImporter:
       name: City - Street 2_13
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 544
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -550,8 +844,8 @@ TextureImporter:
       name: City - Street 2_14
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
+        x: 0
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -571,8 +865,8 @@ TextureImporter:
       name: City - Street 2_15
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
+        x: 32
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -592,8 +886,8 @@ TextureImporter:
       name: City - Street 2_16
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
+        x: 64
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -613,8 +907,8 @@ TextureImporter:
       name: City - Street 2_17
       rect:
         serializedVersion: 2
-        x: 160
-        y: 96
+        x: 96
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -634,8 +928,8 @@ TextureImporter:
       name: City - Street 2_18
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
+        x: 128
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -655,8 +949,8 @@ TextureImporter:
       name: City - Street 2_19
       rect:
         serializedVersion: 2
-        x: 224
-        y: 96
+        x: 160
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -676,8 +970,8 @@ TextureImporter:
       name: City - Street 2_20
       rect:
         serializedVersion: 2
-        x: 256
-        y: 96
+        x: 224
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -697,8 +991,8 @@ TextureImporter:
       name: City - Street 2_21
       rect:
         serializedVersion: 2
-        x: 288
-        y: 96
+        x: 256
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -718,8 +1012,8 @@ TextureImporter:
       name: City - Street 2_22
       rect:
         serializedVersion: 2
-        x: 320
-        y: 96
+        x: 288
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -739,8 +1033,8 @@ TextureImporter:
       name: City - Street 2_23
       rect:
         serializedVersion: 2
-        x: 352
-        y: 96
+        x: 320
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -760,8 +1054,8 @@ TextureImporter:
       name: City - Street 2_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 352
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -781,8 +1075,8 @@ TextureImporter:
       name: City - Street 2_25
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 384
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -802,8 +1096,8 @@ TextureImporter:
       name: City - Street 2_26
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 416
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -823,8 +1117,8 @@ TextureImporter:
       name: City - Street 2_27
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
+        x: 448
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -844,8 +1138,8 @@ TextureImporter:
       name: City - Street 2_28
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
+        x: 480
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -865,8 +1159,8 @@ TextureImporter:
       name: City - Street 2_29
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
+        x: 512
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -886,8 +1180,8 @@ TextureImporter:
       name: City - Street 2_30
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
+        x: 544
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -907,8 +1201,8 @@ TextureImporter:
       name: City - Street 2_31
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
+        x: 0
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -928,8 +1222,8 @@ TextureImporter:
       name: City - Street 2_32
       rect:
         serializedVersion: 2
-        x: 288
-        y: 64
+        x: 32
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -949,8 +1243,8 @@ TextureImporter:
       name: City - Street 2_33
       rect:
         serializedVersion: 2
-        x: 320
-        y: 64
+        x: 64
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -970,8 +1264,8 @@ TextureImporter:
       name: City - Street 2_34
       rect:
         serializedVersion: 2
-        x: 352
-        y: 64
+        x: 96
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -991,8 +1285,8 @@ TextureImporter:
       name: City - Street 2_35
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 128
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1012,8 +1306,8 @@ TextureImporter:
       name: City - Street 2_36
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1033,8 +1327,8 @@ TextureImporter:
       name: City - Street 2_37
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
+        x: 192
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1054,8 +1348,8 @@ TextureImporter:
       name: City - Street 2_38
       rect:
         serializedVersion: 2
-        x: 128
-        y: 32
+        x: 256
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1075,8 +1369,8 @@ TextureImporter:
       name: City - Street 2_39
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
+        x: 288
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1096,8 +1390,8 @@ TextureImporter:
       name: City - Street 2_40
       rect:
         serializedVersion: 2
-        x: 192
-        y: 32
+        x: 320
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1117,8 +1411,8 @@ TextureImporter:
       name: City - Street 2_41
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
+        x: 352
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1138,8 +1432,8 @@ TextureImporter:
       name: City - Street 2_42
       rect:
         serializedVersion: 2
-        x: 256
-        y: 32
+        x: 384
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1159,8 +1453,8 @@ TextureImporter:
       name: City - Street 2_43
       rect:
         serializedVersion: 2
-        x: 288
-        y: 32
+        x: 544
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1180,8 +1474,8 @@ TextureImporter:
       name: City - Street 2_44
       rect:
         serializedVersion: 2
-        x: 320
-        y: 32
+        x: 576
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1201,8 +1495,8 @@ TextureImporter:
       name: City - Street 2_45
       rect:
         serializedVersion: 2
-        x: 352
-        y: 32
+        x: 608
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1222,8 +1516,8 @@ TextureImporter:
       name: City - Street 2_46
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 640
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1243,8 +1537,8 @@ TextureImporter:
       name: City - Street 2_47
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
+        x: 672
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1264,8 +1558,8 @@ TextureImporter:
       name: City - Street 2_48
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
+        x: 704
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1285,8 +1579,8 @@ TextureImporter:
       name: City - Street 2_49
       rect:
         serializedVersion: 2
-        x: 224
-        y: 0
+        x: 736
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1306,8 +1600,8 @@ TextureImporter:
       name: City - Street 2_50
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
+        x: 768
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1327,8 +1621,8 @@ TextureImporter:
       name: City - Street 2_51
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
+        x: 0
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -1348,8 +1642,8 @@ TextureImporter:
       name: City - Street 2_52
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
+        x: 32
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -1369,8 +1663,8 @@ TextureImporter:
       name: City - Street 2_53
       rect:
         serializedVersion: 2
-        x: 352
-        y: 0
+        x: 64
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -1382,6 +1676,2064 @@ TextureImporter:
       bones: []
       spriteID: 8633b9477856da660800000000000000
       internalID: 7398681395290911592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d570d268ccd1e30800000000000000
+      internalID: 4475958481329282362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_55
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42668825c2a277d30800000000000000
+      internalID: 4429055128393770532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_56
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ca8733bc33d99c0800000000000000
+      internalID: -3918919152907539314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e0d725ca6d050f0800000000000000
+      internalID: -1130167470863348138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_58
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6c20a16b60a0a60800000000000000
+      internalID: 7640927096977671893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_59
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0bd479a89bdd83b0800000000000000
+      internalID: -5508505320479728881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_60
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93642f5efbc8e36b0800000000000000
+      internalID: -5314655754426104263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_61
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bba915a57e880db0800000000000000
+      internalID: -4825450364795245642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_62
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409cd03c1ac660350800000000000000
+      internalID: 5982588597026277636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_63
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96f68325d499a4e0800000000000000
+      internalID: -1969879718852888933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_64
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25a3d06bf1abea20800000000000000
+      internalID: 3092743670153323822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_65
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b063685d58a2c900800000000000000
+      internalID: 703309610691551415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_66
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6929921ac0893cb00800000000000000
+      internalID: 847688334886670998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_67
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37e0e09de9217480800000000000000
+      internalID: -8903288888020113602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_68
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809a76b67aea76900800000000000000
+      internalID: 677702303027276040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_69
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022e8af97a5feb9a0800000000000000
+      internalID: -6215260335437716960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_70
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268c1921b75798320800000000000000
+      internalID: 2560707034589808738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_71
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d327fcea593e349c0800000000000000
+      internalID: -3944058616623959491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_72
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f87b4bbcc3d2a4b0800000000000000
+      internalID: -5430545324386322189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_73
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e362359655c1f81d0800000000000000
+      internalID: -3346424844948134338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_74
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c366ccc85846d3ac0800000000000000
+      internalID: -3873829579713124804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_75
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0a59a7700619660800000000000000
+      internalID: 7390794048729358559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_76
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7462105a4dbae50800000000000000
+      internalID: 6821779865736726472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_77
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0364a6e4b140610800000000000000
+      internalID: 1586422992345641159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_78
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ac9b656b4597a00800000000000000
+      internalID: 754727554677066249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_79
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d58b6de18096b70800000000000000
+      internalID: 8892647867764202885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_80
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d14eaf5c596db970800000000000000
+      internalID: 8772283494650757590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_81
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b108d94fdee4a8150800000000000000
+      internalID: 5875595447776411675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_82
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb991fdfc3ad13c0800000000000000
+      internalID: -4387170348792439863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_83
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bdb756ae9416c50800000000000000
+      internalID: 6656682995304094548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_84
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0254a3cdcf32bd7e0800000000000000
+      internalID: -1739757262115027680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_85
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4e66781713d5690800000000000000
+      internalID: -7611873431513537373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_86
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c70b89801e27dee0800000000000000
+      internalID: -1236468924127967292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_87
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dadec1b780d5e95f0800000000000000
+      internalID: -748058197090308691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_88
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9805e7543c5d45710800000000000000
+      internalID: 1681203595577282697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_89
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b243ebcc9dcddc750800000000000000
+      internalID: 6326955879526446123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_90
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ad7d30a02f6e3b0800000000000000
+      internalID: -5483429371448927641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_91
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6949bc9fc994ba0800000000000000
+      internalID: -6104175223247694118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_92
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76231b2dbd65b040800000000000000
+      internalID: 4662753648450938494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_93
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a625ccec3692e1a30800000000000000
+      internalID: 4187830212149138026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_94
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049681e89aebeaba0800000000000000
+      internalID: -6075709211833505472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_95
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405d7f1e495bf55f0800000000000000
+      internalID: -765693760578792188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_96
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43de3704a62d9a280800000000000000
+      internalID: -9031456223925113548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_97
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f554748b3c2ae970800000000000000
+      internalID: 8784882657276483060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_98
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940233b68d35195c0800000000000000
+      internalID: -4210491987638149047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_99
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf081351f2f0cbc0800000000000000
+      internalID: -3764742170186608704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_100
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e0b0f0e0b284580800000000000000
+      internalID: -8842770528960049575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_101
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5dcae8ce093aa00800000000000000
+      internalID: 766615707263489519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_102
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae85c383155d8edb0800000000000000
+      internalID: -4762322061131753238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_103
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bdeb79eed004e80800000000000000
+      internalID: -8196536003415057653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_104
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c8a0822e04801b0800000000000000
+      internalID: -5690226789104055221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_105
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d99b7bfa4d1e43e0800000000000000
+      internalID: -2067682971032512039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_106
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72c1a74f7f5f9620800000000000000
+      internalID: 2783048095005524602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_107
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d61268ddeae8c00800000000000000
+      internalID: 904852841609391431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_108
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23fc98ea1cda4100800000000000000
+      internalID: 93128750444376878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_109
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca86753c1221734d0800000000000000
+      internalID: -3155033077729236820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_110
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33da66de6aaf85730800000000000000
+      internalID: 3988213064891018547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_111
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ff06f22a09775b0800000000000000
+      internalID: -5370665004362039451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_112
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1737d67d114b22220800000000000000
+      internalID: 2459726335219430257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_113
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30605f099083a190800000000000000
+      internalID: -7952371122130886595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_114
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97954651563ade80800000000000000
+      internalID: -8153144452433209445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_115
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb06994c3a0f95060800000000000000
+      internalID: 6942844886737051838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_116
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179e862e5044d5670800000000000000
+      internalID: 8529048061373639025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_117
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1560975401a56b0800000000000000
+      internalID: -5306911320333463106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_118
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49736c52cc2c05cd0800000000000000
+      internalID: -2571341205165688940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_119
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c5c0544fba4e560800000000000000
+      internalID: 7342182358139559042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_120
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90e382eded734410800000000000000
+      internalID: 1460149164859187355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_121
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45252c23906eb7f0800000000000000
+      internalID: -594931915549235893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_122
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e5cde67139cf620800000000000000
+      internalID: 2809281996425813636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_123
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e781a3f42d16a3100800000000000000
+      internalID: 88490698587379838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_124
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c563f0c3d4395c380800000000000000
+      internalID: -8951586724399597988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_125
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a72c8a26b2c99680800000000000000
+      internalID: -8747746713536813144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_126
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312b51b8084b58420800000000000000
+      internalID: 2631708021450191379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_127
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e2fd023458eb460800000000000000
+      internalID: 7259386172728618636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_128
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2937b520c66b500800000000000000
+      internalID: 411635173331014339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_129
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce789893b7519410800000000000000
+      internalID: 1482062181252497097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_130
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11310e44c1ef387f0800000000000000
+      internalID: -611365727024180463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_131
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c279e176a36dfc0800000000000000
+      internalID: -3470522248273122273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_132
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158c45575f2b7b250800000000000000
+      internalID: 5960429399153363025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_133
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf03c0fdf7543430800000000000000
+      internalID: 3761728336938864586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_134
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fda8c75c00a5d60800000000000000
+      internalID: 7879611346236137353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_135
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c1488a7476d63d0800000000000000
+      internalID: -3211797401777726359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_136
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3640d0af8beda20800000000000000
+      internalID: 3089109778522465204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_137
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c12c554aa99b110800000000000000
+      internalID: 1277221999940344949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_138
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42100f51be1c84c00800000000000000
+      internalID: 885170542207828260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_139
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0390fc9503990d3c0800000000000000
+      internalID: -4336798008213567184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_140
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b5f007454c364a0800000000000000
+      internalID: -6601216761858663651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_141
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bf451d9954d9210800000000000000
+      internalID: 1341304790970596200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_142
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b626889a289236910800000000000000
+      internalID: 1829351514809328235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_143
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e906a2eb10afffd70800000000000000
+      internalID: 9079250259194568862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_144
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b3c29fa815f0040800000000000000
+      internalID: 4615997800405809935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_145
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff3fc0cbe96b7890800000000000000
+      internalID: -7459251896536055818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_146
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acde03b57dcf6d750800000000000000
+      internalID: 6329524328193912266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_147
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4481e80e7c7d14cc0800000000000000
+      internalID: -3728461763020187580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_148
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727bc7b2107af9b00800000000000000
+      internalID: 837571679180601127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_149
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edc699347ca8c900800000000000000
+      internalID: 705002956865850857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_150
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c01a7356fb7ee060800000000000000
+      internalID: 6984656369990897861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: City - Street 2_151
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc5f211322eb7ef0800000000000000
+      internalID: -109245125700395835
       vertices: []
       indices: 
       edges: []
