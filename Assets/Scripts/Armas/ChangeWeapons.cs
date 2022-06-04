@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ChangeWeapons : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class ChangeWeapons : MonoBehaviour
     GameObject[] equipavel = new GameObject[4];
 
     [SerializeField] GameObject[] menu;
-    readonly SpriteRenderer[] spriteMenu = new SpriteRenderer[4];
+    readonly Image[] spriteMenu = new Image[4];
 
     Shooting shootingScript;
 
@@ -24,7 +25,7 @@ public class ChangeWeapons : MonoBehaviour
     void Start()
     {
         for (int i = 0; i < 4; i++)
-            spriteMenu[i] = menu[i].GetComponent<SpriteRenderer>();
+            spriteMenu[i] = menu[i].GetComponent<Image>();
 
         for(int i = 0; i<4 ; i++)
         {
