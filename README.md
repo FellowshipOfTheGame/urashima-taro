@@ -55,3 +55,12 @@ Configuração do Chave:<br>
 
 A chave é configurada como segue:
 
+<hr/>
+Documentação: Colisor inserido na cena HerbetH<br>
+Responsável: Alexandre email: alelocci@ime.usp.br<br>
+17/06/22<br><br>
+
+Colisores inseridos na cena HerbetH para limitar o movimento do Paly. Os colisores são objetos 2d sólidos e invisíveis. <br>
+
+Situação: Concluido não testado. <br>
+
