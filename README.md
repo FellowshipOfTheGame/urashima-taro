@@ -64,3 +64,11 @@ Colisores inseridos na cena HerbetH para limitar o movimento do Paly. Os colisor
 
 Situação: Concluido não testado. <br>
 
+<hr/>
+Documentação: Colisor inserido na cena HerbetH2<br>
+Responsável: Alexandre email: alelocci@ime.usp.br<br>
+19/06/22<br><br>
+
+Colisores inseridos na cena HerbetH2 para limitar o movimento do Play. Os colisores são objetos 2d sólidos e invisíveis. <br>
+
+Situação: Concluido e testado. <br>
