@@ -3071,7 +3071,7 @@ Transform:
   - {fileID: 1061558830}
   - {fileID: 1235590933}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &728930786
 GameObject:
@@ -58043,7 +58043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7, y: -18.999908}
+  m_AnchoredPosition: {x: 7, y: -18.999939}
   m_SizeDelta: {x: -460.0426, y: -133.61961}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3284808490582111297
@@ -61862,7 +61862,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -62048,7 +62048,7 @@ MonoBehaviour:
   m_Follow: {fileID: 8437234615786769257}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 6
+    OrthographicSize: 2.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -66473,7 +66473,7 @@ Transform:
   - {fileID: 8437234615440965701}
   - {fileID: 8437234616199208772}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8437234615786769259
 MonoBehaviour:
