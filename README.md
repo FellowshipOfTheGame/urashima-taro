@@ -72,3 +72,13 @@ Responsável: Alexandre email: alelocci@ime.usp.br<br>
 Colisores inseridos na cena HerbetH2 para limitar o movimento do Play. Os colisores são objetos 2d sólidos e invisíveis. <br>
 
 Situação: Concluido e testado. <br>
+
+<hr/>
+Documentação: Função tiro na cena HerbetH2<br>
+Responsável: Alexandre email: alelocci@ime.usp.br<br>
+25/06/22<br><br>
+
+O Script Tiro permite que o player dispare um projétil. O disparo ocorre clicando com o botão direito do mouse (botão esquerdo já está em uso), a direção do projétil será dada pela posição do cursor do mouse, no momento do clique. <br>
+
+Situação: Concluido testado. <br>
+Alterações: Criar uma arte para o objeto bala. <br>
