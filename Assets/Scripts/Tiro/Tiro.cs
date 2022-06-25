@@ -7,7 +7,7 @@ public class Tiro : MonoBehaviour
 
     public Transform jogador;
     public Transform bala1;
-    private float speed = 20;
+    private float speed = 5;
     private float SPEED = 1;   
     private bool mova = false;
     private Camera cam;
@@ -37,7 +37,7 @@ public class Tiro : MonoBehaviour
     void InputShoot()
     {     
 
-        if (Input.GetMouseButtonDown(0) || mova)
+        if (Input.GetMouseButtonDown(1) || mova)
         {
 
             if (!mova)
@@ -45,8 +45,7 @@ public class Tiro : MonoBehaviour
 
                 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = 0.0f;
-                direction = (mousePosition - transform.position).normalized;
-
+                direction = mousePosition;
             }
 
             bala1.transform.position += direction * speed * Time.deltaTime;
@@ -56,9 +55,8 @@ public class Tiro : MonoBehaviour
             {
 
                 mova = false;
-                bala1.transform.position = jogador.transform.position;
-                bala1.transform.rotation = Quaternion.AngleAxis(0, Vector3.up);
-
+                bala1.transform.position = new Vector3(32, 6, 0);
+                
             }
 
         }
