@@ -8,10 +8,10 @@ public class Tiro : MonoBehaviour
     public Transform jogador;
     public Transform bala1;
     private float speed = 5;
-    private float SPEED = 1;   
     private bool mova = false;
     private Camera cam;
     private Vector3 newPosition;
+    private float distance; 
 
     Vector3 mousePosition;
     Vector3 direction;
@@ -25,8 +25,7 @@ public class Tiro : MonoBehaviour
         direction = (mousePosition - transform.position).normalized;
 
     }
-
-    // Update is called once per frame
+    
     void Update()
     {             
         
@@ -51,7 +50,8 @@ public class Tiro : MonoBehaviour
             bala1.transform.position += direction * speed * Time.deltaTime;
             mova = true;
 
-           if(bala1.transform.position.x >= 14.0f || bala1.transform.position.x <= -14.0f || bala1.transform.position.y >= 6.0f || bala1.transform.position.y <= -6.0f)
+           distance = Vector3.Distance (bala1.transform.position, jogador.transform.position);
+           if(distance > 30)
             {
 
                 mova = false;

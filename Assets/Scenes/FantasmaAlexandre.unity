@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jogador: {fileID: 2036947693}
   fantasma: {fileID: 145710070}
-  velocidade: 0.05
+  velocidade: 0.5
   velocidadeDeAtaque: 0.01
   raioAlvo: 8
   tempoSec: 2
@@ -335,6 +335,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2

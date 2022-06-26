@@ -9,6 +9,7 @@ TagManager:
   - Sound
   - porta
   - chave
+  - Fantasma
   layers:
   - Default
   - TransparentFX
