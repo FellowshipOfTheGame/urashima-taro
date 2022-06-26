@@ -82,3 +82,13 @@ O Script Tiro permite que o player dispare um projétil. O disparo ocorre clican
 
 Situação: Concluido testado. <br>
 Alterações: Criar uma arte para o objeto bala. <br>
+
+<hr/>
+Documentação: Fantasma e tiro integrados na cena HerbetH2<br>
+Responsável: Alexandre email: alelocci@ime.usp.br<br>
+26/06/22<br><br>
+
+O fantasma foi integrado a cena. Ele "vaga" em direção ao player. Se a bala atingir o fantasma esse é destruído e recolocado numa nova posição aleatória da cena e recomeça a perseguir o player.<br>
+
+Situação: Concluido testado. <br>
+Alterações: Criar uma arte para o objeto fantasma.<br>
