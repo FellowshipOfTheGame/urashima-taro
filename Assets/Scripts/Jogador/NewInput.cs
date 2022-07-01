@@ -19,6 +19,8 @@ public class NewInput : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Camera cam;
 
+    [SerializeField] float runSpeedFactor;
+
     [HideInInspector] public bool isRunning = false;
     bool isLanternaOn = true;
 
@@ -172,7 +174,7 @@ public class NewInput : MonoBehaviour
         movimento = new Vector2(inputVec.x, inputVec.y);
 
         if (isRunning)
-            rb.MovePosition(rb.position + 2 * Time.fixedDeltaTime * velocidadeMovimento * movimento);
+            rb.MovePosition(rb.position + runSpeedFactor * Time.fixedDeltaTime * velocidadeMovimento * movimento);
         else
             rb.MovePosition(rb.position + Time.fixedDeltaTime * velocidadeMovimento * movimento);
     }
