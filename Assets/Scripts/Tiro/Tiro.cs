@@ -19,7 +19,8 @@ public class Tiro : MonoBehaviour
     void Start()
     {
 
-        bala1.transform.position = jogador.transform.position;
+        //bala1.transform.position = jogador.transform.position;
+        bala1.transform.position = new Vector3(32, 6, 0);
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0.0f;
         direction = (mousePosition - transform.position).normalized;
@@ -39,9 +40,11 @@ public class Tiro : MonoBehaviour
         if (Input.GetMouseButtonDown(1) || mova)
         {
 
+           
+            
             if (!mova)
-            {
-
+            {     
+                 bala1.transform.position = jogador.transform.position;           
                 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = 0.0f;
                 direction = mousePosition;
@@ -50,8 +53,8 @@ public class Tiro : MonoBehaviour
             bala1.transform.position += direction * speed * Time.deltaTime;
             mova = true;
 
-           distance = Vector3.Distance (bala1.transform.position, jogador.transform.position);
-           if(distance > 30)
+            distance = Vector3.Distance (bala1.transform.position, jogador.transform.position);
+            if(distance > 30)
             {
 
                 mova = false;
@@ -64,7 +67,8 @@ public class Tiro : MonoBehaviour
         if (!mova)
         {
 
-            bala1.transform.position = jogador.transform.position;
+            //bala1.transform.position = jogador.transform.position;
+            bala1.transform.position = new Vector3(32, 6, 0);
 
         }
 
