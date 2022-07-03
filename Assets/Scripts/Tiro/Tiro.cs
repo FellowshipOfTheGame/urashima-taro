@@ -7,11 +7,11 @@ public class Tiro : MonoBehaviour
 
     public Transform jogador;
     public Transform bala1;
-    private float speed = 20;
-    private float SPEED = 1;   
+    private float speed = 5;
     private bool mova = false;
     private Camera cam;
     private Vector3 newPosition;
+    private float distance; 
 
     Vector3 mousePosition;
     Vector3 direction;
@@ -19,14 +19,14 @@ public class Tiro : MonoBehaviour
     void Start()
     {
 
-        bala1.transform.position = jogador.transform.position;
+        //bala1.transform.position = jogador.transform.position;
+        bala1.transform.position = new Vector3(32, 6, 0);
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0.0f;
         direction = (mousePosition - transform.position).normalized;
 
     }
-
-    // Update is called once per frame
+    
     void Update()
     {             
         
@@ -37,28 +37,29 @@ public class Tiro : MonoBehaviour
     void InputShoot()
     {     
 
-        if (Input.GetMouseButtonDown(0) || mova)
+        if (Input.GetMouseButtonDown(1) || mova)
         {
 
+           
+            
             if (!mova)
-            {
-
+            {     
+                 bala1.transform.position = jogador.transform.position;           
                 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = 0.0f;
-                direction = (mousePosition - transform.position).normalized;
-
+                direction = mousePosition;
             }
 
             bala1.transform.position += direction * speed * Time.deltaTime;
             mova = true;
 
-           if(bala1.transform.position.x >= 14.0f || bala1.transform.position.x <= -14.0f || bala1.transform.position.y >= 6.0f || bala1.transform.position.y <= -6.0f)
+            distance = Vector3.Distance (bala1.transform.position, jogador.transform.position);
+            if(distance > 30)
             {
 
                 mova = false;
-                bala1.transform.position = jogador.transform.position;
-                bala1.transform.rotation = Quaternion.AngleAxis(0, Vector3.up);
-
+                bala1.transform.position = new Vector3(32, 6, 0);
+                
             }
 
         }
@@ -66,7 +67,8 @@ public class Tiro : MonoBehaviour
         if (!mova)
         {
 
-            bala1.transform.position = jogador.transform.position;
+            //bala1.transform.position = jogador.transform.position;
+            bala1.transform.position = new Vector3(32, 6, 0);
 
         }
 

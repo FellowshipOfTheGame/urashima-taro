@@ -55,3 +55,40 @@ Configuração do Chave:<br>
 
 A chave é configurada como segue:
 
+<hr/>
+Documentação: Colisor inserido na cena HerbetH<br>
+Responsável: Alexandre email: alelocci@ime.usp.br<br>
+17/06/22<br><br>
+
+Colisores inseridos na cena HerbetH para limitar o movimento do Paly. Os colisores são objetos 2d sólidos e invisíveis. <br>
+
+Situação: Concluido não testado. <br>
+
+<hr/>
+Documentação: Colisor inserido na cena HerbetH2<br>
+Responsável: Alexandre email: alelocci@ime.usp.br<br>
+19/06/22<br><br>
+
+Colisores inseridos na cena HerbetH2 para limitar o movimento do Play. Os colisores são objetos 2d sólidos e invisíveis. <br>
+
+Situação: Concluido e testado. <br>
+
+<hr/>
+Documentação: Função tiro na cena HerbetH2<br>
+Responsável: Alexandre email: alelocci@ime.usp.br<br>
+25/06/22<br><br>
+
+O Script Tiro permite que o player dispare um projétil. O disparo ocorre clicando com o botão direito do mouse (botão esquerdo já está em uso), a direção do projétil será dada pela posição do cursor do mouse, no momento do clique. <br>
+
+Situação: Concluido testado. <br>
+Alterações: Criar uma arte para o objeto bala. <br>
+
+<hr/>
+Documentação: Fantasma e tiro integrados na cena HerbetH2<br>
+Responsável: Alexandre email: alelocci@ime.usp.br<br>
+26/06/22<br><br>
+
+O fantasma foi integrado a cena. Ele "vaga" em direção ao player. Se a bala atingir o fantasma esse é destruído e recolocado numa nova posição aleatória da cena e recomeça a perseguir o player.<br>
+
+Situação: Concluido testado. <br>
+Alterações: Criar uma arte para o objeto fantasma.<br>
