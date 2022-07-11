@@ -45,7 +45,7 @@ public class ShadowController : MonoBehaviour
             float distance = Vector3.Distance(transform.position, lights[i].transform.position);
 
             shadowScaleY = distance * maxScale / maxDistance;
-            Debug.Log(shadowScaleY);
+            //Debug.Log(shadowScaleY);
             if (shadowScaleY < minScale)
             {
                 shadowScaleY = minScale;
