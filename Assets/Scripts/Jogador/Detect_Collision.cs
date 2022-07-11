@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Detecta a colisao com o inimigo
-//O objeto do collider do inimigo precisa estar com tag "Enemy" e script "Enemy_Attack" para a deteccao
-
-//Scripts relacionados: Vida(Objeto: Jogador 1)
-//                      Enemy_Attack(Objeto: Objeto que tem o collider do Inimigo)
+//O objeto do collider do inimigo precisa estar com tag "Enemy" para a deteccao
 public class Detect_Collision : MonoBehaviour
 {
     [HideInInspector] public bool isEnemyHit = false;
