@@ -42,7 +42,12 @@ public class NewInput : MonoBehaviour
     private Vector2 UP_RIGHT_DIRECTION = new Vector2(0.7f, 0.7f);
     private Vector2 DOWN_LEFT_DIRECTION = new Vector2(-0.7f, -0.7f);
     private Vector2 DOWN_RIGHT_DIRECTION = new Vector2(0.7f, -0.7f);
-    private float distanceEpsilon = 0.1f; // To compare two vectors distance and check if they are approximately equal
+
+    private const int UP = 0;
+    private const int DOWN = 2;
+    private const int LEFT = 3;
+    private const int RIGHT = 1;    
+    private const float distanceEpsilon = 0.1f; // To compare two vectors distance and check if they are approximately equal
 
     private void Start()
     {
@@ -80,43 +85,46 @@ public class NewInput : MonoBehaviour
         // Debug.Log(InputManager.GetInstance().GetMoveDirection());
     }
 
+    // Auxiliar function to Flip() to flip the player sprite
+    // to its correct animation
+    private void FlipAnimationTo(int directionID)
+    {
+        lanterna.transform.position = posicoesLanterna[directionID].position;
+        anim.SetInteger("Direcao", directionID);
+    }
+
+    // Flip the player sprite related to the direction of the player
     private void Flip()
     {
         Vector2 playerMoveDirection = InputManager.GetInstance().GetMoveDirection();
 
         if (playerMoveDirection == UP_DIRECTION)
         {
-            lanterna.transform.position = posicoesLanterna[0].position;
-            anim.SetInteger("Direcao", 0);
+            FlipAnimationTo(UP);
         }
         else if (playerMoveDirection == DOWN_DIRECTION)
         {
-            lanterna.transform.position = posicoesLanterna[2].position;
-            anim.SetInteger("Direcao", 2);
+            FlipAnimationTo(DOWN);
         }
         else if (playerMoveDirection == RIGHT_DIRECTION)
         {
-            lanterna.transform.position = posicoesLanterna[1].position;
-            anim.SetInteger("Direcao", 1);
+            FlipAnimationTo(RIGHT);
         }
         else if (playerMoveDirection == LEFT_DIRECTION)
         {
-            lanterna.transform.position = posicoesLanterna[3].position;
-            anim.SetInteger("Direcao", 3);
+            FlipAnimationTo(LEFT);
         }
         else if (Vector2.Distance(playerMoveDirection, UP_RIGHT_DIRECTION) < distanceEpsilon)
         {
             if ((angulo < 45 && angulo >= 0) || (angulo > -45 && angulo <= 0))
             {
                 // cima
-                lanterna.transform.position = posicoesLanterna[0].position;
-                anim.SetInteger("Direcao", 0);
+                FlipAnimationTo(UP);
             }
             else if (angulo <= -45 && angulo >= -135)
             {
                 // direita
-                lanterna.transform.position = posicoesLanterna[1].position;
-                anim.SetInteger("Direcao", 1);
+                FlipAnimationTo(RIGHT);
             }
         }
         else if (Vector2.Distance(playerMoveDirection, UP_LEFT_DIRECTION) < distanceEpsilon)
@@ -124,14 +132,12 @@ public class NewInput : MonoBehaviour
             if ((angulo < 45 && angulo >= 0) || (angulo > -45 && angulo <= 0))
             {
                 // cima
-                lanterna.transform.position = posicoesLanterna[0].position;
-                anim.SetInteger("Direcao", 0);
+                FlipAnimationTo(UP);
             }
             else if ((angulo >= 45 && angulo <= 90) || (angulo >= -270 && angulo <= -225))
             {
                 // esquerda
-                lanterna.transform.position = posicoesLanterna[3].position;
-                anim.SetInteger("Direcao", 3);
+                FlipAnimationTo(LEFT);
             }
         }
         else if (Vector2.Distance(playerMoveDirection, DOWN_RIGHT_DIRECTION) < distanceEpsilon)
@@ -139,14 +145,12 @@ public class NewInput : MonoBehaviour
             if (angulo < -135 && angulo > -225)
             {
                 // baixo
-                lanterna.transform.position = posicoesLanterna[2].position;
-                anim.SetInteger("Direcao", 2);
+                FlipAnimationTo(DOWN);
             }            
             else if (angulo <= -45 && angulo >= -135)
             {
                 // direita
-                lanterna.transform.position = posicoesLanterna[1].position;
-                anim.SetInteger("Direcao", 1);
+                FlipAnimationTo(RIGHT);
             }
         }
         else if (Vector2.Distance(playerMoveDirection, DOWN_LEFT_DIRECTION) < distanceEpsilon)
@@ -154,14 +158,12 @@ public class NewInput : MonoBehaviour
             if (angulo < -135 && angulo > -225)
             {
                 // baixo
-                lanterna.transform.position = posicoesLanterna[2].position;
-                anim.SetInteger("Direcao", 2);
+                FlipAnimationTo(DOWN);
             }
             else if ((angulo >= 45 && angulo <= 90) || (angulo >= -270 && angulo <= -225))
             {
                 // esquerda
-                lanterna.transform.position = posicoesLanterna[3].position;
-                anim.SetInteger("Direcao", 3);
+                FlipAnimationTo(LEFT);
             }
         }
     }
