@@ -48,9 +48,12 @@ public class NewInput : MonoBehaviour
     private const int LEFT = 3;
     private const int RIGHT = 1;    
     private const float distanceEpsilon = 0.1f; // To compare two vectors distance and check if they are approximately equal
+    private int directionID;
 
     private void Start()
     {
+        directionID = UP;
+
         mousePosition = GameObject.Find("MousePosReader").GetComponent<MousePosition>();
         anim = GetComponent<Animator>();
     }
@@ -82,90 +85,123 @@ public class NewInput : MonoBehaviour
         Run();
         Flashlight();
         RotationArmas();
-        // Debug.Log(InputManager.GetInstance().GetMoveDirection());
+    }
+
+    // Fix angle accordly to the direction where the player is facing
+    // (Where the sprite of the player is facing) 
+    private void FixAngle(int directionID)
+    {
+        switch(directionID)
+        {
+            case UP:
+                if (angulo < -45f && angulo > -180f)
+                    angulo = -45f;
+                else if (angulo > 45f || angulo <= -180f)
+                    angulo = 45f;
+                break;
+
+            case DOWN:
+                if (angulo < 0f && angulo > -135f)
+                    angulo = -135f;
+                else if (angulo < -225f || angulo >= 0f)
+                    angulo = -225f;
+                break;
+
+            case RIGHT:
+                if (angulo > -45f || angulo <= -270f)
+                    angulo = -45f;
+                else if (angulo < -135f/* && angulo >= -270f*/)
+                    angulo = -135f;
+                break;
+
+            case LEFT:
+                if (angulo < 45f && angulo > -90f)
+                    angulo = 45f;
+                else if (angulo > -225f && angulo <= -90f)
+                    angulo = -225f;
+                break;
+        }
+
     }
 
     // Auxiliar function to Flip() to flip the player sprite
     // to its correct animation
     private void FlipAnimationTo(int directionID)
     {
+        // Change lantern position accordly to the direction
         lanterna.transform.position = posicoesLanterna[directionID].position;
+
+        // Set the player animation sprite accordly to the direction
         anim.SetInteger("Direcao", directionID);
     }
 
     // Flip the player sprite related to the direction of the player
     private void Flip()
-    {
+    {        
         Vector2 playerMoveDirection = InputManager.GetInstance().GetMoveDirection();
 
         if (playerMoveDirection == UP_DIRECTION)
         {
-            FlipAnimationTo(UP);
+            directionID = UP;
         }
         else if (playerMoveDirection == DOWN_DIRECTION)
         {
-            FlipAnimationTo(DOWN);
+            directionID = DOWN;
         }
         else if (playerMoveDirection == RIGHT_DIRECTION)
         {
-            FlipAnimationTo(RIGHT);
+            directionID = RIGHT;
         }
         else if (playerMoveDirection == LEFT_DIRECTION)
         {
-            FlipAnimationTo(LEFT);
+            directionID = LEFT;
         }
         else if (Vector2.Distance(playerMoveDirection, UP_RIGHT_DIRECTION) < distanceEpsilon)
         {
             if ((angulo < 45 && angulo >= 0) || (angulo > -45 && angulo <= 0))
             {
-                // cima
-                FlipAnimationTo(UP);
+                directionID = UP;
             }
             else if (angulo <= -45 && angulo >= -135)
             {
-                // direita
-                FlipAnimationTo(RIGHT);
+                directionID = RIGHT;
             }
         }
         else if (Vector2.Distance(playerMoveDirection, UP_LEFT_DIRECTION) < distanceEpsilon)
         {
             if ((angulo < 45 && angulo >= 0) || (angulo > -45 && angulo <= 0))
             {
-                // cima
-                FlipAnimationTo(UP);
+                directionID = UP;
             }
             else if ((angulo >= 45 && angulo <= 90) || (angulo >= -270 && angulo <= -225))
             {
-                // esquerda
-                FlipAnimationTo(LEFT);
+                directionID = LEFT;
             }
         }
         else if (Vector2.Distance(playerMoveDirection, DOWN_RIGHT_DIRECTION) < distanceEpsilon)
         {
             if (angulo < -135 && angulo > -225)
             {
-                // baixo
-                FlipAnimationTo(DOWN);
+                directionID = DOWN;
             }            
             else if (angulo <= -45 && angulo >= -135)
             {
-                // direita
-                FlipAnimationTo(RIGHT);
+                directionID = RIGHT;
             }
         }
         else if (Vector2.Distance(playerMoveDirection, DOWN_LEFT_DIRECTION) < distanceEpsilon)
         {
             if (angulo < -135 && angulo > -225)
             {
-                // baixo
-                FlipAnimationTo(DOWN);
+                directionID = DOWN;
             }
             else if ((angulo >= 45 && angulo <= 90) || (angulo >= -270 && angulo <= -225))
             {
-                // esquerda
-                FlipAnimationTo(LEFT);
+                directionID = LEFT;
             }
         }
+        FlipAnimationTo(directionID);
+        FixAngle(directionID);
     }
 
     public void Rotation()
