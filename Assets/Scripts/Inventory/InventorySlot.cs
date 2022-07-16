@@ -14,7 +14,7 @@ public class InventorySlot : MonoBehaviour
     // Sprite with size 251x251 used as example to resize sprites (kame)
     private const float exempleWidth = 251f;
     private const float exempleHeight = 251f;
-    private const float sizeFactor = 0.012f;
+    private const float sizeFactor = 0.25f;
 
     private void Start()
     {
