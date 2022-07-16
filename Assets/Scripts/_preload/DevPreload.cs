@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class DevPreload : MonoBehaviour
 {
     public static DevPreload Instance { get; private set; }
-    public enum Type {_preload, Menu, Test, Teoi,Teoi2};
+    public enum Type {_preload, Menu, Test, Teoi, HerbertH2};
     public Type nextScene;
 
     void Awake()
