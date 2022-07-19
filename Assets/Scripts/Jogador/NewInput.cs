@@ -19,6 +19,8 @@ public class NewInput : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Camera cam;
 
+    [SerializeField] float runSpeedFactor;
+
     [HideInInspector] public bool isRunning = false;
     bool isLanternaOn = true;
 
@@ -32,8 +34,26 @@ public class NewInput : MonoBehaviour
 
     float angulo;
 
+    private Vector2 RIGHT_DIRECTION = new Vector2(1.0f, 0.0f);
+    private Vector2 LEFT_DIRECTION = new Vector2(-1.0f, 0.0f);
+    private Vector2 UP_DIRECTION = new Vector2(0.0f, 1.0f);
+    private Vector2 DOWN_DIRECTION = new Vector2(0.0f, -1.0f);
+    private Vector2 UP_LEFT_DIRECTION = new Vector2(-0.7f, 0.7f);
+    private Vector2 UP_RIGHT_DIRECTION = new Vector2(0.7f, 0.7f);
+    private Vector2 DOWN_LEFT_DIRECTION = new Vector2(-0.7f, -0.7f);
+    private Vector2 DOWN_RIGHT_DIRECTION = new Vector2(0.7f, -0.7f);
+
+    private const int UP = 0;
+    private const int DOWN = 2;
+    private const int LEFT = 3;
+    private const int RIGHT = 1;    
+    private const float distanceEpsilon = 0.1f; // To compare two vectors distance and check if they are approximately equal
+    private int directionID;
+
     private void Start()
     {
+        directionID = UP;
+
         mousePosition = GameObject.Find("MousePosReader").GetComponent<MousePosition>();
         anim = GetComponent<Animator>();
     }
@@ -52,8 +72,6 @@ public class NewInput : MonoBehaviour
         {
             raioSom.radius = 6f;
         }
-
-        
     }
 
     private void FixedUpdate()
@@ -67,69 +85,123 @@ public class NewInput : MonoBehaviour
         Run();
         Flashlight();
         RotationArmas();
-
-        /*if ((angulo >= 0 && angulo < 22.5f) || (angulo <= 0 && angulo > -22.5f))
-        {
-            sprite.color = new Color(1, 0, 0, 1);
-        }
-        else if (angulo <= -22.5f && angulo > -67.5f)
-        {
-            sprite.color = new Color(0, 1, 0, 1);
-        }
-        else if (angulo <= -67.5f && angulo > -112.5f)
-        {
-            sprite.color = new Color(0, 0, 1, 1);
-        }
-        else if (angulo <= -112.5f && angulo > -157.5f)
-        {
-            sprite.color = new Color(1, 1, 0, 1);
-        }
-        else if (angulo <= -157.5f && angulo > -202.5)
-        {
-            sprite.color = new Color(1, 0, 1, 1);
-        }
-        else if (angulo <= -202.5f && angulo > -247.5)
-        {
-            sprite.color = new Color(0, 1, 1, 1);
-        }
-        else if ((angulo <= -247.5f && angulo >= -270)||(angulo >= 67.5f && angulo < 90))
-        {
-            sprite.color = new Color(1, 1, 1, 1);
-        }
-        else if (angulo >= 22.5f && angulo < 67.5f)
-        {
-            sprite.color = new Color(0.2f, 0.5f, 1, 1);
-        }*/
     }
 
-    private void Flip()
+    // Fix angle accordly to the direction where the player is facing
+    // (Where the sprite of the player is facing) 
+    private void FixAngle(int directionID)
     {
-        //Debug.Log(angulo);
+        switch(directionID)
+        {
+            case UP:
+                if (angulo < -45f && angulo > -180f)
+                    angulo = -45f;
+                else if (angulo > 45f || angulo <= -180f)
+                    angulo = 45f;
+                break;
 
-        if ((angulo < 45 && angulo >= 0) || (angulo > -45 && angulo <= 0))
-        {
-            // cima
-            lanterna.transform.position = posicoesLanterna[0].position;
-            anim.SetInteger("Direcao", 0);
+            case DOWN:
+                if (angulo < 0f && angulo > -135f)
+                    angulo = -135f;
+                else if (angulo < -225f || angulo >= 0f)
+                    angulo = -225f;
+                break;
+
+            case RIGHT:
+                if (angulo > -45f || angulo <= -270f)
+                    angulo = -45f;
+                else if (angulo < -135f/* && angulo >= -270f*/)
+                    angulo = -135f;
+                break;
+
+            case LEFT:
+                if (angulo < 45f && angulo > -90f)
+                    angulo = 45f;
+                else if (angulo > -225f && angulo <= -90f)
+                    angulo = -225f;
+                break;
         }
-        else if (angulo <= -45 && angulo >= -135)
+
+    }
+
+    // Auxiliar function to Flip() to flip the player sprite
+    // to its correct animation
+    private void FlipAnimationTo(int directionID)
+    {
+        // Change lantern position accordly to the direction
+        lanterna.transform.position = posicoesLanterna[directionID].position;
+
+        // Set the player animation sprite accordly to the direction
+        anim.SetInteger("Direcao", directionID);
+    }
+
+    // Flip the player sprite related to the direction of the player
+    private void Flip()
+    {        
+        Vector2 playerMoveDirection = InputManager.GetInstance().GetMoveDirection();
+
+        if (playerMoveDirection == UP_DIRECTION)
         {
-            // direita
-            lanterna.transform.position = posicoesLanterna[1].position;
-            anim.SetInteger("Direcao", 1);
+            directionID = UP;
         }
-        else if (angulo < -135 && angulo > -225)
+        else if (playerMoveDirection == DOWN_DIRECTION)
         {
-            // baixo
-            lanterna.transform.position = posicoesLanterna[2].position;
-            anim.SetInteger("Direcao", 2);
+            directionID = DOWN;
         }
-        else if ((angulo >= 45 && angulo <= 90) || (angulo >= -270 && angulo <= -225))
+        else if (playerMoveDirection == RIGHT_DIRECTION)
         {
-            // esquerda
-            lanterna.transform.position = posicoesLanterna[3].position;
-            anim.SetInteger("Direcao", 3);
+            directionID = RIGHT;
         }
+        else if (playerMoveDirection == LEFT_DIRECTION)
+        {
+            directionID = LEFT;
+        }
+        else if (Vector2.Distance(playerMoveDirection, UP_RIGHT_DIRECTION) < distanceEpsilon)
+        {
+            if ((angulo < 45 && angulo >= 0) || (angulo > -45 && angulo <= 0))
+            {
+                directionID = UP;
+            }
+            else if (angulo <= -45 && angulo >= -135)
+            {
+                directionID = RIGHT;
+            }
+        }
+        else if (Vector2.Distance(playerMoveDirection, UP_LEFT_DIRECTION) < distanceEpsilon)
+        {
+            if ((angulo < 45 && angulo >= 0) || (angulo > -45 && angulo <= 0))
+            {
+                directionID = UP;
+            }
+            else if ((angulo >= 45 && angulo <= 90) || (angulo >= -270 && angulo <= -225))
+            {
+                directionID = LEFT;
+            }
+        }
+        else if (Vector2.Distance(playerMoveDirection, DOWN_RIGHT_DIRECTION) < distanceEpsilon)
+        {
+            if (angulo < -135 && angulo > -225)
+            {
+                directionID = DOWN;
+            }            
+            else if (angulo <= -45 && angulo >= -135)
+            {
+                directionID = RIGHT;
+            }
+        }
+        else if (Vector2.Distance(playerMoveDirection, DOWN_LEFT_DIRECTION) < distanceEpsilon)
+        {
+            if (angulo < -135 && angulo > -225)
+            {
+                directionID = DOWN;
+            }
+            else if ((angulo >= 45 && angulo <= 90) || (angulo >= -270 && angulo <= -225))
+            {
+                directionID = LEFT;
+            }
+        }
+        FlipAnimationTo(directionID);
+        FixAngle(directionID);
     }
 
     public void Rotation()
@@ -172,7 +244,7 @@ public class NewInput : MonoBehaviour
         movimento = new Vector2(inputVec.x, inputVec.y);
 
         if (isRunning)
-            rb.MovePosition(rb.position + 2 * Time.fixedDeltaTime * velocidadeMovimento * movimento);
+            rb.MovePosition(rb.position + runSpeedFactor * Time.fixedDeltaTime * velocidadeMovimento * movimento);
         else
             rb.MovePosition(rb.position + Time.fixedDeltaTime * velocidadeMovimento * movimento);
     }

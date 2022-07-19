@@ -17,7 +17,8 @@ public class ZombieFieldOfView : MonoBehaviour
     public LayerMask obstructionMask;
 
     public bool canSeePlayer;
-
+    public float initialFollowTime;    // This can be privated when the game launchs
+    private float followTime;
     private NewInput newInput;
 
     void Start()
@@ -25,6 +26,16 @@ public class ZombieFieldOfView : MonoBehaviour
         newInput = FindObjectOfType<NewInput>();
 
         StartCoroutine(FOVRoutine());
+    }
+
+    private void Update()
+    {
+        // Variable that controls the time that the zombie
+        // still follow the player even if its is out of the field of view
+        if (followTime > 0)
+        {
+            followTime -= Time.deltaTime;
+        }
     }
 
     private IEnumerator FOVRoutine()
@@ -41,13 +52,13 @@ public class ZombieFieldOfView : MonoBehaviour
 
     private float GetSlope(Vector3 point0, Vector3 point1)
     {
-        return ( point0.y - point1.y ) / ( point0.x - point1.x );
+        return (point0.y - point1.y) / (point0.x - point1.x);
     }
 
     private void FieldOfViewCheck2D()
     {
-        //* ATTENTION: The Dev lost 4 hours (actually more) trying to debug this, and the reason that the Angle
-        //*            between the player and de zombie was not corrently setted was that another object was with the 'Player' layer.
+        //* ATTENTION: The Dev took 4 hours (actually more) trying to debug this, and the reason that the Angle
+        //*            between the player and the zombie was not corrently setted was becaouse another object was with the 'Player' layer.
         //*            So to avoid this problem, the scene must have ONLY ONE object with the Layer 'Player'.
 
         // Keeps the Collider of the player if the object with targetMask=Player is inside the circle area defined (for vision or hearing)
@@ -56,7 +67,7 @@ public class ZombieFieldOfView : MonoBehaviour
 
         // Checks for the vision
         if (rangeCheckVision.Length != 0)
-        {            
+        {
             // The first transform is the Player transform, because the targetMask is setted as the Player Layer
             Transform target = rangeCheckVision[0].transform;
 
@@ -82,7 +93,7 @@ public class ZombieFieldOfView : MonoBehaviour
             }
             else
                 canSeePlayer = false;
-            
+
         }
         else if (canSeePlayer)
             canSeePlayer = false;
@@ -101,9 +112,10 @@ public class ZombieFieldOfView : MonoBehaviour
             // check if the vision distance and if there is an obstruction between the player and the enemy
             if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
             {
+                followTime = initialFollowTime;
                 canSeePlayer = true;
             }
-            else
+            else if (followTime <= 0)
             {
                 canSeePlayer = false;
             }
@@ -124,7 +136,7 @@ public class ZombieFieldOfView : MonoBehaviour
 
             Vector3 directionToTarget = (target.position - transform.position).normalized;
 
-            if (Vector3.Angle (transform.forward, directionToTarget) < angle / 2)
+            if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
@@ -149,4 +161,6 @@ public class ZombieFieldOfView : MonoBehaviour
         }
 
     }
+
+    
 }

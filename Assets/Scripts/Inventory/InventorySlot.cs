@@ -9,16 +9,35 @@ public class InventorySlot : MonoBehaviour
 
     ItemSO item;
     private TextMeshProUGUI quantityText;
+    public float iconSize = 6;
+
+    // Sprite with size 251x251 used as example to resize sprites (kame)
+    private const float exempleWidth = 251f;
+    private const float exempleHeight = 251f;
+    private const float sizeFactor = 0.25f;
+
     private void Start()
     {
         quantityText = gameObject.GetComponentInChildren<TextMeshProUGUI>();
     }
 
+    private void ResizeSprite()
+    {
+        float originalWidth = icon.preferredWidth;
+        float originalHeight = icon.preferredHeight;
+        float widthFactor = exempleWidth * sizeFactor / originalWidth;
+        float heightFactor = exempleHeight * sizeFactor / originalHeight;
+        icon.rectTransform.sizeDelta = new Vector2(widthFactor * originalWidth, heightFactor*originalHeight);
+        Debug.Log(widthFactor);
+    }
+
     public void AddItem(ItemSO newItem)
     {
         item = newItem;
-
         icon.sprite = item.icon;
+
+        ResizeSprite();
+
         icon.enabled = true;
         quantityText.text = item.quantity.ToString();
     }

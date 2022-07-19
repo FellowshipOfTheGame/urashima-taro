@@ -65,7 +65,7 @@ namespace Pathfinding
 		{
 			ray = new Ray2D(transform.position, transform.forward);
 			// Debug.Log(ray.direction);
-			Debug.Log(transform.eulerAngles.z.GetType());
+			//Debug.Log(transform.eulerAngles.z.GetType());
 			Debug.DrawRay(transform.position, 5*transform.up, Color.green);
 			Debug.DrawRay(transform.position, transform.position + new Vector3(0,0,0) , Color.red);
 

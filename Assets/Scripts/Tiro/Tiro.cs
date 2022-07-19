@@ -7,7 +7,7 @@ public class Tiro : MonoBehaviour
 
     public Transform jogador;
     public Transform bala1;
-    private float speed = 5;
+    private float speed = 25;
     private bool mova = false;
     private Camera cam;
     private Vector3 newPosition;
@@ -50,11 +50,11 @@ public class Tiro : MonoBehaviour
                 direction = mousePosition;
             }
 
-            bala1.transform.position += direction * speed * Time.deltaTime;
+            bala1.transform.position += direction.normalized * speed * Time.deltaTime;
             mova = true;
 
             distance = Vector3.Distance (bala1.transform.position, jogador.transform.position);
-            if(distance > 30)
+            if(distance > 25)
             {
 
                 mova = false;
