@@ -790,6 +790,470 @@ MonoBehaviour:
     spatialBlend: 0
     loop: 1
     source: {fileID: 0}
+  - name: Ceramic
+    clip: {fileID: 8300000, guid: f955602af606b6648bf22f620c5eec64, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Collect_Ammunition
+    clip: {fileID: 8300000, guid: c03aa820f08fc744eba8575d878e1513, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Reload_Pistol_Slow
+    clip: {fileID: 8300000, guid: b9aead10b9e8d5747bb7e056350e1f86, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Reload_Pistol_Fast
+    clip: {fileID: 8300000, guid: 10032a7e5e2b3af43a630cbd22ce7936, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pistol_Shoot
+    clip: {fileID: 8300000, guid: 5a09ac27e50cd2b4aaeb4ce7b02374cd, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Consume_Chips
+    clip: {fileID: 8300000, guid: 9899193f7c5e3974ea0ead0f54e203c6, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Turn_Flashlight_On
+    clip: {fileID: 8300000, guid: 7fb5a69f1918279409b4bbc2102c379c, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Turn_Flashlight_Off
+    clip: {fileID: 8300000, guid: be98ed594f3961c4dac44d6e36f76723, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walking
+    clip: {fileID: 8300000, guid: 57a8da5429556a24e98b7e6bae99bd70, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Walking_On_Puddle
+    clip: {fileID: 8300000, guid: 5e52d3f24f2e9034b94169895c77e1a9, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Drag_Furniture_1
+    clip: {fileID: 8300000, guid: d9b307a1fb0c1974f9482ebf4b089d79, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Drag_Furniture_2
+    clip: {fileID: 8300000, guid: ba9c8060771c00145abd863b850472ad, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Drag_Furniture_3
+    clip: {fileID: 8300000, guid: b2031e34fe0602f4b9e72bf242d7381a, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Drag_Furniture_4
+    clip: {fileID: 8300000, guid: 761a98e8b4d1bd9419f499030c504b94, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Drag_Furniture_5
+    clip: {fileID: 8300000, guid: 75759428dc2d22342bb4fc169059f62d, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Drag_Furniture_6
+    clip: {fileID: 8300000, guid: 6540e26b0160fb840b4ca08c5864d3bb, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Open_Chest
+    clip: {fileID: 8300000, guid: 144b688087e7f99469612a6c17bb0b26, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Open_Door_1
+    clip: {fileID: 8300000, guid: 80a66bf1ddb844c48a0c526639c70b1c, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Open_Door_2
+    clip: {fileID: 8300000, guid: 0e9ca065390ba1b49884285d0563953a, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Open_Door_3
+    clip: {fileID: 8300000, guid: 07ae380f25f47bd4e927632c3a30783c, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Attack
+    clip: {fileID: 8300000, guid: 79c8375cf55837a49b2bd82d532c0e1a, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_1
+    clip: {fileID: 8300000, guid: 24d87f0a16ce6e349a26696f8f1071c3, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_2
+    clip: {fileID: 8300000, guid: 5611852cb1d50f7459c8d005e7fe0b17, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_3
+    clip: {fileID: 8300000, guid: 20cc4ed44f7163642a105d21165ea634, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_4
+    clip: {fileID: 8300000, guid: 366079c0ef345ff428f3e3bbca984bfd, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_5
+    clip: {fileID: 8300000, guid: 2bdd4dfa4cc9d624cade718de27b330f, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_6
+    clip: {fileID: 8300000, guid: e9f8e34105b199e42bad400a9da53df8, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_7
+    clip: {fileID: 8300000, guid: 6414bd937c3563e4895405446b395c63, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_8
+    clip: {fileID: 8300000, guid: f7436efefb056fe4dab537bd359c02a0, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_9
+    clip: {fileID: 8300000, guid: 2972e452002345e458f2210f187a4eaf, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_10
+    clip: {fileID: 8300000, guid: c77da93ffaabb204aa5ba741539da897, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_11
+    clip: {fileID: 8300000, guid: a3ff309e3e197904b91fa39d282f1ec2, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_12
+    clip: {fileID: 8300000, guid: eb804fdc87264b6439e293dd6b3a4e37, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_13
+    clip: {fileID: 8300000, guid: 07f31996af9521249ac5079d052c11fe, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_14
+    clip: {fileID: 8300000, guid: 5611551d7d8ac4d4c93b3fa13f8422d3, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_15
+    clip: {fileID: 8300000, guid: c04122a2a6a37f145a674786e73916f5, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_16
+    clip: {fileID: 8300000, guid: 09c64a1b1b8d84e449208c80775ea09a, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_17
+    clip: {fileID: 8300000, guid: cce014b9298e75f40b98c3c6339bcb43, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_18
+    clip: {fileID: 8300000, guid: 00bd6cd477a5cfe4ebc1238811b9d0c0, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_19
+    clip: {fileID: 8300000, guid: 18eb75c0ba7a017479ca2938387f6d71, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_20
+    clip: {fileID: 8300000, guid: 567dc30ac182c3e4e90f29a4edcd175b, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_21
+    clip: {fileID: 8300000, guid: 3fad97361a3afe840a64b2f6b7ba0e34, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_22
+    clip: {fileID: 8300000, guid: 615eafaf66f9b3146bf125168515d1d4, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Grunt_23
+    clip: {fileID: 8300000, guid: 0934ab251100368438c368f1e57ee042, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Idle
+    clip: {fileID: 8300000, guid: b9fb21d80300add438a1f16370a65864, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Zombie_3
+    clip: {fileID: 8300000, guid: 21c976847596b0b4dabc71b7d38322f3, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Growl_1
+    clip: {fileID: 8300000, guid: 809c727ba0a0024498cb3e065db81e56, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Growl_2
+    clip: {fileID: 8300000, guid: 6604100e4531c25469ae17410297aa7d, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Growl_3
+    clip: {fileID: 8300000, guid: bd335140968d6cf47870d9709634dde3, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Moan
+    clip: {fileID: 8300000, guid: fd340c4a3497b414eb016a972116e00f, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Roar_1
+    clip: {fileID: 8300000, guid: 914fa7d52957d0745b5112576c1ab8fc, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Roar_2
+    clip: {fileID: 8300000, guid: f73daea170896a44ab96c719f15bd8ef, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Roar_3
+    clip: {fileID: 8300000, guid: 9fd47347a201fca4984b9402d9fc6a5e, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Roar_4
+    clip: {fileID: 8300000, guid: fbdf05f994a5cc943a079895ebfec7b9, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zumbi_Roar_5
+    clip: {fileID: 8300000, guid: a1339938e69b2c34a99015733e868abc, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Twah_1
+    clip: {fileID: 8300000, guid: 4c96f97efdbae8041adb8a8db2bc56ec, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Twah_2
+    clip: {fileID: 8300000, guid: 5efffc9800c9f6a4db68da463a4d8211, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zombie_Twah_3
+    clip: {fileID: 8300000, guid: 11551c0800241354fb68f22082080aa5, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!114 &1007754101
 MonoBehaviour:
   m_ObjectHideFlags: 0
