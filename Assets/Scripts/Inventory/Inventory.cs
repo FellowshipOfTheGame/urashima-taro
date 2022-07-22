@@ -245,7 +245,7 @@ public class Inventory : MonoBehaviour
 
     private IEnumerator EW0(ItemSO item)
     {
-        if (item.tipe != Tipe.Weapon)
+        if (item.type != Type.Weapon)
         {
             yield break;
         }
@@ -273,7 +273,7 @@ public class Inventory : MonoBehaviour
 
     public IEnumerator EW1(ItemSO item)
     {
-        if (item.tipe != Tipe.Weapon)
+        if (item.type != Type.Weapon)
         {
             yield break;
         }
@@ -301,7 +301,7 @@ public class Inventory : MonoBehaviour
 
     public IEnumerator EW2(ItemSO item)
     {
-        if (item.tipe != Tipe.Weapon)
+        if (item.type != Type.Weapon)
         {
             yield break;
         }
@@ -329,7 +329,7 @@ public class Inventory : MonoBehaviour
 
     public IEnumerator EW3(ItemSO item)
     {
-        if (item.tipe != Tipe.Weapon)
+        if (item.type != Type.Weapon)
         {
             yield break;
         }
@@ -365,7 +365,7 @@ public class Inventory : MonoBehaviour
 
     public IEnumerator EW(ItemSO item, int slot)
     {
-        if (item.tipe != Tipe.Weapon || slot > 3)
+        if (item.type != Type.Weapon || slot > 3)
         {
             yield break;
         }
