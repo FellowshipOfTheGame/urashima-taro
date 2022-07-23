@@ -20,7 +20,7 @@ public class InventoryInput : MonoBehaviour
     }
 
     // Function to set the inventory gameobject active or disabled
-    // Also invert the 'activeness' of the buttons to close or open the inventory
+    // Also inverts the 'activeness' of the buttons to close and open the inventory
     public void OpenOrCloseInventory(bool activeSelf)
     {
         inventory.SetActive(activeSelf);

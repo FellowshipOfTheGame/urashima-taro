@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum Tipe 
+public enum Type 
 {
     Default,
     Weapon
@@ -10,7 +10,7 @@ public enum Tipe
 public class ItemSO : ScriptableObject
 {
     new public string name = "New Item";
-    public Tipe tipe;
+    public Type type;
     public Sprite icon = null;
     public int ID;
     public int quantity = 0;
