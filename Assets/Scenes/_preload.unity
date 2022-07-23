@@ -186,6 +186,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1640175834}
     m_Modifications:
+    - target: {fileID: 3208393900882153551, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
+      propertyPath: iconSize
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4242793334718777591, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 350
@@ -233,6 +237,10 @@ PrefabInstance:
     - target: {fileID: 4242793334928530393, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4242793334967027280, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
+      propertyPath: iconSize
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4242793335071602305, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
       propertyPath: inventory
@@ -354,6 +362,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddInventory
       objectReference: {fileID: 0}
+    - target: {fileID: 4242793335491484898, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
+      propertyPath: iconSize
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4242793335551596912, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -334
@@ -421,6 +433,18 @@ PrefabInstance:
     - target: {fileID: 4242793336284283097, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 163
+      objectReference: {fileID: 0}
+    - target: {fileID: 4242793336418804024, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
+      propertyPath: iconSize
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4242793336494090797, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
+      propertyPath: iconSize
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4242793336713557540, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
+      propertyPath: iconSize
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4242793336729155929, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -510,6 +534,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6465629038863073660, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
+      propertyPath: iconSize
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6465629039068032129, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -581,6 +609,10 @@ PrefabInstance:
     - target: {fileID: 6465629039354900616, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8049593277795531738, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
+      propertyPath: iconSize
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
@@ -600,6 +632,7 @@ GameObject:
   - component: {fileID: 913188470}
   - component: {fileID: 913188469}
   - component: {fileID: 913188468}
+  - component: {fileID: 913188471}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -672,6 +705,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &913188471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913188467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &986559290
 GameObject:
   m_ObjectHideFlags: 0
