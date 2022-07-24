@@ -123,6 +123,7 @@ public class DialogueManager : MonoBehaviour
         _story = new Story(inkJSON.text);
         dialogoRodando = true;
         caixaDeTexto.SetActive(true);
+        Time.timeScale = 0;
 
         ContinuarHistoria();
     }
@@ -132,7 +133,8 @@ public class DialogueManager : MonoBehaviour
         dialogoRodando = false;
         caixaDeTexto.SetActive(false);
         texto.text = "";
-        // mudando antes da hr?
+        Time.timeScale = 1;
+
         InputManager.GetInstance().ChangeActionMap("Player_base");
     }
 
@@ -230,7 +232,7 @@ public class DialogueManager : MonoBehaviour
     {
         _story.ChooseChoiceIndex(escolha);
         EventSystem.current.SetSelectedGameObject(null);
-        StartCoroutine(DesativarEscolhas());
+        DesativarEscolhas();
 
         // Permite tirar a caixa de texto 'fantasma' qndo usa o mouse
         if (InputManager.GetInstance().CurrentControlScheme() == "Keyboard")
@@ -243,11 +245,8 @@ public class DialogueManager : MonoBehaviour
         fazendoEscolha = false;
     }
 
-    private IEnumerator DesativarEscolhas()
+    void DesativarEscolhas()
     {
-        // coroutine para evitar bugs com os botoes
-        yield return new WaitForSeconds(0.01f);
-
         for (int i = 0; i < escolhas.Length; i++)
         {
             escolhas[i].SetActive(false);

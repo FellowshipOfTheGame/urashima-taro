@@ -23,7 +23,9 @@ public class CacarMoverLimitar : MonoBehaviour
 
     void Update()
     {
-        //limiteMovimento();
+        //quando jogo for pausado nao move
+        if (Time.timeScale == 0) return;
+
         distance = Vector3.Distance(jogador.transform.position, fantasma.transform.position);
         ataque();
     }
@@ -32,19 +34,13 @@ public class CacarMoverLimitar : MonoBehaviour
     {
         if (distance <= raioAlvo)
         {
-            StartCoroutine(Ataque());
+            fantasma.transform.position = Vector3.MoveTowards(fantasma.transform.position, jogador.transform.position, Time.fixedDeltaTime * velocidadeDeAtaque);
         }
         else
         {
             limiteMovimento();
             movefantasma();
         }
-    }
-
-    IEnumerator Ataque()
-    {
-        yield return new WaitForSecondsRealtime(tempoSec);
-        fantasma.transform.position = Vector3.MoveTowards(fantasma.transform.position, jogador.transform.position, Time.fixedDeltaTime * velocidadeDeAtaque);
     }
     
     void movefantasma()
