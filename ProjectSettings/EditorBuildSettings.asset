@@ -18,7 +18,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Teoi.unity
     guid: ed06d93a7be27cf44b69a621d7199a11
   - enabled: 1
+    path: Assets/Scenes/HerbertH.unity
+    guid: 1bd3394008d53004bb7cb1a0fca3b5c0
+  - enabled: 1
     path: Assets/Scenes/HerbertH2.unity
     guid: a93f50b4622a8e24d87d729908f13a96
+  - enabled: 1
+    path: Assets/Scenes/HerbertH3.unity
+    guid: 08f488f83dcd6244b8c5947bd3ee5eb3
+  - enabled: 1
+    path: Assets/Scenes/house1Floor.unity
+    guid: 69520d07e4dfbd84fbe00fa8b367d80d
+  - enabled: 1
+    path: Assets/Scenes/house2Floor.unity
+    guid: 43f0d707e4cc7a141810a73ea2a7373f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c16d0b7127b3c714695bee82e373fa5c, type: 2}
