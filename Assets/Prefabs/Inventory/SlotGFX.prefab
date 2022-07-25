@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 7159572586948149602}
+  iconSize: 0
 --- !u!1 &8826551544750458850
 GameObject:
   m_ObjectHideFlags: 0
