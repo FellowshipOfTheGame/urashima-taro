@@ -486,6 +486,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 134.54489
       objectReference: {fileID: 0}
+    - target: {fileID: 6238748459315898635, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
+      propertyPath: m_Color.a
+      value: 0.45490196
+      objectReference: {fileID: 0}
     - target: {fileID: 6465629037815416391, guid: e51aad4b60fed6f40b141e67551caacf, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1161,7 +1165,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1770170494 stripped
 RectTransform:
