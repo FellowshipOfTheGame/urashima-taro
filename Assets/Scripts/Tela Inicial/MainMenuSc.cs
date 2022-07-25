@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuSc : MonoBehaviour
 {
+    [SerializeField] AudioManager audio;
+    private string nomeMusica = "MenuTheme";
+
+    public void Start()
+    {
+        audio.Play(nomeMusica);
+    }
+
     public void PlayButtonPressed()
     {
         //Colocado para teste
