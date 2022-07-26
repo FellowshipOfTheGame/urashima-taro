@@ -7,7 +7,8 @@ public class ControleTextoCredito : MonoBehaviour
 {
     int num;
     int index;
-    string[] nomes = {"nome1","nome2","nome3","nome4","nome5","nome6"};
+    string[] nomes = {"Jhonatas Paolozza - Coordinator","Herbert Heinz - 2D Artist, Game Design, Screenplay and History.","Kaito Hayashi - 2D Artist and Programmer","Bernardo T. - 2D Artist","Julia Frare - 2D Artist","Thales Castro - Sounds and effects", "Alexandre Martins - Programmer", "Tyago Yuji Teoi - Programmer", "Paolo Victor - Programmer and Game Design","Rodrigo Lima - Programmer"};
+    
     public Text credito1;
     string str;
     const int MAXIMORANGE  = 1000000;
