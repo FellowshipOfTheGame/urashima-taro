@@ -160,9 +160,8 @@ public class Inventory : MonoBehaviour
 
     // Update the quantity of the item adding the value 'quantityAdd'
     // Do almost the same of the function 'Add Inventory'
-    public void UpdateItemQuantity(ItemSO item/*, int quantityAdd*/)
+    public void UpdateItemQuantity(ItemSO item, int quantityAdd)
     {
-        int quantityAdd = 1;
         int itemIdx = IsInInventory(item);
         
         // Test if the item is in the list of items

@@ -10,6 +10,7 @@ public class InventoryInput : MonoBehaviour
     public GameObject CloseButton;
 
     private bool isGamePaused = false;
+
     void Update()
     {
         // Check if the key to set active the inventory is pressed
