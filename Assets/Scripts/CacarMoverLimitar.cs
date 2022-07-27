@@ -7,10 +7,12 @@ using UnityEngine;
 public class CacarMoverLimitar : MonoBehaviour
 {
 
+  
     private Vector2 fantasma_V;
     private float velocidadeRecuo = 0.5f;
     public Transform jogador;
     public Transform fantasma;
+    //public AudioClip myClip;
     public float velocidade = 0.05f;
     public float velocidadeDeAtaque = 0.01f;
     public float raioAlvo = 8f;
@@ -19,19 +21,34 @@ public class CacarMoverLimitar : MonoBehaviour
     public float comprimento = 10.0f;
     public float retorno = 0.05f;
     float distance;
-    float direcao;
+    float direcao;    
+    
+    private AudioManager audioManager;
+    //audioManager.Play("Som");
+    
+    
+    void Start()
+    {
+    
+      audioManager = FindObjectOfType<AudioManager>();
+      audioManager.Play("Walking");
+    
+    }
 
     void Update()
-    {
+    {               
+        
         //quando jogo for pausado nao move
         if (Time.timeScale == 0) return;
-
         distance = Vector3.Distance(jogador.transform.position, fantasma.transform.position);
         ataque();
     }
 
     void ataque()
     {
+    
+         
+    
         if (distance <= raioAlvo)
         {
             fantasma.transform.position = Vector3.MoveTowards(fantasma.transform.position, jogador.transform.position, Time.fixedDeltaTime * velocidadeDeAtaque);
