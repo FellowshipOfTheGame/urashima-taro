@@ -14,5 +14,6 @@ public class ItemSO : ScriptableObject
     public Sprite icon = null;
     public int ID;
     public int quantity = 0;
+    public int quantityRedusedByUse = 1;
     public GameObject item;
 }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Pistola
   m_EditorClassIdentifier: 
   name: Pistola
-  tipe: 1
-  icon: {fileID: 21300000, guid: 595b47165a0f715448c5260c44c3f02a, type: 3}
+  type: 1
+  icon: {fileID: 698664279297640794, guid: 284580e043e0ccd43b572a8bd20f44ce, type: 3}
   ID: 4
-  quantity: 4
+  quantity: 7
   item: {fileID: 3092128958371249628, guid: 0ad1eabec84f436498f11fc05ef65d58, type: 3}

@@ -8,6 +8,9 @@ public class InventoryInput : MonoBehaviour
     public GameObject inventory;
     public GameObject OpenButton;
     public GameObject CloseButton;
+
+    private bool isGamePaused = false;
+
     void Update()
     {
         // Check if the key to set active the inventory is pressed
@@ -26,6 +29,21 @@ public class InventoryInput : MonoBehaviour
         inventory.SetActive(activeSelf);
         OpenButton.SetActive(!OpenButton.activeSelf);
         CloseButton.SetActive(!CloseButton.activeSelf);
+        GamePause();
+    }
+
+    private void GamePause()
+    {
+        if (isGamePaused) 
+        {
+            isGamePaused = false;
+            Time.timeScale = 1;
+        }
+        else
+        {
+            isGamePaused = true;
+            Time.timeScale = 0;
+        }
     }
 }
 
