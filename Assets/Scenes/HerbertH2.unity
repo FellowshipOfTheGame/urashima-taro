@@ -10207,6 +10207,7 @@ GameObject:
   - component: {fileID: 1224928345}
   - component: {fileID: 1224928347}
   - component: {fileID: 1224928346}
+  - component: {fileID: 1224928348}
   m_Layer: 0
   m_Name: FantasmaSprite
   m_TagString: Untagged
@@ -10329,6 +10330,24 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1224928348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224928344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ad9aa4776834709bcca8b439ccc902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outroSpriteFrente: {fileID: 21300000, guid: 3a54a30ed78707915bf70a2e4b453939, type: 3}
+  outroSpriteCostas: {fileID: 21300000, guid: 093af2586b29448ec8297db05763733c, type: 3}
+  outroSpriteDireita: {fileID: 21300000, guid: 127dd9b7e161432fd8c97a0b6e758a4d, type: 3}
+  outroSpriteEsquerda: {fileID: 21300000, guid: 12c68d2cab71a5007a7b907dda30a57f, type: 3}
+  fantasma: {fileID: 1257901293}
+  jogador: {fileID: 8437234615786769257}
 --- !u!1 &1230776153
 GameObject:
   m_ObjectHideFlags: 0

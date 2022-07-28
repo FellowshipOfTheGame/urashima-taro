@@ -45,8 +45,7 @@ public class CacarMoverLimitar : MonoBehaviour
     }
 
     void ataque()
-    {
-    
+    {    
          
     
         if (distance <= raioAlvo)
