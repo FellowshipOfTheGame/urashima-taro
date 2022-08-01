@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: New Item 2
   m_EditorClassIdentifier: 
   ID: 0
-  name: New Item
-  type: 0
+  name: Consumable
+  type: 1
   icon: {fileID: 0}
   quantity: 0
   quantityRedusedByUse: 0
