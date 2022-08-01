@@ -38,8 +38,8 @@ public class MudaSprite : MonoBehaviour
 	 Vector3 posA = origem.transform.position;
 	 Vector3 posB = destino.transform.position;
 	 Vector3 dir = (posB - posA).normalized;
-	 Debug.Log(dir.x.ToString() + " x");
-	 Debug.Log(dir.y.ToString()+ " y");   
+	 //Debug.Log(dir.x.ToString() + " x");
+	 //Debug.Log(dir.y.ToString()+ " y");   
          
         if (dir.x > 0 && dir.y > 0)//1
         {

@@ -11,9 +11,13 @@ public class Vida : MonoBehaviour
     //parametros de vida
     [SerializeField] int vidaMax;
     [HideInInspector] public int vidaAtual;
+    private int vidaExtraMax;
+    [HideInInspector] public int vidaExtra;
+
 
     //objetos externos
     BarraDeVida barraScript;
+    BarraDeVidaExtra barraExtraScript;
     SpriteRenderer sprite;
     private Detect_Collision damageCol;
 
@@ -28,9 +32,15 @@ public class Vida : MonoBehaviour
         //pega objetos externos
         GameObject hp = GameObject.Find("UI_Jogador/HP");
         barraScript = hp.GetComponent<BarraDeVida>();
+        if (barraScript == null) Debug.Log("Barra de vida not found");
+
+        GameObject hpExtra = GameObject.Find("UI_Jogador/HP/ExtraHP");
+        barraExtraScript = hpExtra.GetComponent<BarraDeVidaExtra>();
+        if (barraExtraScript == null) Debug.Log("Barra de vida extra not found");
 
         damageCol = transform.Find("Player_Damage").gameObject.
                 GetComponent<Detect_Collision>();
+        if (damageCol == null) Debug.Log("Detect_Collision not Found");
 
         sprite = GetComponent<SpriteRenderer>();
 
@@ -41,22 +51,22 @@ public class Vida : MonoBehaviour
 
     void Update()
     {
-        if(damageCol.isEnemyHit && canHit)
+        if (damageCol.isEnemyHit && canHit)
         {
             //recebe dano
             Dano(damageCol.attackDamage);
 
             //inicializa dados para piscar
             canHit = false;
-            invencibleTimer = 0;            
+            invencibleTimer = 0;
+
+            barraScript.DefinirVida(vidaAtual);
         }
 
-        if(!canHit)
+        if (!canHit)
         {
             Piscar();
         }
-
-        barraScript.DefinirVida(vidaAtual);
     }
 
     //funcao para piscar
@@ -72,7 +82,7 @@ public class Vida : MonoBehaviour
             canHit = true;
             sprite.enabled = true;
         }
-            
+
 
         invencibleTimer += Time.deltaTime;
     }
@@ -81,9 +91,24 @@ public class Vida : MonoBehaviour
     //funcao para receber dano
     public void Dano(int _dano)
     {
-        Debug.Log(vidaAtual);
-        Debug.Log(vidaMax);
-        vidaAtual = Mathf.Clamp(vidaAtual-_dano, 0, vidaMax);
+        //tira da vida extra
+        if(vidaExtra != 0)
+        {
+            if(vidaExtra >= _dano)
+            {
+                vidaExtra -= _dano;
+                _dano = 0;
+            }
+            else
+            {
+                _dano -= vidaExtra;
+                vidaExtra = 0;
+            }
+            barraExtraScript.DefinirVida(vidaExtra);
+        }
+
+        //tira da vida normal
+        vidaAtual = Mathf.Clamp(vidaAtual - _dano, 0, vidaMax);
 
         barraScript.DefinirVida(vidaAtual);
 
@@ -92,5 +117,20 @@ public class Vida : MonoBehaviour
             // morte
             Destroy(gameObject);
         }
+    }
+
+
+    public void RecuperaVida(int _vida)
+    {
+        vidaAtual = Mathf.Min(vidaMax, vidaAtual + _vida);
+    }
+
+
+    public void SetVidaExtra(int _vidaExtra)
+    {
+        vidaExtraMax = _vidaExtra;
+        vidaExtra = _vidaExtra;
+        barraExtraScript.DefinirVidaMax(vidaExtraMax);
+        barraExtraScript.DefinirVida(vidaExtra);
     }
 }
