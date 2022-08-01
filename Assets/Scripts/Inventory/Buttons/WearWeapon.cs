@@ -5,7 +5,6 @@ using UnityEngine;
 public class WearWeapon: MonoBehaviour
 {
     private Inventory inventory;
-    private GameObject player;
     [HideInInspector] public ItemSO item;
 
     private void Start()
@@ -15,7 +14,7 @@ public class WearWeapon: MonoBehaviour
 
     public void WearItem()
     {
-        // Temporarily only works to the pistol item
-        GameObject.FindWithTag("Player").GetComponent<Tiro>().enabled = true;
+        Vida vida = GameObject.FindWithTag("Player").GetComponent<Vida>();
+        vida.SetVidaExtra(item.lifeArmor);
     }
 }

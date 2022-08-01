@@ -15,6 +15,11 @@ public class UseConsumable : MonoBehaviour
     // Start is called before the first frame update
     public void UseItem()
     {
+        //diminui quantidade
         inventory.UpdateItemQuantity(item, -item.quantityRedusedByUse);
+
+        //aumenta vida
+        Vida vida = GameObject.FindWithTag("Player").GetComponent<Vida>();
+        vida.RecuperaVida(item.lifeHealed);
     }
 }
