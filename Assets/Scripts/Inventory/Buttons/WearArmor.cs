@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WearButton : MonoBehaviour
+public class WearArmor : MonoBehaviour
 {
     private Inventory inventory;
-    private GameObject player;
-    public ItemSO item;
+    [HideInInspector] public ItemSO item;
 
     private void Start()
     {

@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// Script used to get the player key to open or close the inventory
+// Script used to get the player key to open or close the inventoryMenu
 // OBS: the key from the keyboard to open or close is 'i'
 public class InventoryInput : MonoBehaviour
 {
-    public GameObject inventory;
+    public GameObject inventoryMenu;
     public GameObject OpenButton;
     public GameObject CloseButton;
 
@@ -13,20 +13,20 @@ public class InventoryInput : MonoBehaviour
 
     void Update()
     {
-        // Check if the key to set active the inventory is pressed
+        // Check if the key to set active the inventoryMenu is pressed
         if (Keyboard.current.iKey.wasPressedThisFrame)
         {
-            // If the inventory is active (activeSelf == true) set false
+            // If the inventoryMenu is active (activeSelf == true) set false
             // else, set true
-            OpenOrCloseInventory(!inventory.activeSelf);
+            OpenOrCloseInventory(!inventoryMenu.activeSelf);
         }
     }
 
-    // Function to set the inventory gameobject active or disabled
-    // Also inverts the 'activeness' of the buttons to close and open the inventory
+    // Function to set the inventoryMenu gameobject active or disabled
+    // Also inverts the 'activeness' of the buttons to close and open the inventoryMenu
     public void OpenOrCloseInventory(bool activeSelf)
     {
-        inventory.SetActive(activeSelf);
+        inventoryMenu.SetActive(activeSelf);
         OpenButton.SetActive(!OpenButton.activeSelf);
         CloseButton.SetActive(!CloseButton.activeSelf);
         GamePause();

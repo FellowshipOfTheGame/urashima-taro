@@ -9,19 +9,26 @@ public class InventoryUI : MonoBehaviour
 
     [SerializeField] private Inventory inventory;
 
+    [SerializeField] private GameObject inventoryMenu;
+
     InventorySlot[] slots;
 
-    // This update the inventory every frame, so maybe we could change the inventory only 
-    // when an item is changed?
+    // This update the inventory every frame (when the inventory menu is active)
+    
     void Update()
     {
-        slots = gameObjectParent.GetComponentsInChildren<InventorySlot>();
-
-        UpdateUI();
+        if (inventoryMenu.activeSelf == true)
+        {
+            slots = gameObjectParent.GetComponentsInChildren<InventorySlot>();
+            UpdateUI();
+        }
     }
+    
 
     void UpdateUI()
     {
+        slots = gameObjectParent.GetComponentsInChildren<InventorySlot>();
+
         List<ItemSO> listInventory = inventory.GetInventory();
 
         for(int i = 0; i < slots.Length; i++)

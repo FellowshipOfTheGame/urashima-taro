@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71ae10fc3ff9c184f9af5348ee746fe9, type: 3}
-  m_Name: Pistola
+  m_Name: New Item 2
   m_EditorClassIdentifier: 
-  name: Pistola
-  type: weapon
-  icon: {fileID: 698664279297640794, guid: 284580e043e0ccd43b572a8bd20f44ce, type: 3}
-  ID: 4
-  quantity: 10
-  quantityRedusedByUse: 1
-  item: {fileID: 3092128958371249628, guid: 0ad1eabec84f436498f11fc05ef65d58, type: 3}
+  ID: 0
+  name: New Item
+  type: 0
+  icon: {fileID: 0}
+  quantity: 0
+  quantityRedusedByUse: 0
+  lifeHealed: 0
+  lifeArmor: 0
+  item: {fileID: 0}

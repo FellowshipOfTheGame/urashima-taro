@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GarbageButton : MonoBehaviour
+public class Garbage : MonoBehaviour
 {
     private Inventory inventory;
-    public ItemSO item;
+    [HideInInspector] public ItemSO item;
 
     private void Start()
     {

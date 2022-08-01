@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UseButton : MonoBehaviour
+public class UseConsumable : MonoBehaviour
 {
     private Inventory inventory;
-    public ItemSO item;
+    [HideInInspector] public ItemSO item;
 
     private void Start()
     {
