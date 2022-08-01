@@ -123,6 +123,7 @@ public class Vida : MonoBehaviour
     public void RecuperaVida(int _vida)
     {
         vidaAtual = Mathf.Min(vidaMax, vidaAtual + _vida);
+        barraScript.DefinirVida(vidaAtual);
     }
 
 

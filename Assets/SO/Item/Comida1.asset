@@ -16,7 +16,7 @@ MonoBehaviour:
   name: Onigiri
   type: 1
   icon: {fileID: 656764543531043711, guid: b651b9785a5474e45918f8283e6f6f53, type: 3}
-  quantity: 1
+  quantity: 0
   quantityRedusedByUse: 1
   lifeHealed: 2
   lifeArmor: 0

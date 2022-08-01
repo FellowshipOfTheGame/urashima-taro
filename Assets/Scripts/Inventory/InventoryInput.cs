@@ -34,7 +34,7 @@ public class InventoryInput : MonoBehaviour
 
     private void GamePause()
     {
-        if (isGamePaused) 
+        if (isGamePaused)
         {
             isGamePaused = false;
             Time.timeScale = 1;
