@@ -1,20 +1,25 @@
 using UnityEngine;
 
-public enum Type 
+public enum ItemType
 {
-    Default,
     Weapon,
-    Consumible
+    Consumable,
+    Armor
 }
 
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
 public class ItemSO : ScriptableObject
 {
-    new public string name = "New Item";
-    public Type type;
-    public Sprite icon = null;
     public int ID;
-    public int quantity = 0;
-    public int quantityRedusedByUse = 1;
-    public GameObject item;
+    new public string name = "New Item";
+    public ItemType type;
+    public Sprite icon = null;
+    public int quantity;
+    public int quantityRedusedByUse;
+
+    public int lifeHealed;                  // For consumable 
+
+    public int lifeArmor;                   // For armor
+
+    public GameObject item;                 // Place the gameobject where the script of the item is 
 }
