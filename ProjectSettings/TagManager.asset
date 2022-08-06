@@ -10,6 +10,7 @@ TagManager:
   - porta
   - chave
   - Fantasma
+  - History
   layers:
   - Default
   - TransparentFX
@@ -47,11 +48,14 @@ TagManager:
   - name: Background
     uniqueID: 276150625
     locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Outline
     uniqueID: 906333153
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Itens
+    uniqueID: 785100261
     locked: 0
   - name: Obstacle
     uniqueID: 263426399
