@@ -12,7 +12,7 @@ public class Bala : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject.transform.root.gameObject);
 
         Destroy(gameObject);
     }

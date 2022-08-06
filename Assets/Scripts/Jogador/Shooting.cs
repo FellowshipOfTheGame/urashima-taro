@@ -77,7 +77,8 @@ public class Shooting : MonoBehaviour
 
                 for (int i = 0; i < dano.Length; i++)
                 {
-                    Destroy(dano[i].gameObject);
+                    //destroi o objeto root
+                    Destroy(dano[i].gameObject.transform.root.gameObject);
                 }
 
                 delay = cooldownTiros;
