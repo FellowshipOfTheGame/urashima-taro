@@ -158,7 +158,7 @@ public class Inventory : MonoBehaviour
         return -1;
     }
 
-    // Update the quantity of the item adding the value 'quantityAdd'
+    // Update the quaugntity of the item adding the value 'quantityAdd'
     // Do almost the same of the function 'Add Inventory'
     public void UpdateItemQuantity(ItemSO item, int quantityAdd)
     {
@@ -182,6 +182,7 @@ public class Inventory : MonoBehaviour
                 items.Add(item);
             }
         }
+        Debug.Log(item.quantity);
     }
 
     public void AddInventory(ItemSO item)

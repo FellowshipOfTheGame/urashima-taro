@@ -14,7 +14,11 @@ public class WearArmor : MonoBehaviour
 
     public void WearItem()
     {
-        // Temporarily only works to the pistol item
-        GameObject.FindWithTag("Player").GetComponent<Tiro>().enabled = true;
+        //diminui quantidade
+        inventory.UpdateItemQuantity(item, -item.quantityRedusedByUse);
+
+        //coloca armadura
+        Vida vida = GameObject.FindWithTag("Player").GetComponent<Vida>();
+        vida.SetVidaExtra(item.lifeArmor);
     }
 }
