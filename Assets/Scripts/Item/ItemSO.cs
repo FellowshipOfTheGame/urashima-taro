@@ -21,5 +21,5 @@ public class ItemSO : ScriptableObject
 
     public int lifeArmor;                   // For armor
 
-    public GameObject itemPrefab;                 // Place the gameobject where the script of the item is 
+    public GameObject item;                 // Place the gameobject where the script of the item is 
 }
