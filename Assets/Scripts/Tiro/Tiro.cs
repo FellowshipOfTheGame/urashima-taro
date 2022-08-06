@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tiro : MonoBehaviour
 {
 
-    public Transform jogador;
+    private Transform jogador;
     public Transform bala1;
     private float speed = 25;
     private bool mova = false;
@@ -18,7 +18,7 @@ public class Tiro : MonoBehaviour
 
     void Start()
     {
-
+        jogador = GameObject.FindWithTag("Player").transform;
         bala1.transform.position = new Vector3(32, 6, 0);
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0.0f;
