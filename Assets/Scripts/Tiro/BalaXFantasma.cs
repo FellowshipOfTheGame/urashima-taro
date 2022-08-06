@@ -11,34 +11,43 @@ public class BalaXFantasma : MonoBehaviour
     float distanciaBalaFantasma;
     float distanciaJogadorFantasma;
     int index = 0;
+    Flag marca = new Flag();
     
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
     
         distanciaBalaFantasma = Vector3.Distance (bala1.transform.position, fantasma.transform.position);        
         
-        if(distanciaBalaFantasma < 1.0)//Fantasma é morto. 
+        if(distanciaBalaFantasma <= 0)//Fantasma é morto. 
         {        
            
            posicaoFantasma();
-           //Implementar o ganho de pontos  
            
        }       
        
        distanciaJogadorFantasma = Vector3.Distance (jogador.transform.position, fantasma.transform.position);
        
-       if(distanciaJogadorFantasma <= 0)
+       if(distanciaJogadorFantasma <= 0.5)
        {
        
-         //perder vidas.
-         Debug.Log("Fantasma hit Jogador");
-         posicaoFantasma();
+         marca.setFantasmaAtaque(1);        
+         if(marca.getFantasmaAtaque() > 0)
+          {
+          
+             posicaoFantasma();
+          
+          }
+          else
+          {
+          
+               fantasma.transform.position = new Vector3(100, 100, 0);
+          
+          }                   
        
        }           
        
@@ -47,7 +56,7 @@ public class BalaXFantasma : MonoBehaviour
     void posicaoFantasma()
     {
     
-       index = (int) Random.Range(0.0f, 3.0f);           
+       index = (int) Random.Range(0.0f, 3.0f);   
        if (index == 0) fantasma.transform.position = new Vector3(-7, 2, 0);
        if (index == 1) fantasma.transform.position = new Vector3(17, 7, 0);
        if (index == 2) fantasma.transform.position = new Vector3(3, -6, 0);

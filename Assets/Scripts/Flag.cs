@@ -8,5 +8,20 @@ public class Flag : MonoBehaviour
     public static bool eventoChave = true;//passar para false quando entrar em produção
     public static bool insereChave = true;
     public static bool porta       = false;
+    private static int  fantasmaAtaque = 3;
+    
+    public void setFantasmaAtaque(int value)
+      {
+      
+         fantasmaAtaque -= value;
+      
+      }
+      
+    public int getFantasmaAtaque()
+      {
+      
+         return fantasmaAtaque;
+      
+      }
 
 }
