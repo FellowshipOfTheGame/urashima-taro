@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: ced2342c0e29a094fa783ebe77f6446e
   - enabled: 1
@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/house2Floor.unity
     guid: 43f0d707e4cc7a141810a73ea2a7373f
+  - enabled: 1
+    path: Assets/Scenes/TesteHerbert.unity
+    guid: 91ad73bd6ad7c01449030ed52d7619f5
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c16d0b7127b3c714695bee82e373fa5c, type: 2}
