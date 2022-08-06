@@ -5,16 +5,20 @@ using UnityEngine;
 public class BalaXFantasma : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform fantasma;
+    private Transform fantasma;
     public Transform bala1;
-    public Transform jogador;
+    private Transform jogador;
     float distanciaBalaFantasma;
     float distanciaJogadorFantasma;
     int index = 0;
     
     void Start()
     {
-        
+        jogador = GameObject.FindWithTag("Player").transform;
+        // This work only for one 'fantasma'
+        // If, in the future, more than one ghost will appeir in the scene
+        // 'fantasma' have to be a list of fantasmas
+        fantasma = GameObject.Find("Fantasma").transform;
     }
 
     // Update is called once per frame

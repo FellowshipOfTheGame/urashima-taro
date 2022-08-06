@@ -5,12 +5,10 @@ using UnityEngine;
 public class Tiro : MonoBehaviour
 {
 
-    public Transform jogador;
+    private Transform jogador;
     public Transform bala1;
     private float speed = 25;
     private bool mova = false;
-    private Camera cam;
-    private Vector3 newPosition;
     private float distance; 
 
     Vector3 mousePosition;
@@ -18,7 +16,7 @@ public class Tiro : MonoBehaviour
 
     void Start()
     {
-
+        jogador = GameObject.FindWithTag("Player").transform;
         //bala1.transform.position = jogador.transform.position;
         bala1.transform.position = new Vector3(32, 6, 0);
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
