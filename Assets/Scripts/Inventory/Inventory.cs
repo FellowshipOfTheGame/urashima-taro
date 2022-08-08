@@ -198,12 +198,11 @@ public class Inventory : MonoBehaviour
         // Test if the item is already in the inventory
         if (itemIdx == -1) 
         {
-            item.quantity += 1;
             items.Add(item);            
         } 
         else 
         {
-            items[itemIdx].quantity += 1;
+            items[itemIdx].quantity += item.quantity;
         }
     }
     public void RemoveInventory(ItemSO item)

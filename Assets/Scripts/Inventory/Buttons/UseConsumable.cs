@@ -17,6 +17,7 @@ public class UseConsumable : MonoBehaviour
     {
         //diminui quantidade
         inventory.UpdateItemQuantity(item, -item.quantityRedusedByUse);
+        // item.quantity -= item.quantityRedusedByUse;
 
         //aumenta vida
         Vida vida = GameObject.FindWithTag("Player").GetComponent<Vida>();
