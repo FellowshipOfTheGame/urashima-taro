@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71ae10fc3ff9c184f9af5348ee746fe9, type: 3}
-  m_Name: SaltWeapon
+  m_Name: Pistol
   m_EditorClassIdentifier: 
-  ID: 100
-  name: SaltWeapon
+  ID: 102
+  name: Pistol
   type: 0
-  icon: {fileID: 2912464402848211330, guid: 284580e043e0ccd43b572a8bd20f44ce, type: 3}
-  quantity: 5
+  icon: {fileID: 698664279297640794, guid: 284580e043e0ccd43b572a8bd20f44ce, type: 3}
+  quantity: 3
   quantityRedusedByUse: 0
   lifeHealed: 0
   lifeArmor: 0
-  itemPrefab: {fileID: 2040490836397684635, guid: 78339db728df3894b9a6a363ff2890c9, type: 3}
+  itemPrefab: {fileID: 3712865990477035180, guid: 93799714552a39d4081babf5d04b933b, type: 3}
