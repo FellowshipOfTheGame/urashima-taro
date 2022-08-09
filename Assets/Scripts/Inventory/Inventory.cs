@@ -20,7 +20,6 @@ public class Inventory : MonoBehaviour
     // player
     private GameObject player;
 
-    private ChangeWeapons changeWeapons;
     // gameobject vazio onde estao os weapon slots
     private Transform weaponPlayer;
     // referencia aos weapon slots no player
@@ -44,7 +43,6 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Jogador 1");
-        changeWeapons = player.GetComponent<ChangeWeapons>();
         weaponPlayer = player.transform.Find("Armas");
 
         for(int i = 0; i<weaponPlayer.childCount; i++)
