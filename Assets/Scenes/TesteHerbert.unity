@@ -66019,7 +66019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 2247903056189097737}
-  item: {fileID: 11400000, guid: c2c5b9f9572b1354381a1e9bfa49ae89, type: 2}
+  item: {fileID: 11400000, guid: 4c040791de856cd4d83f913bd55a5d4d, type: 2}
 --- !u!212 &2247903055974863746
 SpriteRenderer:
   m_ObjectHideFlags: 0

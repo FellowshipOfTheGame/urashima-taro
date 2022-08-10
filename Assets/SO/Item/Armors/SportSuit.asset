@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 202
   name: SportSuit
-  type: 0
+  type: 2
   icon: {fileID: 2527720842142326344, guid: b651b9785a5474e45918f8283e6f6f53, type: 3}
   quantity: 1
   quantityRedusedByUse: 1

@@ -24,36 +24,38 @@ public class BalaXFantasma : MonoBehaviour
 
     void Update()
     {
-    
-        distanciaBalaFantasma = Vector3.Distance (bala1.transform.position, fantasma.transform.position);        
+        if (fantasma != null)
+        {
+            distanciaBalaFantasma = Vector3.Distance (bala1.transform.position, fantasma.transform.position);        
         
-        if(distanciaBalaFantasma <= 0)//Fantasma é morto. 
-        {        
+            if(distanciaBalaFantasma <= 0)//Fantasma é morto. 
+            {        
            
-           posicaoFantasma();
+               posicaoFantasma();
            
-       }       
+            }       
        
-       distanciaJogadorFantasma = Vector3.Distance (jogador.transform.position, fantasma.transform.position);
+            distanciaJogadorFantasma = Vector3.Distance (jogador.transform.position, fantasma.transform.position);
        
-       if(distanciaJogadorFantasma <= 0.5)
-       {
+            if(distanciaJogadorFantasma <= 0.5)
+            {
        
-         marca.setFantasmaAtaque(1);        
-         if(marca.getFantasmaAtaque() > 0)
-          {
+             marca.setFantasmaAtaque(1);        
+             if(marca.getFantasmaAtaque() > 0)
+              {
           
-             posicaoFantasma();
+                 posicaoFantasma();
           
-          }
-          else
-          {
+              }
+              else
+              {
           
-               fantasma.transform.position = new Vector3(100, 100, 0);
+                   fantasma.transform.position = new Vector3(100, 100, 0);
           
-          }                   
+              }                   
        
-       }           
+           }           
+        }
        
     }    
     
