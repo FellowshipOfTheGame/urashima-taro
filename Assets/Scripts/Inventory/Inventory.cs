@@ -20,12 +20,6 @@ public class Inventory : MonoBehaviour
     // player
     private GameObject player;
 
-    private ChangeWeapons changeWeapons;
-    // gameobject vazio onde estao os weapon slots
-    private Transform weaponPlayer;
-    // referencia aos weapon slots no player
-    private Transform[] weaponSlots = new Transform[4];
-
     private bool inventarioAtivo = false;
 
     ItemSO currentItem;
@@ -36,7 +30,7 @@ public class Inventory : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("Mais de 1 Inventario");
+            Destroy(this.gameObject);
         }
         instance = this;
     }
@@ -44,13 +38,6 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Jogador 1");
-        changeWeapons = player.GetComponent<ChangeWeapons>();
-        weaponPlayer = player.transform.Find("Armas");
-
-        for(int i = 0; i<weaponPlayer.childCount; i++)
-        {
-            weaponSlots[i] = weaponPlayer.GetChild(i);
-        }
     }
 
     public static Inventory GetInstance()

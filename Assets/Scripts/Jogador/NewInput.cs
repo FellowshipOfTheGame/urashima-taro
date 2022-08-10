@@ -24,8 +24,6 @@ public class NewInput : MonoBehaviour
     [HideInInspector] public bool isRunning = false;
     bool isLanternaOn = true;
 
-    [SerializeField] private Transform armas;
-
     private MousePosition mousePosition;
     Animator anim;
 
@@ -84,7 +82,6 @@ public class NewInput : MonoBehaviour
         Move();
         Run();
         Flashlight();
-        RotationArmas();
     }
 
     // Fix angle accordly to the direction where the player is facing
@@ -263,10 +260,5 @@ public class NewInput : MonoBehaviour
         {
             lanterna.transform.rotation = Quaternion.Euler(0, 0, angulo);
         }
-    }
-
-    private void RotationArmas()
-    {
-        armas.rotation = Quaternion.Euler(0, 0, angulo);
     }
 }
