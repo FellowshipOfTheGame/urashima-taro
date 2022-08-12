@@ -10,14 +10,15 @@ public class MudaSprite : MonoBehaviour
     public Sprite outroSpriteDireita;
     public Sprite outroSpriteEsquerda;
     public Transform fantasma;
-    public Transform jogador;
+    private Transform jogador;
     private Transform posOriginal;    
     private SpriteRenderer renderSprite; 
     string resultado;
     
     void Start()
     {
-         renderSprite = GetComponent<SpriteRenderer>();
+        jogador = GameObject.FindWithTag("Player").transform;
+        renderSprite = GetComponent<SpriteRenderer>();
          //posOriginal.transform.position = fantasma.transform.position;
     }
 
