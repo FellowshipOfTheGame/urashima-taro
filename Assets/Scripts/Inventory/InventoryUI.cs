@@ -24,7 +24,6 @@ public class InventoryUI : MonoBehaviour
         }
     }
     
-
     void UpdateUI()
     {
         slots = gameObjectParent.GetComponentsInChildren<InventorySlot>();
