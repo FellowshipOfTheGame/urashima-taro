@@ -55,7 +55,7 @@ public class Fade : MonoBehaviour
         return compFadeOut;
     }
 
-    void Start()
+    void OnLevelWasLoaded()
     {
         img = GetComponent<Image>();
         if (firstFadeInComp)
