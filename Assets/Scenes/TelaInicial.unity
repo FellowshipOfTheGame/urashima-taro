@@ -3763,6 +3763,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8022959302449755560, guid: 9cfacfba1c4e9e14ea3100c1d562e79b, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 40f54a90e73b8554ba4ef78c604769dc, type: 3}
+    - target: {fileID: 8022959302449755560, guid: 9cfacfba1c4e9e14ea3100c1d562e79b, type: 3}
+      propertyPath: sounds.Array.data[61].name
+      value: Loop_Gameplay_Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022959302449755560, guid: 9cfacfba1c4e9e14ea3100c1d562e79b, type: 3}
+      propertyPath: sounds.Array.data[1].output
+      value: 
+      objectReference: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     - target: {fileID: 8022959302449755562, guid: 9cfacfba1c4e9e14ea3100c1d562e79b, type: 3}
       propertyPath: m_RootOrder
       value: 4

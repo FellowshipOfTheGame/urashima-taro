@@ -66,15 +66,15 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: MenuTheme
-    clip: {fileID: 8300000, guid: ad5aa99b922473a419de68a189e033d4, type: 3}
-    output: {fileID: -5501493645383929318, guid: 5c0f6354d4257ea4d8830027384b4f3f, type: 2}
+    clip: {fileID: 8300000, guid: 40f54a90e73b8554ba4ef78c604769dc, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 0.1
     spatialBlend: 0
     loop: 1
     source: {fileID: 0}
   - name: Ceramic
-    clip: {fileID: 8300000, guid: f955602af606b6648bf22f620c5eec64, type: 3}
+    clip: {fileID: 8300000, guid: 2f79fa787cbefef468e1712cfc223be4, type: 3}
     output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
@@ -531,6 +531,22 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Zombie_Twah_3
     clip: {fileID: 8300000, guid: 11551c0800241354fb68f22082080aa5, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Intro_Gameplay_Music
+    clip: {fileID: 8300000, guid: 5b1712071a675eb4ebd242fa8196fde6, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Loop-Gameplay_Music
+    clip: {fileID: 8300000, guid: 0eb60b32c2177d247862a95d9de6de11, type: 3}
     output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
