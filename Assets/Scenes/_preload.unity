@@ -1482,7 +1482,6 @@ GameObject:
   - component: {fileID: 986559291}
   - component: {fileID: 986559292}
   - component: {fileID: 986559293}
-  - component: {fileID: 986559294}
   m_Layer: 0
   m_Name: __app
   m_TagString: Untagged
@@ -1533,19 +1532,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c63e3ec88e1ad418894e5c8b6c5895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &986559294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986559290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 443758d7c7d964f4fa49c243531b3285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicName: 0
 --- !u!1 &1007754099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,7 +1564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: MenuTheme
-    clip: {fileID: 8300000, guid: aeaef2594181f8b4584730d3230dafb6, type: 3}
+    clip: {fileID: 8300000, guid: 40f54a90e73b8554ba4ef78c604769dc, type: 3}
     output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
@@ -1586,7 +1572,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: PlayTheme
-    clip: {fileID: 8300000, guid: ce38ca1fc7be33242ab176bfdd99763e, type: 3}
+    clip: {fileID: 8300000, guid: 5b1712071a675eb4ebd242fa8196fde6, type: 3}
     output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
@@ -1594,7 +1580,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: PlayThemeLoop
-    clip: {fileID: 8300000, guid: cac8a0fa51b4fa542a8127ec863b562e, type: 3}
+    clip: {fileID: 8300000, guid: 0eb60b32c2177d247862a95d9de6de11, type: 3}
     output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
@@ -2427,7 +2413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b53767bd3ad4f4419b6f24d0ea890a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 4
+  nextScene: 5
 --- !u!4 &1572093975
 Transform:
   m_ObjectHideFlags: 0

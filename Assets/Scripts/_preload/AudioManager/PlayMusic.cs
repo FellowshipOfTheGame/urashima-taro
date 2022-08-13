@@ -7,6 +7,7 @@ public class PlayMusic : MonoBehaviour
     public enum MusicType { MenuTheme, PlayTheme };
     public MusicType music;
     private AudioManager audioManager;
+    private AudioClip clip;
 
     void Start()
     {
@@ -14,8 +15,9 @@ public class PlayMusic : MonoBehaviour
 
         if (music == MusicType.PlayTheme)
         {
+            clip = audioManager.ReturnAudioclip("PlayTheme");
             audioManager.Play(music.ToString());
-
+            Invoke("PlayThemeIntro", clip.length);
         }
         else
         {
