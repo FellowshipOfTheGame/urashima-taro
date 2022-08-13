@@ -106,6 +106,14 @@ public class AudioManager : MonoBehaviour
             s.source.UnPause();
     }
 
+    // Return the audioclip of the given name
+    public AudioClip ReturnAudioclip(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+
+        return s.clip;
+    }
+
     /*
     // Can play multiple sounds on one AudioSource
     public void PlayOneShot(string name, float volumeScale)
