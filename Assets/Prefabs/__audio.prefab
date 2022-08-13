@@ -553,3 +553,147 @@ MonoBehaviour:
     spatialBlend: 1
     loop: 0
     source: {fileID: 0}
+  - name: Ghost_Breath
+    clip: {fileID: 8300000, guid: 0d351a2e900ac1f45a77a298e0b8c9d2, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Moan_1
+    clip: {fileID: 8300000, guid: 81472c41e468ac544b43738443fd77d7, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Moan_2
+    clip: {fileID: 8300000, guid: a719ae9429c10644ab483d5484b1baae, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Stutter_1
+    clip: {fileID: 8300000, guid: 95e9fe6d01b2bbd449cd4860c82dbe29, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Stutter_2
+    clip: {fileID: 8300000, guid: 9d86a70eb9e1dba45ad47995ac11c002, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Stutter_3
+    clip: {fileID: 8300000, guid: f2e7415580e000c44be8c7ea121e528b, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Whoosh
+    clip: {fileID: 8300000, guid: 61ccd35530414bd44a8154aef456df78, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Whisper
+    clip: {fileID: 8300000, guid: 29a58637d7b755248a38a2ad354f05a3, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Attack_1
+    clip: {fileID: 8300000, guid: 72f8f380f4e426040b3f05ff3cefffe5, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Attack_2
+    clip: {fileID: 8300000, guid: 21bbdf8e29328c049a805101b1370860, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Attack_3
+    clip: {fileID: 8300000, guid: 74d6bfa6ce5a3bf499f21adaae1f25ea, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Attack_4
+    clip: {fileID: 8300000, guid: 47e74e667bb4b344c8a10688bb1f65b8, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Attack_5
+    clip: {fileID: 8300000, guid: 0cff57ddd66efb2489685a868d4b05ac, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Attack_6
+    clip: {fileID: 8300000, guid: 140d3ff0ab14f2c43b9a141d6e965842, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Attack_7
+    clip: {fileID: 8300000, guid: 3def9fa8c288ac249b99306ec91fe56c, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Attack_8
+    clip: {fileID: 8300000, guid: 17db251df049c964ab4e4d9968bc513c, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Attack_Startup
+    clip: {fileID: 8300000, guid: 19bfb36dc0958c842a4921b772e733d9, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ghost_Death
+    clip: {fileID: 8300000, guid: 4e60c89ca69f94a469b79c7cbfafa503, type: 3}
+    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 0.385
+    pitch: 1.01
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
