@@ -25,7 +25,7 @@ namespace Pathfinding
 		// The default location of the zombie, where he run when he is not pursuing the player
 		public Transform defaultLocation;
 		// The position of the player
-		public Transform playerLocation;
+		private Transform playerLocation;
 		// To check if the zombie is seing the player
 		private ZombieFieldOfView zombieView;
 
@@ -37,6 +37,7 @@ namespace Pathfinding
 
 		private void Start()
         {
+			playerLocation = GameObject.FindWithTag("Player").transform;
 			// Receive the script attached with the Player object, used to return variables related to collision
 			playerCollision = GameObject.FindWithTag("Player").GetComponent<PlayerCollision>();
 			zombieView = GetComponent<ZombieFieldOfView>();

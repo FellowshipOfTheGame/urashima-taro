@@ -10,7 +10,7 @@ public class CacarMoverLimitar : MonoBehaviour
   
     private Vector2 fantasma_V;
     private float velocidadeRecuo = 0.5f;
-    public Transform jogador;
+    private Transform jogador;
     public Transform fantasma;
     public float velocidade = 0.05f;
     public float velocidadeDeAtaque = 0.01f;
@@ -24,7 +24,7 @@ public class CacarMoverLimitar : MonoBehaviour
         
     void Start()
     {
-    
+      jogador = GameObject.FindWithTag("Player").transform;
       audioManager = FindObjectOfType<AudioManager>();
       audioManager.Play("Walking");
     

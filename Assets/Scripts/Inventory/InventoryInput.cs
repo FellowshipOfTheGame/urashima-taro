@@ -13,6 +13,9 @@ public class InventoryInput : MonoBehaviour
 
     void Update()
     {
+        // WARNING: for some reason pressing "I" freezes the player movement
+        // probably because the old input system uses "I" to do something
+        /*
         // Check if the key to set active the inventoryMenu is pressed
         if (Keyboard.current.iKey.wasPressedThisFrame)
         {
@@ -20,6 +23,7 @@ public class InventoryInput : MonoBehaviour
             // else, set true
             OpenOrCloseInventory(!inventoryMenu.activeSelf);
         }
+        */
     }
 
     // Function to set the inventoryMenu gameobject active or disabled
