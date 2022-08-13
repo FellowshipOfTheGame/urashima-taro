@@ -8,4 +8,6 @@ public abstract class Interactable : MonoBehaviour
     public abstract void Acender();
     public abstract void Apagar();
     public abstract void Interagir();
+
+    public abstract bool EstahAtivo();
 }

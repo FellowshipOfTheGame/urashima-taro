@@ -30,4 +30,9 @@ public class Item : Interactable
 
         gameObject.SetActive(false);
     }
+
+    public override bool EstahAtivo()
+    {
+        return false;
+    }
 }

@@ -8,15 +8,23 @@ public class TextManager : Interactable
     [SerializeField] private GameObject textCanvas;
     [SerializeField] GameObject outline;
     [SerializeField] PauseMenu pauseMenu;
+    private bool isActive;
+
+    private void Start()
+    {
+        isActive = false;
+    }
 
     public void StartText()
     {
+        isActive = true;
         Time.timeScale = 0;
         textCanvas.SetActive(true);
     }
 
     public void EndText()
     {
+        isActive = false;
         Time.timeScale = 1;
         textCanvas.SetActive(false);
     }
@@ -31,7 +39,7 @@ public class TextManager : Interactable
 
     public override string Descricao()
     {
-        return "";
+        return "Pressione E para ler o documento";
     }
 
     public override void Acender()
@@ -57,5 +65,10 @@ public class TextManager : Interactable
 
         //muda o variavel do pause menu
         pauseMenu.isGamePaused = true;
+    }
+
+    public override bool EstahAtivo()
+    {
+        return isActive;
     }
 }

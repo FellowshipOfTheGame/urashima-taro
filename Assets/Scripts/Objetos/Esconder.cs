@@ -89,4 +89,9 @@ public class Esconder : Interactable
             isHidden = false;
         }
     }
+
+    public override bool EstahAtivo()
+    {
+        return false;
+    }
 }

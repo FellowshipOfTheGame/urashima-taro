@@ -31,8 +31,8 @@ public class InteracaoJogador : MonoBehaviour
         if(maisPerto != null)
         {
             Interactable interactable = maisPerto.gameObject.GetComponent<Interactable>();
-
-            if(interactable != null)
+            
+            if(interactable != null && !interactable.EstahAtivo())
             {
                 if (!interagindo)
                 {
@@ -47,6 +47,10 @@ public class InteracaoJogador : MonoBehaviour
                     interagindo = !interagindo;
                 }
             }
+            else
+            {
+                texto.text = "";
+            }
         }
         else
         {
@@ -59,7 +63,7 @@ public class InteracaoJogador : MonoBehaviour
     {
         // array com todos os interagiveis
         Collider2D[] colliders = Physics2D.OverlapCircleAll(jogador.transform.position, raioInteracao, objeto);
-
+        Debug.Log(colliders.Length);
         if (colliders.Length == 0)
         {
             if(maisPerto != null)
