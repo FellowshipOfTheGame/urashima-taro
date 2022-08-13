@@ -55,7 +55,7 @@ public class CacarMoverLimitar : MonoBehaviour
     void ataque()
     {            
     
-      if (distance <= raioAlvo)
+      if (distance <= raioAlvo && marca.getAtaque())
       {
       
        fantasma.transform.position = Vector3.MoveTowards(fantasma.transform.position, jogador.transform.position, Time.fixedDeltaTime * velocidadeDeAtaque);
