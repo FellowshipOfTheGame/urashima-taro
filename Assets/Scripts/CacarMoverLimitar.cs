@@ -19,11 +19,12 @@ public class CacarMoverLimitar : MonoBehaviour
     public float retorno = 0.05f;
     private AudioManager audioManager;
     float distance;
-    float direcao;        
-    Flag marca = new Flag();
+    float direcao;
+    private Flag marca;
         
     void Start()
     {
+      marca = FindObjectOfType<Flag>();
       jogador = GameObject.FindWithTag("Player").transform;
       audioManager = FindObjectOfType<AudioManager>();
       audioManager.Play("Walking");

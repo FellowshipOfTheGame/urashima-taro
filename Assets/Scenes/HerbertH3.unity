@@ -92815,6 +92815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1652899161}
+  - component: {fileID: 1652899162}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -92836,6 +92837,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1652899162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652899160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c01037a0495f84bac49b1430c11b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1657042916
 GameObject:
   m_ObjectHideFlags: 0
@@ -93919,8 +93932,9 @@ GameObject:
   - component: {fileID: 1941701171}
   - component: {fileID: 1941701173}
   - component: {fileID: 1941701172}
+  - component: {fileID: 1941701174}
   m_Layer: 8
-  m_Name: Teleporter (1)
+  m_Name: UP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93981,6 +93995,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destinyPosition: {x: -65, y: 216, z: 0}
   scene: HerbertH3
+--- !u!114 &1941701174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941701170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504053c31db6c0f45af8dd7c43324a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2032421494
 GameObject:
   m_ObjectHideFlags: 0
@@ -94315,13 +94341,26 @@ GameObject:
   - component: {fileID: 5382338417455788066}
   - component: {fileID: 3850632622382160598}
   - component: {fileID: 8677260282334295213}
+  - component: {fileID: 1409177864032627109}
   m_Layer: 8
-  m_Name: Teleporter
+  m_Name: UP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1409177864032627109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409177864032627108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504053c31db6c0f45af8dd7c43324a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3850632622382160598
 MonoBehaviour:
   m_ObjectHideFlags: 0
