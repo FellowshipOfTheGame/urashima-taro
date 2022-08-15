@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Cuida da vida do Player
 
@@ -27,6 +28,9 @@ public class Vida : MonoBehaviour
     private float invencibleTimer;
     private bool canHit = true;
 
+    //posicao inicial
+    Vector3 inicialPos;
+
     void Start()
     {
         //pega objetos externos
@@ -47,6 +51,9 @@ public class Vida : MonoBehaviour
         //inicializa a vida
         vidaAtual = vidaMax;
         barraScript.DefinirVidaMax(vidaMax);
+
+        //salva a posicao inicial
+        inicialPos = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
     }
 
     void Update()
@@ -115,7 +122,12 @@ public class Vida : MonoBehaviour
         if (vidaAtual == 0)
         {
             // morte
-            Destroy(gameObject);
+            vidaAtual = vidaMax;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            damageCol.isEnemyHit = false;
+            canHit = true;
+            sprite.enabled = true;
+            this.gameObject.transform.position = inicialPos;
         }
     }
 
