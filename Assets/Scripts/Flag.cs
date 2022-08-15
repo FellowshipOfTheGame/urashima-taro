@@ -10,8 +10,17 @@ public class Flag : MonoBehaviour
     public static bool porta       = false;
     private static bool ataque = false;
     private static int  fantasmaAtaque = 3;
-    
-    
+
+    public static Flag instance;
+
+    private void Start()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(this);
+    }
+
     public void setFantasmaAtaque(int value)
       {
       
