@@ -18,7 +18,6 @@ public class ItemTeleport : Interactable
 
     private void Start()
     {
-        Debug.Log("start");
         fade = GameObject.Find("Fade").GetComponent<Fade>();
         if (fade == null)
         {
@@ -41,13 +40,11 @@ public class ItemTeleport : Interactable
 
     public override void Acender()
     {
-        Debug.Log("ac");
         outline.SetActive(true);
     }
 
     public override void Apagar()
     {
-        Debug.Log("ap");
         outline.SetActive(false);
     }
 

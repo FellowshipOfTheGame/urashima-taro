@@ -11,6 +11,7 @@ public class MainMenuSc : MonoBehaviour
     public void Start()
     {
         audio.Play(nomeMusica);
+        Debug.Log("entrou");
     }
 
     public void PlayButtonPressed()
