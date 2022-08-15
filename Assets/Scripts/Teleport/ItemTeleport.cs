@@ -35,7 +35,7 @@ public class ItemTeleport : Interactable
 
     public override string Descricao()
     {
-        return "";
+        return "Pressione E para teleportar";
     }
 
     public override void Acender()
