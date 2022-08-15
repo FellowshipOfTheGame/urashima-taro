@@ -58,14 +58,14 @@ public class ControleTextoCredito : MonoBehaviour
       else
       {
        
-          SceneManager.LoadScene("Menu");
+          SceneManager.LoadScene("TelaInicial");
                 
       }
       
-      if (Input.GetKeyDown(KeyCode.Escape))
+      if (Input.GetKeyDown(KeyCode.Space))
       {
             
-          SceneManager.LoadScene("Menu");  
+          SceneManager.LoadScene("TelaInicial");  
             
       }       
                
