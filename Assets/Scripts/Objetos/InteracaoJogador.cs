@@ -42,7 +42,7 @@ public class InteracaoJogador : MonoBehaviour
                 texto.text = interactable.Descricao();
                 if (InputManager.GetInstance().GetInteragir())
                 {
-                    // ação
+                    // aï¿½ï¿½o
                     interactable.Interagir();
                     interagindo = !interagindo;
                 }
