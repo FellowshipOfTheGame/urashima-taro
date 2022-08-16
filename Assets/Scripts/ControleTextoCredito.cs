@@ -62,7 +62,7 @@ public class ControleTextoCredito : MonoBehaviour
                 
       }
       
-      if (Input.GetKeyDown(KeyCode.Space))
+      if (Input.GetKeyDown(KeyCode.Escape))
       {
             
           SceneManager.LoadScene("TelaInicial");  

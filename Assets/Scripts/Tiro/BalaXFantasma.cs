@@ -63,10 +63,10 @@ public class BalaXFantasma : MonoBehaviour
     {
     
        index = (int) Random.Range(0.0f, 3.0f);   
-       if (index == 0) fantasma.transform.position = new Vector3(-100, 250, 0);
-       if (index == 1) fantasma.transform.position = new Vector3(100, 200, 0);
-       if (index == 2) fantasma.transform.position = new Vector3(-100, 215, 0);
-       if (index == 3) fantasma.transform.position = new Vector3(-100, 200, 0);
+       if (index == 0) fantasma.transform.position = new Vector3(-20, 100, 0);
+       if (index == 1) fantasma.transform.position = new Vector3(-6, 90, 0);
+       if (index == 2) fantasma.transform.position = new Vector3(-20, 150, 0);
+       if (index == 3) fantasma.transform.position = new Vector3(-40, 100, 0);
     
     }
     

@@ -86612,7 +86612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &121059094
 Transform:
   m_ObjectHideFlags: 0
@@ -86685,7 +86685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &136646571
 Transform:
   m_ObjectHideFlags: 0
@@ -86758,7 +86758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &141000923
 Transform:
   m_ObjectHideFlags: 0
@@ -87012,7 +87012,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &184400431
 MonoBehaviour:
@@ -88183,12 +88183,12 @@ Transform:
   m_GameObject: {fileID: 551011520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1487670601}
   - {fileID: 25703258}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &602917020
 GameObject:
@@ -88213,13 +88213,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602917020}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1740118101}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &623382417
 GameObject:
@@ -88815,7 +88815,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733270885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.6, y: -178.5, z: 0}
+  m_LocalPosition: {x: 4.38, y: -180.13, z: 0}
   m_LocalScale: {x: -3.3672407, y: 0.8981881, z: 1}
   m_Children:
   - {fileID: 101898104}
@@ -89124,7 +89124,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &854418104
 GameObject:
@@ -89149,15 +89149,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854418104}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.86063, y: 163.95119, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.930315, y: 81.97559, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1691558768}
   - {fileID: 2032421495}
   - {fileID: 1551486123}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &866459232
 GameObject:
@@ -89450,6 +89450,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1824609182115124804, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
+      propertyPath: outroSpriteDireita
+      value: 
+      objectReference: {fileID: 21300000, guid: 12c68d2cab71a5007a7b907dda30a57f, type: 3}
+    - target: {fileID: 1824609182115124804, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
+      propertyPath: outroSpriteEsquerda
+      value: 
+      objectReference: {fileID: 21300000, guid: 127dd9b7e161432fd8c97a0b6e758a4d, type: 3}
     - target: {fileID: 1824609182118819571, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
       propertyPath: m_Name
       value: Fantasma
@@ -89460,11 +89468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1824609182118819573, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.8
+      value: -22.1
       objectReference: {fileID: 0}
     - target: {fileID: 1824609182118819573, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 249.4
+      value: 100.7
       objectReference: {fileID: 0}
     - target: {fileID: 1824609182118819573, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -89497,6 +89505,14 @@ PrefabInstance:
     - target: {fileID: 1824609182118819573, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824609182118819574, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
+      propertyPath: velocidade
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824609182118819574, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
+      propertyPath: velocidadeDeAtaque
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
@@ -90531,7 +90547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab143eb5c0b5df64ba0998939fc9c2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinyPosition: {x: -29.5, y: 7.6, z: 0}
+  destinyPosition: {x: -19, y: 23, z: 0}
   scene: HerbertH3
 --- !u!1 &1176351049
 GameObject:
@@ -92868,9 +92884,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587660196}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.376993, y: 14.726058, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.188497, y: 7.363029, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 105849309}
   - {fileID: 392484342}
@@ -94257,7 +94273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab143eb5c0b5df64ba0998939fc9c2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinyPosition: {x: -65, y: 216, z: 0}
+  destinyPosition: {x: -14, y: 107, z: 0}
   scene: HerbertH3
 --- !u!114 &1941701174
 MonoBehaviour:
@@ -94394,7 +94410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2062501097
 Transform:
   m_ObjectHideFlags: 0
@@ -94637,7 +94653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab143eb5c0b5df64ba0998939fc9c2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinyPosition: {x: -19, y: 280, z: 0}
+  destinyPosition: {x: -14, y: 107, z: 0}
   scene: HerbertH3
 --- !u!1 &5200577763358718263
 GameObject:
