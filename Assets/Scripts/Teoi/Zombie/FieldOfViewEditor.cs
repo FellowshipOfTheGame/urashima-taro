@@ -1,10 +1,10 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(ZombieFieldOfView))]
-public class FieldOfViewEditor : Editor
+//[CustomEditor(typeof(ZombieFieldOfView))]
+public class FieldOfViewEditor : MonoBehaviour
 {
-    private void OnSceneGUI()
+   /* private void OnSceneGUI()
     {
         ZombieFieldOfView fov = (ZombieFieldOfView)target;
         Handles.color = Color.white;
@@ -33,5 +33,5 @@ public class FieldOfViewEditor : Editor
         angleInDegrees += eulerY;
 
         return new Vector3((-1)*Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad), 0);
-    }
+    }*/
 }

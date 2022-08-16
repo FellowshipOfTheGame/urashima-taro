@@ -89508,11 +89508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1824609182118819574, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
       propertyPath: velocidade
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1824609182118819574, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
       propertyPath: velocidadeDeAtaque
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5596b225e4f1429959239fb7bf2a3fc1, type: 3}
