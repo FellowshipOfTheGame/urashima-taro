@@ -16,8 +16,9 @@ public class PlayMusic : MonoBehaviour
         if (music == MusicType.PlayTheme)
         {
             clip = audioManager.ReturnAudioclip("PlayTheme");
-            audioManager.Play(music.ToString());
             Invoke("PlayThemeIntro", clip.length);
+            audioManager.Play(music.ToString());
+            
         }
         else
         {
@@ -27,6 +28,7 @@ public class PlayMusic : MonoBehaviour
 
     void PlayThemeIntro()
     {
-        audioManager.Play(music.ToString("PlayThemeLoop"));
+        Debug.Log("TOCOU");
+        audioManager.Play("PlayThemeLoop");
     }
 }

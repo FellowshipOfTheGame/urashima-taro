@@ -1577,7 +1577,7 @@ MonoBehaviour:
     output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
-    spatialBlend: 1
+    spatialBlend: 0
     loop: 0
     source: {fileID: 0}
   - name: PlayThemeLoop
@@ -1585,7 +1585,7 @@ MonoBehaviour:
     output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
-    spatialBlend: 1
+    spatialBlend: 0
     loop: 1
     source: {fileID: 0}
   - name: Collect_Ammunition
