@@ -39,34 +39,32 @@ public class MudaSprite : MonoBehaviour
 	 Vector3 posA = origem.transform.position;
 	 Vector3 posB = destino.transform.position;
 	 Vector3 dir = (posB - posA).normalized;
-	 //Debug.Log(dir.x.ToString() + " x");
-	 //Debug.Log(dir.y.ToString()+ " y");   
          
-        if (dir.x > 0 && dir.y > 0)//1
-        {
-         
-            renderSprite.sprite = outroSpriteEsquerda; 
-        
-        } 
-        
-        if (dir.x < 0 && dir.y > 0)//4
+        if (dir.x > 0 && dir.y > 0)
         {
          
             renderSprite.sprite = outroSpriteDireita; 
+        
+        } 
+        
+        if (dir.x < 0 && dir.y > 0)
+        {
+         
+            renderSprite.sprite = outroSpriteEsquerda; 
         
         } 
         
         if (dir.x < 0 && dir.y < 0)//3
         {
          
-            renderSprite.sprite = outroSpriteDireita; 
+            renderSprite.sprite = outroSpriteEsquerda; 
         
         } 
         
         if (dir.x > 0 && dir.y < 0)//3
         {
          
-            renderSprite.sprite = outroSpriteEsquerda; 
+            renderSprite.sprite = outroSpriteDireita; 
         
         }
         

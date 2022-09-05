@@ -24,10 +24,11 @@ public class CacarMoverLimitar : MonoBehaviour
         
     void Start()
     {
+    
       marca = FindObjectOfType<Flag>();
       jogador = GameObject.FindWithTag("Player").transform;
-      audioManager = FindObjectOfType<AudioManager>();
-      audioManager.Play("Walking");
+      //audioManager = FindObjectOfType<AudioManager>();
+      //audioManager.Play("Walking");
     
     }
 
@@ -36,32 +37,17 @@ public class CacarMoverLimitar : MonoBehaviour
         
         //quando jogo for pausado nao move
       if (Time.timeScale == 0) return;
-      distance = Vector3.Distance(jogador.transform.position, fantasma.transform.position);
-        
-      if(marca.getFantasmaAtaque() > 0)
-      {
+      //distance = Vector3.Distance(jogador.transform.position, fantasma.transform.position);     
+      ataque();  
           
-        ataque();  
-         
-      } 
-      else
-      {
-         
-        audioManager.Stop("Walking");
-          
-      }            
-        
     }
 
     void ataque()
     {            
     
-      if (distance <= raioAlvo && marca.getAtaque())
-      {
-      
-       fantasma.transform.position = Vector3.MoveTowards(fantasma.transform.position, jogador.transform.position, Time.fixedDeltaTime * velocidadeDeAtaque);
-       
-      }
+         
+       fantasma.transform.position = Vector3.MoveTowards(fantasma.transform.position, jogador.transform.position, Time.fixedDeltaTime * velocidadeDeAtaque);       
+    
         
     } 
        
