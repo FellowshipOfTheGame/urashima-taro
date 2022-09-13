@@ -7,28 +7,34 @@ public class PlayMusic : MonoBehaviour
     public enum MusicType { MenuTheme, PlayTheme };
     public MusicType music;
     private AudioManager audioManager;
-    private AudioClip clip;
+
+    private IEnumerator coroutine;
 
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
 
+        
         if (music == MusicType.PlayTheme)
         {
-            clip = audioManager.ReturnAudioclip("PlayTheme");
-            Invoke("PlayThemeIntro", clip.length);
+            float clipLength = audioManager.ReturnAudioclip("PlayTheme").length;
+            coroutine = WaitAndPlayIntro(clipLength);
             audioManager.Play(music.ToString());
-            
+            StartCoroutine(coroutine);
+            Debug.Log("ENTROU PLAYTHEME");
         }
         else
         {
             audioManager.Play(music.ToString());
         }
+        
     }
 
-    void PlayThemeIntro()
+    private IEnumerator WaitAndPlayIntro(float clipLength)
     {
-        Debug.Log("TOCOU");
+        Debug.Log("ENTROU WAIT");
+        yield return new WaitForSeconds(clipLength);
         audioManager.Play("PlayThemeLoop");
+        Debug.Log("SAIU WAIT");
     }
 }

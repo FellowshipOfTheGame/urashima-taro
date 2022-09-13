@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/_preload.unity
     guid: 1bcc933d672a79f449241337f2753159
   - enabled: 1
-    path: Assets/Scenes/ZombieTest.unity
+    path: Assets/Scenes/Tests/ZombieTest.unity
     guid: ed06d93a7be27cf44b69a621d7199a11
   - enabled: 1
     path: Assets/Scenes/HerbertH.unity
