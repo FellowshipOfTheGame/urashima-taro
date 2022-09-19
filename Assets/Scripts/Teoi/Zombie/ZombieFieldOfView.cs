@@ -16,14 +16,16 @@ public class ZombieFieldOfView : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstructionMask;
 
-    public bool canSeePlayer;
-    public bool stillCanSeePlayer;      // Even if the Zombie cannot see the player, there is a delay that the zombie still can follow the player
+    [HideInInspector] public bool canSeePlayer;
+    [HideInInspector] public bool stillCanSeePlayer = false;      // Even if the Zombie cannot see the player, there is a delay that the zombie still can follow the player
                                         //before the 'canSeePlayer' variable is setted to false
     public float initialFollowTime;    // This can be privated when the game launchs
     private float followTime;
     private NewInput newInput;
 
-    public GameObject player;
+    [HideInInspector] public GameObject player;
+
+    private IEnumerator coroutine;
 
     void Start()
     {
@@ -47,6 +49,11 @@ public class ZombieFieldOfView : MonoBehaviour
     private void FixedUpdate()
     {
         //Debug.DrawLine();
+    }
+
+    private IEnumerator WaitAndSetStillCanSee()
+    {
+        yield return new WaitForSeconds(followTime);
     }
 
     private IEnumerator FOVRoutine()
@@ -76,61 +83,82 @@ public class ZombieFieldOfView : MonoBehaviour
         Collider2D[] rangeCheckVision = Physics2D.OverlapCircleAll(transform.position, radiusVision, targetMask);
         Collider2D[] rangeCheckHearing = Physics2D.OverlapCircleAll(transform.position, radiusHearing, targetMask);
 
-        // Checks for the vision
-        if (rangeCheckVision.Length != 0)
+        foreach (Collider2D col in rangeCheckVision)
         {
-            // The first transform is the Player transform, because the targetMask is setted as the Player Layer
-            Transform target = rangeCheckVision[0].transform;
-
-            // Get the direction from the zombie to the player
-            Vector3 directionToTarget = (target.position - transform.position).normalized;
-
-            //Debug.Log(Vector3.Angle(directionToTarget, transform.up));
-
-            // Checks if the angle between the line to the target and the line with angle/2 to this line takes the player position
-            if (Vector3.Angle(directionToTarget, transform.up) < angle / 2)
+            if (col.gameObject.name == "Jogador 1")
             {
+                // Checks for the vision
+                if (rangeCheckVision.Length != 0)
+                {
+                    Debug.Log(rangeCheckVision.Length);
+                    Debug.Log("PLAYER IN VISION");
+                    // The first transform is the Player transform, because the targetMask is setted as the Player Layer
+                    Transform target = rangeCheckVision[0].transform;
+
+                    // Get the direction from the zombie to the player
+                    Vector3 directionToTarget = (target.position - transform.position).normalized;
+
+                    //Debug.Log(Vector3.Angle(directionToTarget, transform.up));
+
+                    // Checks if the angle between the line to the target and the line with angle/2 to this line takes the player position
+                    if (Vector3.Angle(directionToTarget, transform.up) < angle / 2)
+                    {
+                        float distanceToTarget = Vector2.Distance(transform.position, target.position);
+
+                        // check if the vision distance and if there is an obstruction between the player and the enemy
+                        if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                        {
+                            followTime = initialFollowTime;
+                            canSeePlayer = true;
+                        }
+                        else
+                        {
+
+                            canSeePlayer = false;
+                        }
+                    }
+                    else
+                        canSeePlayer = false;
+
+                }
+                else if (canSeePlayer)
+                    canSeePlayer = false;
+            }
+        }
+
+        foreach (Collider2D col in rangeCheckHearing)
+        {
+            // Checks if the player is running inside the circle where the zombie can listen
+            if (col.gameObject.name == "Jogador 1" && !canSeePlayer && newInput.isRunning)
+            {
+                // The first transform is the Player transform, because the targetMask is setted as the Player Layer
+                Transform target = rangeCheckHearing[0].transform;
+
+                // Get the direction from the zombie to the player
+                Vector3 directionToTarget = (target.position - transform.position).normalized;
+
                 float distanceToTarget = Vector2.Distance(transform.position, target.position);
 
                 // check if the vision distance and if there is an obstruction between the player and the enemy
                 if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
                 {
+                    followTime = initialFollowTime;
                     canSeePlayer = true;
                 }
-                else
+                else if (followTime <= 0)
                 {
                     canSeePlayer = false;
                 }
             }
-            else
-                canSeePlayer = false;
-
         }
-        else if (canSeePlayer)
-            canSeePlayer = false;
 
-        // Checks if the player is running inside the circle where the zombie can listen
-        if (!canSeePlayer && rangeCheckHearing.Length != 0 && newInput.isRunning)
+        // Checks if the zombie saw the player in the last 'initialFollowTime' seconds
+        // if yes, the zombie 'remembers' to follow the player still, even if all given follow tests for 'canSeePlayer' are false
+        if (followTime > 0.0f)
         {
-            // The first transform is the Player transform, because the targetMask is setted as the Player Layer
-            Transform target = rangeCheckHearing[0].transform;
-
-            // Get the direction from the zombie to the player
-            Vector3 directionToTarget = (target.position - transform.position).normalized;
-
-            float distanceToTarget = Vector2.Distance(transform.position, target.position);
-
-            // check if the vision distance and if there is an obstruction between the player and the enemy
-            if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
-            {
-                followTime = initialFollowTime;
-                canSeePlayer = true;
-            }
-            else if (followTime <= 0)
-            {
-                canSeePlayer = false;
-            }
+            canSeePlayer = true;
         }
+
     }
 
     private void FieldOfViewCheck()
