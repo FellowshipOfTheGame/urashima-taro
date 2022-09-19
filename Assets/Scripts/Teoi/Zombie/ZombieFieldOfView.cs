@@ -90,8 +90,6 @@ public class ZombieFieldOfView : MonoBehaviour
                 // Checks for the vision
                 if (rangeCheckVision.Length != 0)
                 {
-                    Debug.Log(rangeCheckVision.Length);
-                    Debug.Log("PLAYER IN VISION");
                     // The first transform is the Player transform, because the targetMask is setted as the Player Layer
                     Transform target = rangeCheckVision[0].transform;
 
@@ -154,11 +152,11 @@ public class ZombieFieldOfView : MonoBehaviour
 
         // Checks if the zombie saw the player in the last 'initialFollowTime' seconds
         // if yes, the zombie 'remembers' to follow the player still, even if all given follow tests for 'canSeePlayer' are false
-        if (followTime > 0.0f)
-        {
-            canSeePlayer = true;
-        }
-
+        if (followTime > 0.0f)        
+            canSeePlayer = true;        
+        else
+            canSeePlayer = false;
+        Debug.Log(followTime);
     }
 
     private void FieldOfViewCheck()

@@ -2690,8 +2690,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7b80f6fe090b434c8e3b9073f7cb112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radiusVision: 2
-  radiusHearing: 0
+  radiusVision: 4
+  radiusHearing: 2
   delayToSearch: 0
   angle: 90
   targetMask:
