@@ -235,6 +235,7 @@ public class NewInput : MonoBehaviour
         else
         {
             anim.SetBool("Andando", false);
+            anim.SetBool("Correndo", false);
         }
 
 
