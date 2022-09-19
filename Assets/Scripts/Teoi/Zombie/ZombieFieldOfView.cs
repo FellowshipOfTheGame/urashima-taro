@@ -11,19 +11,25 @@ public class ZombieFieldOfView : MonoBehaviour
 
     [Range(0, 360)] public float angle;
 
-    public GameObject player;
+    //public GameObject player;
 
     public LayerMask targetMask;
     public LayerMask obstructionMask;
 
     public bool canSeePlayer;
+    public bool stillCanSeePlayer;      // Even if the Zombie cannot see the player, there is a delay that the zombie still can follow the player
+                                        //before the 'canSeePlayer' variable is setted to false
     public float initialFollowTime;    // This can be privated when the game launchs
     private float followTime;
     private NewInput newInput;
 
+    public GameObject player;
+
     void Start()
     {
         newInput = FindObjectOfType<NewInput>();
+
+        player = GameObject.FindWithTag("Player");
 
         StartCoroutine(FOVRoutine());
     }
@@ -36,6 +42,11 @@ public class ZombieFieldOfView : MonoBehaviour
         {
             followTime -= Time.deltaTime;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        //Debug.DrawLine();
     }
 
     private IEnumerator FOVRoutine()
