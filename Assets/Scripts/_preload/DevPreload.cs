@@ -37,7 +37,8 @@ public class DevPreload : MonoBehaviour
         {
             GameObject player = GameObject.FindWithTag("Player");
 
-            player.transform.position = destinyPosition;
+            if (player != null)
+                player.transform.position = destinyPosition;
         }
     }
 }
