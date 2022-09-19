@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 063bbefd03e386a4cbc2010636647094
+guid: ae35bd12d9bf6e6448286ce355537318
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1857500885880239455
-    second: anim003_1
+      213: -762006884320212971
+    second: tile003_0
   - first:
-      213: 4824381090851765555
-    second: anim003_2
+      213: 8762165554376584713
+    second: tile003_1
   - first:
-      213: 1418588459334322108
-    second: anim003_5
+      213: 82502101096955941
+    second: tile003_2
   - first:
-      213: 6718171267928854830
-    second: anim003_6
+      213: 1431709114989144949
+    second: tile003_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,12 +103,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: anim003_1
+      name: tile003_0
       rect:
         serializedVersion: 2
-        x: 15
+        x: 16
         y: 0
-        width: 32
+        width: 27
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -117,19 +117,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1aa822729c4d836e0800000000000000
-      internalID: -1857500885880239455
+      spriteID: 51801b7a6cecc65f0800000000000000
+      internalID: -762006884320212971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim003_2
+      name: tile003_1
       rect:
         serializedVersion: 2
-        x: 79
+        x: 80
         y: 0
-        width: 32
+        width: 27
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -138,19 +138,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33db45d9a05a3f240800000000000000
-      internalID: 4824381090851765555
+      spriteID: 90ea7c3d527799970800000000000000
+      internalID: 8762165554376584713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim003_5
+      name: tile003_2
       rect:
         serializedVersion: 2
-        x: 143
+        x: 144
         y: 0
-        width: 32
+        width: 27
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -159,19 +159,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb7471110b6dfa310800000000000000
-      internalID: 1418588459334322108
+      spriteID: 5208b1d493b152100800000000000000
+      internalID: 82502101096955941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: anim003_6
+      name: tile003_3
       rect:
         serializedVersion: 2
-        x: 207
+        x: 208
         y: 0
-        width: 32
+        width: 27
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e21922d7c2dbb3d50800000000000000
-      internalID: 6718171267928854830
+      spriteID: 57bed94cad37ed310800000000000000
+      internalID: 1431709114989144949
       vertices: []
       indices: 
       edges: []
