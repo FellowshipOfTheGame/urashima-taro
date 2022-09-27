@@ -582,6 +582,7 @@ MonoBehaviour:
   backSpeed: 150
   attackRange: 0.8
   isFirstStopOn: 1
+  _anim: {fileID: 2227218403512390514}
 --- !u!50 &6483981533902222813
 Rigidbody2D:
   serializedVersion: 4
@@ -667,4 +668,4 @@ MonoBehaviour:
   - {x: -0.46912277, y: -0.17591655, z: 0}
   m_ShapePathHash: -1197621037
   m_Mesh: {fileID: 0}
-  m_InstanceId: 64360
+  m_InstanceId: 83240

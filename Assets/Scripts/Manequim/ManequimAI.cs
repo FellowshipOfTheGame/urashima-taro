@@ -12,7 +12,8 @@ public class ManequimAI : MonoBehaviour
     [Header("Attack Parameters")] public float attackRange;
 
     [Header("Settings")] public bool isFirstStopOn;
-    
+
+    [SerializeField] private Animator _anim;
    
     //componentes do manequim
     Seeker seeker;
@@ -83,18 +84,28 @@ public class ManequimAI : MonoBehaviour
             if (xAngle < 45f)
             {
                 //direita
+                _anim.SetInteger("Direction", 1);
                 velocity2 = new Vector2(1, 0);
             }
             else if (xAngle < 135f)
             {
                 //cima
-                if (yAngle < 90) velocity2 = new Vector2(0, 1);
+                if (yAngle < 90)
+                {
+                    _anim.SetInteger("Direction", 0);
+                    velocity2 = new Vector2(0, 1);
+                }
                 //baixo
-                else velocity2 = new Vector2(0, -1);
+                else
+                {
+                    _anim.SetInteger("Direction", 2);
+                    velocity2 = new Vector2(0, -1);
+                }
             }
             else
             {
                 //esquerda
+                _anim.SetInteger("Direction", 3);
                 velocity2 = new Vector2(-1, 0);
             }
 
@@ -172,6 +183,7 @@ public class ManequimAI : MonoBehaviour
     #region //Start Move
     private void StartMove()
     {
+        _anim.SetBool("isWalking", true);
         sprite.color = new Color(0, 1, 0, 1);
         isActive = true;
         isStop = true;
@@ -202,7 +214,7 @@ public class ManequimAI : MonoBehaviour
 
     #region //ReachPlayer
     private void ReachPlayer()
-    {
+    {        
         isStop = true;
         //faz animacao de ataque
         sprite.color = new Color(0, 1, 1, 1);
@@ -250,6 +262,7 @@ public class ManequimAI : MonoBehaviour
     #region //Stop Move
     void StopMove()
     {
+        _anim.SetBool("isWalking", false);
         isActive = false;
         isStop = true;
         //faz animacao
