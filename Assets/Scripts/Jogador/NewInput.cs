@@ -48,12 +48,16 @@ public class NewInput : MonoBehaviour
     private const float distanceEpsilon = 0.1f; // To compare two vectors distance and check if they are approximately equal
     private int directionID;
 
+    private LanternSortingLayer _lanternSortingLayer;
+
     private void Start()
     {
         directionID = UP;
 
         mousePosition = GameObject.Find("MousePosReader").GetComponent<MousePosition>();
         anim = GetComponent<Animator>();
+
+        _lanternSortingLayer = LanternSortingLayer.Instance;
     }
 
     private void Update()
@@ -139,28 +143,40 @@ public class NewInput : MonoBehaviour
 
         if (playerMoveDirection == UP_DIRECTION)
         {
+            _lanternSortingLayer.UpLayer();
+            lanterna = _lanternSortingLayer.lantern1;
             directionID = UP;
         }
         else if (playerMoveDirection == DOWN_DIRECTION)
         {
+            _lanternSortingLayer.NotUpLayer();
+            lanterna = _lanternSortingLayer.lantern2;
             directionID = DOWN;
         }
         else if (playerMoveDirection == RIGHT_DIRECTION)
         {
+            _lanternSortingLayer.NotUpLayer();
+            lanterna = _lanternSortingLayer.lantern2;
             directionID = RIGHT;
         }
         else if (playerMoveDirection == LEFT_DIRECTION)
         {
+            _lanternSortingLayer.NotUpLayer();
+            lanterna = _lanternSortingLayer.lantern2;
             directionID = LEFT;
         }
         else if (Vector2.Distance(playerMoveDirection, UP_RIGHT_DIRECTION) < distanceEpsilon)
         {
             if ((angulo < 45 && angulo >= 0) || (angulo > -45 && angulo <= 0))
             {
+                _lanternSortingLayer.UpLayer();
+                lanterna = _lanternSortingLayer.lantern1;
                 directionID = UP;
             }
             else if (angulo <= -45 && angulo >= -135)
             {
+                _lanternSortingLayer.NotUpLayer();
+                lanterna = _lanternSortingLayer.lantern2;
                 directionID = RIGHT;
             }
         }
@@ -168,15 +184,21 @@ public class NewInput : MonoBehaviour
         {
             if ((angulo < 45 && angulo >= 0) || (angulo > -45 && angulo <= 0))
             {
+                _lanternSortingLayer.UpLayer();
+                lanterna = _lanternSortingLayer.lantern1;
                 directionID = UP;
             }
             else if ((angulo >= 45 && angulo <= 90) || (angulo >= -270 && angulo <= -225))
             {
+                _lanternSortingLayer.NotUpLayer();
+                lanterna = _lanternSortingLayer.lantern2;
                 directionID = LEFT;
             }
         }
         else if (Vector2.Distance(playerMoveDirection, DOWN_RIGHT_DIRECTION) < distanceEpsilon)
         {
+            _lanternSortingLayer.NotUpLayer();
+            lanterna = _lanternSortingLayer.lantern2;
             if (angulo < -135 && angulo > -225)
             {
                 directionID = DOWN;
@@ -188,6 +210,8 @@ public class NewInput : MonoBehaviour
         }
         else if (Vector2.Distance(playerMoveDirection, DOWN_LEFT_DIRECTION) < distanceEpsilon)
         {
+            _lanternSortingLayer.NotUpLayer();
+            lanterna = _lanternSortingLayer.lantern2;
             if (angulo < -135 && angulo > -225)
             {
                 directionID = DOWN;
