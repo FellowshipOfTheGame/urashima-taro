@@ -467,7 +467,7 @@ MonoBehaviour:
   - {x: -0.46912277, y: -0.17591655, z: 0}
   m_ShapePathHash: -1197621037
   m_Mesh: {fileID: 0}
-  m_InstanceId: 64808
+  m_InstanceId: 70158
 --- !u!114 &791870183363942472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,7 +499,6 @@ MonoBehaviour:
   radiusHearing: 2
   delayToSearch: 0
   angle: 76
-  player: {fileID: 0}
   targetMask:
     serializedVersion: 2
     m_Bits: 64
@@ -507,7 +506,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   canSeePlayer: 0
-  initialFollowTime: 0
+  stillCanSeePlayer: 0
+  initialFollowTime: 5
+  player: {fileID: 0}
 --- !u!114 &791870183363942835
 MonoBehaviour:
   m_ObjectHideFlags: 0
