@@ -156,7 +156,7 @@ public class ZombieFieldOfView : MonoBehaviour
             canSeePlayer = true;        
         else
             canSeePlayer = false;
-        Debug.Log(followTime);
+// Debug.Log(followTime);
     }
 
     private void FieldOfViewCheck()

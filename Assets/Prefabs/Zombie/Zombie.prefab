@@ -1,5 +1,245 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3084751689504959728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6825718445193111050}
+  - component: {fileID: 3307798526910451036}
+  m_Layer: 7
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6825718445193111050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3084751689504959728}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.12, y: -0.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6102643367835304637}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3307798526910451036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3084751689504959728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e790e8d9f2359749880112a414551e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicSounds:
+  - name: Idle
+    clip: {fileID: 8300000, guid: af490684765ce3148a8e30889f9366c2, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: KilledPlayer
+    clip: {fileID: 8300000, guid: 4a2197844655cae4eb85e06768118d1f, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    spatialBlend: 1
+  attackSounds:
+  - name: Attack0
+    clip: {fileID: 8300000, guid: 8e3aaea4a54b72649bdb8edc28ec41b3, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack1
+    clip: {fileID: 8300000, guid: 69daf38cd0db15341a9f4a1b558eb4d3, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack2
+    clip: {fileID: 8300000, guid: b6574998d48138d4b8b1a21cfd6e7175, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack3
+    clip: {fileID: 8300000, guid: 7c232bf32c91f4344a6da8e9ac9d9731, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack4
+    clip: {fileID: 8300000, guid: b5a4bbca536461941b31cbb84406c214, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack5
+    clip: {fileID: 8300000, guid: 9cae7cf080752064e9fd628cf22c3c7c, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack6
+    clip: {fileID: 8300000, guid: 6defa5a441b664c43bdd46561f66df72, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack7
+    clip: {fileID: 8300000, guid: 94773701a0bcc8040b0e886fd620a04c, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack8
+    clip: {fileID: 8300000, guid: f44f8e03cec20ec4f86802f08ab3a0d0, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack9
+    clip: {fileID: 8300000, guid: 12c2df99d350c554b9115270deac92ea, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack10
+    clip: {fileID: 8300000, guid: a7056d88a3b87e546b8a106ec53c682d, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack11
+    clip: {fileID: 8300000, guid: 44fe7524cfa1d2f48ac33a7601cce153, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack12
+    clip: {fileID: 8300000, guid: 77c409d829e785440aea132e018c6fb2, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack13
+    clip: {fileID: 8300000, guid: 7945a690a15e8bd4991e5df410c9e121, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack14
+    clip: {fileID: 8300000, guid: 9b1882ecaa7ab634db4c8c40a270643c, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack15
+    clip: {fileID: 8300000, guid: 6dd486a5b4ea281438a94c6191b073a1, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack16
+    clip: {fileID: 8300000, guid: a1d075d9eb89a2c4f807cc3ec0585b52, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack17
+    clip: {fileID: 8300000, guid: f2a269975d5299344b39d2ddf9efdf88, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack18
+    clip: {fileID: 8300000, guid: 5b939e4f51f20d24898d02288da10d30, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack19
+    clip: {fileID: 8300000, guid: 22896a61293dcec44919707a622e5e43, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack20
+    clip: {fileID: 8300000, guid: f8083c3f95812ce42980629970ddf39a, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Attack21
+    clip: {fileID: 8300000, guid: 25dab63cba46e2d44a5487e8d6947bf4, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  diedSounds: []
+  followingSounds: []
+  foundedPlayerSounds: []
 --- !u!1 &4676213455759994159
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +602,7 @@ Transform:
   - {fileID: 9136428846178038429}
   - {fileID: 6102643366858915263}
   - {fileID: 6102643367075565986}
+  - {fileID: 6825718445193111050}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -737,7 +978,7 @@ MonoBehaviour:
   repathRate: 0
   canSearch: 1
   canMove: 1
-  maxSpeed: 10
+  maxSpeed: 5
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -803,7 +1044,7 @@ MonoBehaviour:
   - {x: -0.46912277, y: -0.17591655, z: 0}
   m_ShapePathHash: -1197621037
   m_Mesh: {fileID: 0}
-  m_InstanceId: 90604
+  m_InstanceId: 204004
 --- !u!114 &9136428846178038426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,6 +1060,7 @@ MonoBehaviour:
   version: 1
   defaultLocation: {fileID: 6102643366615932316}
   animator: {fileID: 6102643367075565989}
+  zombieAudio: {fileID: 3307798526910451036}
 --- !u!114 &9136428846178038431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,7 +1075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radiusVision: 5
   radiusHearing: 2
-  delayToSearch: 0
+  delayToSearch: 0.1
   angle: 76
   targetMask:
     serializedVersion: 2
@@ -842,7 +1084,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   canSeePlayer: 0
-  initialFollowTime: 0
+  stillCanSeePlayer: 0
+  initialFollowTime: 5
+  player: {fileID: 0}
 --- !u!114 &9136428846178038625
 MonoBehaviour:
   m_ObjectHideFlags: 0

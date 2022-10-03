@@ -16,8 +16,6 @@ public class Sound
     public float volume = 0.5f;
     [Range(.1f, 3f)]
     public float pitch = 1f;
-    [Range(0f, 1f)]
-    public float spatialBlend = 0f;
 
     // Sets if the sound will loop after his time ends
     public bool loop;

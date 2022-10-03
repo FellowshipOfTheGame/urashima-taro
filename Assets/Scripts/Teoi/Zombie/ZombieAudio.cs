@@ -1,24 +1,42 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public class ZombieAudio : MonoBehaviour
 {
-    public Sound[] sounds;
+    public EnemySound[] basicSounds;
+    public EnemySound[] attackSounds;
+    public EnemySound[] diedSounds;
+    public EnemySound[] followingSounds;
+    public EnemySound[] foundedPlayerSounds;
+    private List<EnemySound[]> _soundLists = new List<EnemySound[]>();
 
     void Awake()
     {
-        foreach (Sound s in sounds)
+        _soundLists.Add(basicSounds);
+        _soundLists.Add(attackSounds);
+        _soundLists.Add(diedSounds);
+        _soundLists.Add(followingSounds);
+        _soundLists.Add(foundedPlayerSounds);
+
+        foreach (EnemySound[] list in _soundLists)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
+            Debug.Log(list);
+            foreach (EnemySound s in list)
+            {
+                Debug.Log(s);
+                s.source = gameObject.AddComponent<AudioSource>();
+                s.source.clip = s.clip;
 
-            s.source.outputAudioMixerGroup = s.output;
+                s.source.outputAudioMixerGroup = s.output;
 
-            s.source.loop = s.loop;
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.spatialBlend = s.spatialBlend;
+                s.source.loop = s.loop;
+                s.source.volume = s.volume;
+                s.source.pitch = s.pitch;
+                s.source.spatialBlend = s.spatialBlend;
+            }
         }
     }
 
@@ -26,10 +44,10 @@ public class ZombieAudio : MonoBehaviour
     //      
 
     // Play the sound with the 'name' passed by parameter
-    public void Play(string name)
+    public void Play(string name, EnemySound[] sounds)
     {
         // search in the sound array the sound with de given name
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        EnemySound s = Array.Find(sounds, sound => sound.name == name);
 
         // Check it the given 'name' exists
         if (s == null)
@@ -37,17 +55,17 @@ public class ZombieAudio : MonoBehaviour
             Debug.LogWarning("Sound:" + name + " not found to PLAY!");
             return;
         }
-
+        Debug.LogWarning("Sound:" + name + "");
 
         // Play the sound found
         s.source.Play();
     }
 
     // Stop the sound with the 'name' passed by parameter
-    public void Stop(string name)
+    public void Stop(string name, EnemySound[] sounds)
     {
         // search in the sound array the sound with de given name
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        EnemySound s = Array.Find(sounds, sound => sound.name == name);
 
         // Check it the given 'name' exists
         if (s == null)
@@ -61,10 +79,10 @@ public class ZombieAudio : MonoBehaviour
     }
 
     // Stop the sound with the 'name' passed by parameter
-    public void Pause(string name)
+    public void Pause(string name, EnemySound[] sounds)
     {
         // search in the sound array the sound with de given name
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        EnemySound s = Array.Find(sounds, sound => sound.name == name);
 
         // Check it the given 'name' exists
         if (s == null)
@@ -79,10 +97,10 @@ public class ZombieAudio : MonoBehaviour
     }
 
     // Stop the sound with the 'name' passed by parameter
-    public void Unpause(string name)
+    public void Unpause(string name, EnemySound[] sounds)
     {
         // search in the sound array the sound with de given name
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        EnemySound s = Array.Find(sounds, sound => sound.name == name);
 
         // Check it the given 'name' exists
         if (s == null)
@@ -97,9 +115,9 @@ public class ZombieAudio : MonoBehaviour
     }
 
     // Return the audioclip of the given name
-    public AudioClip ReturnAudioclip(string name)
+    public AudioClip ReturnAudioclip(string name, EnemySound[] sounds)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        EnemySound s = Array.Find(sounds, sound => sound.name == name);
 
         return s.clip;
     }
@@ -109,7 +127,7 @@ public class ZombieAudio : MonoBehaviour
     public void PlayOneShot(string name, float volumeScale)
     {
         // search in the sound array the sound with de given name
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        EnemySound s = Array.Find(sounds, sound => sound.name == name);
 
         // Check it the given 'name' exists
         if (s == null)
@@ -123,4 +141,10 @@ public class ZombieAudio : MonoBehaviour
 
 
     */
+
+    public void PlayRandomSound(EnemySound[] sounds)
+    {
+        int index = UnityEngine.Random.Range(0, sounds.Length);
+        sounds[index].source.Play();
+    }
 }
