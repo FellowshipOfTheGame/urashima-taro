@@ -12,12 +12,12 @@ public class ManequimAI : MonoBehaviour
     [Header("Attack Parameters")] public float attackRange;
 
     [Header("Settings")] public bool isFirstStopOn;
-    
+
+    [SerializeField] private Animator _anim;
    
     //componentes do manequim
     Seeker seeker;
     Rigidbody2D rb;
-    SpriteRenderer sprite;
     Vector3 firstPos;
 
     //static
@@ -45,7 +45,6 @@ public class ManequimAI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        sprite = GetComponentInChildren<SpriteRenderer>();
 
         player = GameObject.FindWithTag("Player");
         playerCollision = player.GetComponent<PlayerCollision>();
@@ -83,18 +82,28 @@ public class ManequimAI : MonoBehaviour
             if (xAngle < 45f)
             {
                 //direita
+                _anim.SetInteger("Direction", 1);
                 velocity2 = new Vector2(1, 0);
             }
             else if (xAngle < 135f)
             {
                 //cima
-                if (yAngle < 90) velocity2 = new Vector2(0, 1);
+                if (yAngle < 90)
+                {
+                    _anim.SetInteger("Direction", 0);
+                    velocity2 = new Vector2(0, 1);
+                }
                 //baixo
-                else velocity2 = new Vector2(0, -1);
+                else
+                {
+                    _anim.SetInteger("Direction", 2);
+                    velocity2 = new Vector2(0, -1);
+                }
             }
             else
             {
                 //esquerda
+                _anim.SetInteger("Direction", 3);
                 velocity2 = new Vector2(-1, 0);
             }
 
@@ -172,7 +181,7 @@ public class ManequimAI : MonoBehaviour
     #region //Start Move
     private void StartMove()
     {
-        sprite.color = new Color(0, 1, 0, 1);
+        _anim.SetBool("isWalking", true);
         isActive = true;
         isStop = true;
         isBack = false;
@@ -181,12 +190,10 @@ public class ManequimAI : MonoBehaviour
         {
             StartCoroutine(FirstStop());
             //faz animacao
-            sprite.color = new Color(1, 1, 0, 1);
         }
         else
         {
             isStop = false;
-            sprite.color = new Color(1, 0, 0, 1);
         }
     }
 
@@ -196,16 +203,14 @@ public class ManequimAI : MonoBehaviour
         //o tempo, depois troca para tempo da animacao
         yield return new WaitForSeconds(1f);
         isStop = false;
-        sprite.color = new Color(1, 0, 0, 1);
     }
     #endregion
 
     #region //ReachPlayer
     private void ReachPlayer()
-    {
+    {        
         isStop = true;
         //faz animacao de ataque
-        sprite.color = new Color(0, 1, 1, 1);
         StartCoroutine(AttackStop());
     }
 
@@ -214,7 +219,6 @@ public class ManequimAI : MonoBehaviour
         //o tempo, depois troca para tempo da animacao
         yield return new WaitForSeconds(1f);
         isStop = false;
-        sprite.color = new Color(1, 0, 0, 1);
     }
     #endregion
 
@@ -250,10 +254,10 @@ public class ManequimAI : MonoBehaviour
     #region //Stop Move
     void StopMove()
     {
+        _anim.SetBool("isWalking", false);
         isActive = false;
         isStop = true;
         //faz animacao
-        sprite.color = new Color(1, 1, 1, 1);
     }
     #endregion
 
@@ -262,8 +266,6 @@ public class ManequimAI : MonoBehaviour
     #region//StartBack
     private void StartBack()
     {
-        sprite.color = new Color(1, 0.5f, 0, 1);
-
         isWaiting = true;
         isStop = true;
     }
@@ -275,7 +277,6 @@ public class ManequimAI : MonoBehaviour
             waitTime = 0;
             isWaiting = false;
             isStop = false;
-            sprite.color = new Color(1, 0, 0, 1);
         }
 
         if (waitTime >= 3f)
@@ -287,7 +288,6 @@ public class ManequimAI : MonoBehaviour
             isBack = true;
             PathUpdate();
             speed = backSpeed;
-            sprite.color = new Color(0, 0.5f, 1, 1);
         }
 
         waitTime += Time.deltaTime;
@@ -300,7 +300,6 @@ public class ManequimAI : MonoBehaviour
         isBack = false;
         isStop = true;
         //faz animacao
-        sprite.color = new Color(1, 1, 1, 1);
     }
     #endregion
 
