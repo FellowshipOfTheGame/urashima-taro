@@ -1,32 +1,18 @@
+using UnityEngine;
 using UnityEngine.Audio;
 using System;
-using UnityEngine;
 
-// How to use:
-// Inside some script of an object you desire to play a sound listed on the AudioManager
-// you can simply type: 
-// ***************** 'FindObjectOfType<AudioManager>().Play("Name of the sound");' ******************
-// passing the name of the sound to play it.
-
-public class AudioManager : MonoBehaviour
+public class ZombieAudio : MonoBehaviour
 {
     public Sound[] sounds;
 
-    // 'instance' references to itself
-    public static AudioManager instance;
-
-    // Awake is called before the Start method
     void Awake()
     {
-        if (instance == null)
-            instance = this;
-        else
-            GameObject.Destroy(this);
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            
+
             s.source.outputAudioMixerGroup = s.output;
 
             s.source.loop = s.loop;
@@ -40,7 +26,7 @@ public class AudioManager : MonoBehaviour
     //      
 
     // Play the sound with the 'name' passed by parameter
-    public void Play (string name)
+    public void Play(string name)
     {
         // search in the sound array the sound with de given name
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -50,15 +36,15 @@ public class AudioManager : MonoBehaviour
         {
             Debug.LogWarning("Sound:" + name + " not found to PLAY!");
             return;
-        }         
+        }
 
-        
+
         // Play the sound found
         s.source.Play();
     }
 
     // Stop the sound with the 'name' passed by parameter
-    public void Stop (string name)
+    public void Stop(string name)
     {
         // search in the sound array the sound with de given name
         Sound s = Array.Find(sounds, sound => sound.name == name);
