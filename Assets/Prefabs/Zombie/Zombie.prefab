@@ -237,9 +237,105 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
     spatialBlend: 1
-  diedSounds: []
-  followingSounds: []
-  foundedPlayerSounds: []
+  diedSounds:
+  - name: Died0
+    clip: {fileID: 8300000, guid: 1857c5798fce0204482fadbaa544aabe, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Died1
+    clip: {fileID: 8300000, guid: fe1638202f01ace4cbd95e9ecd101634, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  followingSounds:
+  - name: Following0
+    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Following1
+    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Following2
+    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Following3
+    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Following4
+    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Following5
+    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Following6
+    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  foundedPlayerSounds:
+  - name: Founded0
+    clip: {fileID: 8300000, guid: 565088d88f81c5b4888ef07626316302, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Founded1
+    clip: {fileID: 8300000, guid: a1d42e266e7466842ab15a71ecd5a6de, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Founded2
+    clip: {fileID: 8300000, guid: 34d357400710cf741882811b0658ff58, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
 --- !u!1 &4676213455759994159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +1140,7 @@ MonoBehaviour:
   - {x: -0.46912277, y: -0.17591655, z: 0}
   m_ShapePathHash: -1197621037
   m_Mesh: {fileID: 0}
-  m_InstanceId: 204004
+  m_InstanceId: 66412
 --- !u!114 &9136428846178038426
 MonoBehaviour:
   m_ObjectHideFlags: 0
