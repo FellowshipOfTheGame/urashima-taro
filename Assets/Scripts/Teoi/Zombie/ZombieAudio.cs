@@ -13,6 +13,12 @@ public class ZombieAudio : MonoBehaviour
     public EnemySound[] foundedPlayerSounds;
     private List<EnemySound[]> _soundLists = new List<EnemySound[]>();
 
+    [SerializeField] const float _soundDelay = 0.1f;
+
+    private bool _isPlaying = false;
+
+    private IEnumerator coroutine;
+
     void Awake()
     {
         _soundLists.Add(basicSounds);
@@ -144,7 +150,26 @@ public class ZombieAudio : MonoBehaviour
 
     public void PlayRandomSound(EnemySound[] sounds)
     {
-        int index = UnityEngine.Random.Range(0, sounds.Length);
-        sounds[index].source.Play();
+        if (!_isPlaying)
+        {
+            int index = UnityEngine.Random.Range(0, sounds.Length);
+            EnemySound sound = sounds[index];
+            float soundDuration = sound.clip.length;
+
+
+            //sounds[index].source.Play();
+
+            coroutine = PlayAndWait(sound, soundDuration + _soundDelay);
+            StartCoroutine(coroutine);
+        }
+    }
+
+    //zombieAudio.PlayRandomSound(zombieAudio.attackSounds);
+    private IEnumerator PlayAndWait(EnemySound sound, float waitTime)
+    {
+        _isPlaying = true;
+        sound.source.Play();
+        yield return new WaitForSeconds(waitTime);
+        _isPlaying = false;
     }
 }

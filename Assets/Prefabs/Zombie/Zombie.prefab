@@ -264,7 +264,7 @@ MonoBehaviour:
     source: {fileID: 0}
     spatialBlend: 1
   - name: Following1
-    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    clip: {fileID: 8300000, guid: 04d2bc2fac6cc404093ea5aebd2d11cf, type: 3}
     output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
@@ -272,7 +272,7 @@ MonoBehaviour:
     source: {fileID: 0}
     spatialBlend: 1
   - name: Following2
-    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    clip: {fileID: 8300000, guid: 0ca438788264d9c4fa2f59e5bb6ec27e, type: 3}
     output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
@@ -280,7 +280,7 @@ MonoBehaviour:
     source: {fileID: 0}
     spatialBlend: 1
   - name: Following3
-    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    clip: {fileID: 8300000, guid: 08e5dece76052bc47a2b2e567d6c5e7b, type: 3}
     output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
@@ -288,7 +288,7 @@ MonoBehaviour:
     source: {fileID: 0}
     spatialBlend: 1
   - name: Following4
-    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    clip: {fileID: 8300000, guid: c5e2aae87dbdb274f895641d19ebf765, type: 3}
     output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
@@ -296,7 +296,7 @@ MonoBehaviour:
     source: {fileID: 0}
     spatialBlend: 1
   - name: Following5
-    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    clip: {fileID: 8300000, guid: cceff46a0a1bf6c44a9ca6488b72c59f, type: 3}
     output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
@@ -304,7 +304,23 @@ MonoBehaviour:
     source: {fileID: 0}
     spatialBlend: 1
   - name: Following6
-    clip: {fileID: 8300000, guid: 4b8fe403ed26b45439fda8e1a8703c71, type: 3}
+    clip: {fileID: 8300000, guid: a6197e055ba38f54d91d6d8c78792fd7, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Following7
+    clip: {fileID: 8300000, guid: 7e37a9cb1b49e4d4daa6b27b34bb7ca2, type: 3}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    spatialBlend: 1
+  - name: Following8
+    clip: {fileID: 8300000, guid: 283b69f49af9f8441aa236c55bbc89d4, type: 3}
     output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
@@ -1140,7 +1156,7 @@ MonoBehaviour:
   - {x: -0.46912277, y: -0.17591655, z: 0}
   m_ShapePathHash: -1197621037
   m_Mesh: {fileID: 0}
-  m_InstanceId: 66412
+  m_InstanceId: 71934
 --- !u!114 &9136428846178038426
 MonoBehaviour:
   m_ObjectHideFlags: 0
