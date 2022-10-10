@@ -5,12 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/TelaInicial.unity
     guid: 1c78dde8604461446a33c85c15f4b626
@@ -29,15 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HerbertH3.unity
     guid: 08f488f83dcd6244b8c5947bd3ee5eb3
-  - enabled: 1
-    path: Assets/Scenes/house1Floor.unity
-    guid: 69520d07e4dfbd84fbe00fa8b367d80d
-  - enabled: 1
-    path: Assets/Scenes/house2Floor.unity
-    guid: 43f0d707e4cc7a141810a73ea2a7373f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/CenaAberturaCreditos.unity
     guid: 67ca0c31b4c1c777d8f5843dfa324e50
