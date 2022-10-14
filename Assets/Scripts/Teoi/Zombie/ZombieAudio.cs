@@ -11,10 +11,12 @@ public class ZombieAudio : MonoBehaviour
     public EnemySound[] diedSounds;
     public EnemySound[] followingSounds;
     public EnemySound[] foundedPlayerSounds;
+    public EnemySound[] getHitSounds;
     private List<EnemySound[]> _soundLists = new List<EnemySound[]>();
 
     [SerializeField] const float _soundDelay = 0.1f;
 
+    private EnemySound _currentSoundPlaying;
     private bool _isPlaying = false;
 
     private IEnumerator coroutine;
@@ -26,6 +28,7 @@ public class ZombieAudio : MonoBehaviour
         _soundLists.Add(diedSounds);
         _soundLists.Add(followingSounds);
         _soundLists.Add(foundedPlayerSounds);
+        _soundLists.Add(getHitSounds);
 
         foreach (EnemySound[] list in _soundLists)
         {
@@ -128,6 +131,30 @@ public class ZombieAudio : MonoBehaviour
         return s.clip;
     }
 
+
+    public void PlayRandomSound(EnemySound[] sounds)
+    {
+        if (!_isPlaying)
+        {
+            int index = UnityEngine.Random.Range(0, sounds.Length);
+            _currentSoundPlaying = sounds[index];
+            float soundDuration = _currentSoundPlaying.clip.length;
+
+            coroutine = PlayAndWait(_currentSoundPlaying, soundDuration + _soundDelay);
+            StartCoroutine(coroutine);
+        }
+    }
+
+    //zombieAudio.PlayRandomSound(zombieAudio.attackSounds);
+    private IEnumerator PlayAndWait(EnemySound sound, float waitTime)
+    {
+        _isPlaying = true;
+        sound.source.Play();
+        yield return new WaitForSeconds(waitTime);
+        _isPlaying = false;
+    }
+}
+
     /*
     // Can play multiple sounds on one AudioSource
     public void PlayOneShot(string name, float volumeScale)
@@ -147,29 +174,3 @@ public class ZombieAudio : MonoBehaviour
 
 
     */
-
-    public void PlayRandomSound(EnemySound[] sounds)
-    {
-        if (!_isPlaying)
-        {
-            int index = UnityEngine.Random.Range(0, sounds.Length);
-            EnemySound sound = sounds[index];
-            float soundDuration = sound.clip.length;
-
-
-            //sounds[index].source.Play();
-
-            coroutine = PlayAndWait(sound, soundDuration + _soundDelay);
-            StartCoroutine(coroutine);
-        }
-    }
-
-    //zombieAudio.PlayRandomSound(zombieAudio.attackSounds);
-    private IEnumerator PlayAndWait(EnemySound sound, float waitTime)
-    {
-        _isPlaying = true;
-        sound.source.Play();
-        yield return new WaitForSeconds(waitTime);
-        _isPlaying = false;
-    }
-}
