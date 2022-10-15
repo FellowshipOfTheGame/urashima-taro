@@ -66,8 +66,7 @@ namespace Pathfinding
 
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () 
-		{
-			zombieAudio.PlayRandomSound(zombieAudio.attackSounds);
+		{			
 			ray = new Ray2D(transform.position, transform.forward);
 			// Debug.Log(ray.direction);
 			//Debug.Log(transform.eulerAngles.z.GetType());
@@ -88,6 +87,7 @@ namespace Pathfinding
 						}
 						else
 						{
+							zombieAudio.PlayRandomSound(zombieAudio.followingSounds);
 							animator.SetBool("isWalking", true);
 							ai.destination = defaultLocation.position;
 						}
@@ -95,6 +95,7 @@ namespace Pathfinding
 					case false:
 						if (zombieView.canSeePlayer)
 						{
+							zombieAudio.PlayRandomSound(zombieAudio.followingSounds);
 							animator.SetBool("isWalking", true);
 							ai.destination = playerLocation.position;
 						}

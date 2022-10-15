@@ -53,10 +53,10 @@ MonoBehaviour:
   tirosMax: 6
   tirosAtuais: 0
   podeAtirar: 1
-  range: 0
+  range: 10
   inimigo:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!1 &3092128958883895199
 GameObject:
   m_ObjectHideFlags: 0

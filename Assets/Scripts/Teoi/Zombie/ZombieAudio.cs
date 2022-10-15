@@ -14,7 +14,7 @@ public class ZombieAudio : MonoBehaviour
     public EnemySound[] getHitSounds;
     private List<EnemySound[]> _soundLists = new List<EnemySound[]>();
 
-    [SerializeField] const float _soundDelay = 0.1f;
+    [SerializeField] const float _soundDelay = 0.5f;
 
     private EnemySound _currentSoundPlaying;
     private bool _isPlaying = false;

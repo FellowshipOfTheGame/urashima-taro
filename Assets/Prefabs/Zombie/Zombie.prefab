@@ -258,7 +258,7 @@ MonoBehaviour:
   - name: Following0
     clip: {fileID: 8300000, guid: a6197e055ba38f54d91d6d8c78792fd7, type: 3}
     output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
-    volume: 1
+    volume: 0.599
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -266,7 +266,7 @@ MonoBehaviour:
   - name: Following1
     clip: {fileID: 8300000, guid: 7e37a9cb1b49e4d4daa6b27b34bb7ca2, type: 3}
     output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
-    volume: 1
+    volume: 0.593
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -274,7 +274,7 @@ MonoBehaviour:
   - name: Following2
     clip: {fileID: 8300000, guid: 283b69f49af9f8441aa236c55bbc89d4, type: 3}
     output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
-    volume: 1
+    volume: 0.648
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -282,7 +282,7 @@ MonoBehaviour:
   - name: Following3
     clip: {fileID: 8300000, guid: 04d2bc2fac6cc404093ea5aebd2d11cf, type: 3}
     output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
-    volume: 1
+    volume: 0.615
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -386,7 +386,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -737,7 +737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2992565329479736434
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   - {x: -0.46912277, y: -0.17591655, z: 0}
   m_ShapePathHash: -1197621037
   m_Mesh: {fileID: 0}
-  m_InstanceId: 68346
+  m_InstanceId: 108762
 --- !u!114 &9136428846178038426
 MonoBehaviour:
   m_ObjectHideFlags: 0
