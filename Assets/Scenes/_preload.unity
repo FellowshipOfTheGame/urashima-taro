@@ -1643,178 +1643,156 @@ MonoBehaviour:
   sounds:
   - name: MenuTheme
     clip: {fileID: 8300000, guid: 40f54a90e73b8554ba4ef78c604769dc, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7000572662853630981, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
-    spatialBlend: 0
     loop: 1
     source: {fileID: 0}
   - name: PlayTheme
     clip: {fileID: 8300000, guid: 5b1712071a675eb4ebd242fa8196fde6, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7000572662853630981, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
-    spatialBlend: 0
     loop: 0
     source: {fileID: 0}
   - name: PlayThemeLoop
     clip: {fileID: 8300000, guid: 0eb60b32c2177d247862a95d9de6de11, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7000572662853630981, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 1
     pitch: 1
-    spatialBlend: 0
     loop: 1
     source: {fileID: 0}
   - name: Collect_Ammunition
     clip: {fileID: 8300000, guid: c03aa820f08fc744eba8575d878e1513, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 0
     loop: 0
     source: {fileID: 0}
   - name: Reload_Pistol_Slow
     clip: {fileID: 8300000, guid: b9aead10b9e8d5747bb7e056350e1f86, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 0
     loop: 0
     source: {fileID: 0}
   - name: Reload_Pistol_Fast
     clip: {fileID: 8300000, guid: 10032a7e5e2b3af43a630cbd22ce7936, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Pistol_Shoot
     clip: {fileID: 8300000, guid: 5a09ac27e50cd2b4aaeb4ce7b02374cd, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Consume_Chips
     clip: {fileID: 8300000, guid: 9899193f7c5e3974ea0ead0f54e203c6, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Turn_Flashlight_On
     clip: {fileID: 8300000, guid: 7fb5a69f1918279409b4bbc2102c379c, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Turn_Flashlight_Off
     clip: {fileID: 8300000, guid: be98ed594f3961c4dac44d6e36f76723, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Walking
     clip: {fileID: 8300000, guid: 57a8da5429556a24e98b7e6bae99bd70, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 1
     source: {fileID: 0}
   - name: Walking_On_Puddle
     clip: {fileID: 8300000, guid: 5e52d3f24f2e9034b94169895c77e1a9, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 1
     source: {fileID: 0}
   - name: Drag_Furniture_1
     clip: {fileID: 8300000, guid: d9b307a1fb0c1974f9482ebf4b089d79, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Drag_Furniture_2
     clip: {fileID: 8300000, guid: ba9c8060771c00145abd863b850472ad, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Drag_Furniture_3
     clip: {fileID: 8300000, guid: b2031e34fe0602f4b9e72bf242d7381a, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Drag_Furniture_4
     clip: {fileID: 8300000, guid: 761a98e8b4d1bd9419f499030c504b94, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Drag_Furniture_5
     clip: {fileID: 8300000, guid: 75759428dc2d22342bb4fc169059f62d, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Drag_Furniture_6
     clip: {fileID: 8300000, guid: 6540e26b0160fb840b4ca08c5864d3bb, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Open_Chest
     clip: {fileID: 8300000, guid: 144b688087e7f99469612a6c17bb0b26, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Open_Door_1
     clip: {fileID: 8300000, guid: 80a66bf1ddb844c48a0c526639c70b1c, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Open_Door_2
     clip: {fileID: 8300000, guid: 0e9ca065390ba1b49884285d0563953a, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
   - name: Open_Door_3
     clip: {fileID: 8300000, guid: 07ae380f25f47bd4e927632c3a30783c, type: 3}
-    output: {fileID: 24300002, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
+    output: {fileID: -7928531845385019761, guid: 1dd00564c58aabd458e02e288f91be42, type: 2}
     volume: 0.385
     pitch: 1.01
-    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
 --- !u!114 &1007754101
@@ -4398,7 +4376,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGamePaused: 0
   pauseMenuUI: {fileID: 6217813376847511507}
-  BackgroundImage: {fileID: 6217813376204748863}
+  volumePanel: {fileID: 0}
+  menuLabelText: {fileID: 0}
 --- !u!224 &1491586502729284068
 RectTransform:
   m_ObjectHideFlags: 0
