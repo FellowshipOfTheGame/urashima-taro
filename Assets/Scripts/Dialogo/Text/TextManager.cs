@@ -7,7 +7,7 @@ public class TextManager : Interactable
 {
     [SerializeField] private GameObject textCanvas;
     [SerializeField] GameObject outline;
-    [SerializeField] PauseMenu pauseMenu;
+    [SerializeField] OldPauseMenu pauseMenu;
     private bool isActive;
 
     private void Start()

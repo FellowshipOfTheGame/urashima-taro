@@ -18,6 +18,10 @@ public class AudioManager : MonoBehaviour
     // Awake is called before the Start method
     void Awake()
     {
+        if (instance == null)
+            instance = this;
+        else
+            GameObject.Destroy(this);
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -28,7 +32,6 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
-            s.source.spatialBlend = s.spatialBlend;
         }
     }
 

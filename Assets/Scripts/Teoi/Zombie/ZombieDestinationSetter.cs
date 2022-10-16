@@ -35,8 +35,11 @@ namespace Pathfinding
 
 		public Animator animator ;
 
+		public ZombieAudio zombieAudio;
+
 		private void Start()
         {
+			zombieAudio.Play("Idle", zombieAudio.basicSounds);
 			playerLocation = GameObject.FindWithTag("Player").transform;
 			// Receive the script attached with the Player object, used to return variables related to collision
 			playerCollision = GameObject.FindWithTag("Player").GetComponent<PlayerCollision>();
@@ -63,7 +66,7 @@ namespace Pathfinding
 
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () 
-		{
+		{			
 			ray = new Ray2D(transform.position, transform.forward);
 			// Debug.Log(ray.direction);
 			//Debug.Log(transform.eulerAngles.z.GetType());
@@ -84,6 +87,7 @@ namespace Pathfinding
 						}
 						else
 						{
+							zombieAudio.PlayRandomSound(zombieAudio.followingSounds);
 							animator.SetBool("isWalking", true);
 							ai.destination = defaultLocation.position;
 						}
@@ -91,6 +95,7 @@ namespace Pathfinding
 					case false:
 						if (zombieView.canSeePlayer)
 						{
+							zombieAudio.PlayRandomSound(zombieAudio.followingSounds);
 							animator.SetBool("isWalking", true);
 							ai.destination = playerLocation.position;
 						}

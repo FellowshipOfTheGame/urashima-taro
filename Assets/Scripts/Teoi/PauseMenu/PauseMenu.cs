@@ -1,7 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,43 +13,49 @@ public class PauseMenu : MonoBehaviour
 
     // Receive the PauseMenu game object
     public GameObject pauseMenuUI;
-    public GameObject BackgroundImage;
+    public GameObject volumePanel;
 
-    private AudioManager audioManager;
+    public TMP_Text menuLabelText;
+
+    //private AudioManager audioManager;
 
     private void Start()
     {
-        audioManager = FindObjectOfType<AudioManager>();
+        //audioManager = FindObjectOfType<AudioManager>();
+        Resume();
     }
+
 
     // Update is called once per frame
     void Update()
     {
         // Check if the user press ESC button
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Keyboard.current[Key.Escape].wasPressedThisFrame)
         {
-            // IF the game is already paused, exits the pause menu
-            if (isGamePaused)
-            {
-                Resume();
-            } 
-            // ELSE join the pause menu
-            else
-            {
-                Pause();
-            }
+            Debug.Log("PRESSED ESC");
+            Debug.Log(isGamePaused);
+            SwitchPaused();
         }
     }
-
+    public void SwitchPaused()
+    {
+        // IF the game is already paused, exits the pause menu
+        if (isGamePaused)
+        {
+            Resume();
+        }
+        // ELSE join the pause menu
+        else
+        {
+            Pause();
+        }
+    }
     // Exit the Pause Menu
     public void Resume()
     {
-        // Play the click sound
-        audioManager.Play("ButtonClick");
-
+        //audioManager.Play("Button");
         // Exit the Pause Menu in the canvas
         pauseMenuUI.SetActive(false);
-        BackgroundImage.SetActive(false);
 
         // Unfreeze the game
         Time.timeScale = 1f;
@@ -55,11 +65,11 @@ public class PauseMenu : MonoBehaviour
     }
 
     // Open the Pause Menu
-    void Pause()
+    public void Pause()
     {
-        // Play the click sound
-        audioManager.Play("ButtonClick");
+        //audioManager.Play("Button");
 
+        menuLabelText.text = "PAUSADO";
         // Show the Pause Menu in the canvas
         pauseMenuUI.SetActive(true);
 
@@ -69,29 +79,35 @@ public class PauseMenu : MonoBehaviour
         // Set true meaning that the game is paused
         isGamePaused = true;
 
-        BackgroundImage.SetActive(true);
+        //BackgroundImage.SetActive(true);
     }
 
-    // Open the Main Menu
-    public void LoadMenu()
+    public void ReloadScene()
     {
-        // Play the click sound
-        audioManager.Play("ButtonClick");
-
-        // Stop the Play Scene Theme Song
-        audioManager.Stop("PlayTheme0");
-
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        // StartCoroutine(FinishAndLoadSceneEnumerator(SceneManager.GetActiveScene().buildIndex));
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Quit the game
     public void QuitGame()
     {
-        // Play the click sound
-        audioManager.Play("ButtonClick");
-
         Debug.Log("Quit the game");
         Application.Quit();
+    }
+
+    private float effecttmp;
+    
+    public void Volume()
+    {
+        //audioManager.Play("Button");
+
+        menuLabelText.text = "VOLUME";
+                        
+        volumePanel.SetActive(true);
+    }
+    
+    float Remap(float value, float min1, float max1, float min2, float max2) 
+    {
+        return min2 + (value - min1) * (max2 - min2) / (max1 - min1);
     }
 }
