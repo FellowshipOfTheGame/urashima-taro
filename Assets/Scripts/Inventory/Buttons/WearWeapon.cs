@@ -25,7 +25,7 @@ public class WearWeapon: MonoBehaviour
         {
             Destroy(weaponPrefab);
         }
-
+        _weaponImage.enabled = true;
         // Changes the WeaponBadge's icon and bullet number
         _weaponImage.sprite = item.icon;
         _bulletNumber.text = item.quantity.ToString();
