@@ -13,8 +13,11 @@ public class WearWeapon: MonoBehaviour
     private static GameObject weaponPrefab;
     [HideInInspector] public ItemSO item;
 
+    private WeaponBadge _weaponBadge;
+
     private void Start()
     {
+        _weaponBadge = WeaponBadge.Instance;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -25,11 +28,9 @@ public class WearWeapon: MonoBehaviour
         {
             Destroy(weaponPrefab);
         }
-        _weaponImage.enabled = true;
-        // Changes the WeaponBadge's icon and bullet number
-        _weaponImage.sprite = item.icon;
-        _bulletNumber.text = item.quantity.ToString();
 
+        _weaponBadge.currentWeapon = item;        
+        _weaponBadge.AddWeaponBadge();
 
         // Instantiate the prefab containing the weapon script
         weaponPrefab = Instantiate(item.itemPrefab, player.transform.position, Quaternion.identity);
