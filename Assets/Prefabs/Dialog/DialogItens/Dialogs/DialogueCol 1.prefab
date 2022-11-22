@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -407.11}
-  m_SizeDelta: {x: 1920, y: 265.78}
+  m_SizeDelta: {x: 1375.3567, y: 265.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1660584716503277189
 CanvasRenderer:
@@ -224,8 +224,10 @@ MonoBehaviour:
   textCanvas: {fileID: 8520537368124568797}
   pauseMenu: {fileID: 0}
   listDialogue:
-  - 1
-  - 2
+  - "A escurid\xE3o est\xE1 tomando conta de tudo. Estou ouvindo coisas."
+  - "N\xE3o entendo o que est\xE1 ocorrendo, ser\xE1 que tem a ver com a hist\xF3ria
+    que meu pai tanto falava?"
+  - "Se for, eu nunca prestei muito a aten\xE7\xE3o."
 --- !u!61 &8520537368489791783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -286,8 +288,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.62, y: -407.109}
-  m_SizeDelta: {x: 1862, y: 208}
+  m_AnchoredPosition: {x: 6.1748, y: -407.109}
+  m_SizeDelta: {x: 1333.8096, y: 208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8520537369000256339
 CanvasRenderer:
