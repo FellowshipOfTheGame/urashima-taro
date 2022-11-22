@@ -224,8 +224,10 @@ MonoBehaviour:
   textCanvas: {fileID: 8520537368124568797}
   pauseMenu: {fileID: 0}
   listDialogue:
-  - 1
-  - 2
+  - "A escurid\xE3o est\xE1 tomando conta de tudo. Estou ouvindo coisas."
+  - "N\xE3o entendo o que est\xE1 ocorrendo, ser\xE1 que tem a ver com a hist\xF3ria
+    que meu pai tanto falava?"
+  - "Se for, eu nunca prestei muito a aten\xE7\xE3o."
 --- !u!61 &8520537368489791783
 BoxCollider2D:
   m_ObjectHideFlags: 0
