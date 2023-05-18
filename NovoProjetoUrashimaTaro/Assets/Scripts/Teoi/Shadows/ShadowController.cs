@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ShadowController : MonoBehaviour
 {
+    /*
     public GameObject shadowPrefab;
     public Transform shadowPosition;
 
-    public LightSource[] lightSources;
+    //public LightSource[] lightSources;
     public List<Transform> shadows;
     public List<Transform> lights;
 
@@ -58,4 +59,5 @@ public class ShadowController : MonoBehaviour
             shadows[i].localScale = new Vector3(shadows[i].localScale.x, shadowScaleY, shadows[i].localScale.z);
         }
     }
+    */
 }
